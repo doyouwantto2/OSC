@@ -7,7 +7,7 @@
     enable = true;
   };
 
-  programs.bash {
+  programs.bash = {
     enable = true;
     shellAliases = {
       ll = "ls -l";

@@ -2,7 +2,8 @@
 
 {
   environment.systemPackages = with pkgs; [
-    vscodium
-    neovim
+    wezterm
+    kitty
   ]; 
 }
+

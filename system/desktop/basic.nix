@@ -2,7 +2,9 @@
 
 {
   environment.systemPackages = with pkgs; [
-    vscodium
-    neovim
+    wl-clipboard
+    git
+    ripgrep
   ]; 
 }
+

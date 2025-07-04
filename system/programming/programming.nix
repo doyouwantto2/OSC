@@ -1,7 +1,7 @@
 { config, pkgs, ... }:
 
 {
-  import = [
+  imports = [
     ./languages.nix
     ./text-editor.nix
     ./terminal.nix

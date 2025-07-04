@@ -8,7 +8,8 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
-      ./programming/languages.nix
+      ./programming/programming.nix
+      ./desktop/desktop.nix
     ];
 
   # Bootloader.

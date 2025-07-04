@@ -1,7 +1,7 @@
 { config, pkgs, ... }:
 
 {
-  import = [ ./basic.nix ]; 
+  imports = [ ./basic.nix ]; 
 
-  program.hyprland.enable = true;
+  programs.hyprland.enable = true;
 }

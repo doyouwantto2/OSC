@@ -14,7 +14,7 @@
     };
   in
   {
-    nixosConfigurations.${user.name} = nixpkgs.lib.nixosSystem {
+    nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
        system = user.system;
        modules = [ ./system/configuration.nix ];
     };

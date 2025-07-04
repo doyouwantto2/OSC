@@ -7,7 +7,6 @@
     enable = true;
     shellAliases = {
       ll = "ls -l";
-      cls = "clear";
     };
   };
   

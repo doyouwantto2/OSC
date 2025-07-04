@@ -1,6 +1,8 @@
 { config, pkgs, user, ... }:
 
 {
+  programs.home-manager.enable = true;
+
   programs.steam = {
     enable = true;
   };

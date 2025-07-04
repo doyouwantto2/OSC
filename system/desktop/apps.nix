@@ -11,11 +11,6 @@
     teams-for-linux
     zoom-us
 
-    # Creativity
-    krita
-    blender
-    godot
-
     # Learning
     foliate
 

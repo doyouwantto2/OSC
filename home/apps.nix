@@ -3,10 +3,6 @@
 {
   programs.home-manager.enable = true;
 
-  programs.steam = {
-    enable = true;
-  };
-
   programs.bash = {
     enable = true;
     shellAliases = {

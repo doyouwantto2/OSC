@@ -109,6 +109,7 @@
      neovim
      wezterm
      git
+     gcc
      home-manager
   ];
 

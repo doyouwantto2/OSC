@@ -16,7 +16,7 @@
   {
     nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
        system = user.system;
-       modules = [ ./config/configuration.nix ];
+       modules = [ ./system/configuration.nix ];
     };
 
           homeConfigurations.${user.name} = home-manager.lib.homeManagerConfiguration {

@@ -3,4 +3,8 @@
 {
   home.username = user.name;
   home.homeDirectory = "/home/${user.name}";
+
+  home.files = {
+
+  };
 }

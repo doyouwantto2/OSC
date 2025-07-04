@@ -20,7 +20,6 @@
       pandas 
       opencv
       matplotlib
-      tensorflow
       scikit-learn
     ]))
 

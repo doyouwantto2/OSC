@@ -7,7 +7,8 @@
   home.homeDirectory = "/home/${user.name}";
 
   home.file = {
-
+    ".config/hypr".source = ./dotfiles/hypr;
+    ".config/nvim".source = ./dotfiles/nvim;
   };
 
   nixpkgs.config.allowUnfree = true;

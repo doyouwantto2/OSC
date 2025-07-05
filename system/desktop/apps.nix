@@ -14,6 +14,9 @@
     # Learning
     foliate
 
+    #Menu
+    rofi-wayland
+
   ];
 
 }

@@ -9,9 +9,9 @@
   programs.hyprland.enable = true;
   programs.hyprpanel.enable = true;
   programs.hyprlock.enable = true;
-  programs.hypridle.enable = true;
 
   environment.systemPackages = with pkgs; [
+    hypridle
     hyprdim
     hyprshot
     hyprspace

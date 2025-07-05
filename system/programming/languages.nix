@@ -19,18 +19,24 @@
       opencv
       matplotlib
       scikit-learn
+      pydbus
+      pygls
     ]))
-    ty
 
     ruby
     rubyPackages.rails
     rubyPackages.railties
-    rubocop
 
     rustc
     cargo
     rune-languageserver
 
-    nil
+    nixel
+    nixf
+    nixd
+
+    hyprlang
+    hyprls
+
   ];
 }

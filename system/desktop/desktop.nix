@@ -7,8 +7,23 @@
   ]; 
 
   programs.hyprland.enable = true;
+  programs.hyprpanel.enable = true;
+  programs.hyprlock.enable = true;
+  programs.hypridle.enable = true;
 
   environment.systemPackages = with pkgs; [
+    hyprdim
+    hyprshot
+    hyprspace
+    hyprkeys
+    hyprshade
+    hyprpaper
+    hyprcursor
+    hyprsysteminfo
+    hyprland-protocols
+
+    waypaper
+    swww
   ];
  
 }

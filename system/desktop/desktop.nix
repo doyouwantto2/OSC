@@ -13,17 +13,16 @@
     hypridle
     hyprdim
     hyprshot
-    hyprkeys
     hyprshade
     hyprpaper
     hyprcursor
     hyprsysteminfo
     hyprland-protocols
 
-    waypaper
+    mpvpaper
+    swww
     waybar
     hyprnotify
-    swww
 
     rose-pine-hyprcursor
   ];

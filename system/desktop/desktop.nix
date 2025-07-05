@@ -22,7 +22,7 @@
 
     waypaper
     waybar
-    swaync
+    swaynotificationcenter
     swww
 
     rose-pine-hyprcursor

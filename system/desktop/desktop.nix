@@ -19,6 +19,7 @@
     hyprshade
     hyprpaper
     hyprcursor
+    hyprnotify
     hyprsysteminfo
     hyprland-protocols
 

@@ -7,13 +7,15 @@
     cmake
 
     nodejs
+    typescript
     javascript-typescript-langserver
+
+    go
 
     lua-language-server
     luarocks
     luajit
     lua
-    ccls
 
     (python3.withPackages (ps:
       with ps; [
@@ -24,7 +26,7 @@
         scikit-learn
         pydbus
         pygls
-    ]))
+      ]))
 
     ruby
     rubyPackages.rails

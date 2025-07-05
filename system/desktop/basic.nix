@@ -4,7 +4,6 @@
   environment.systemPackages = with pkgs; [
     wl-clipboard
     git
-    ripgrep
   ]; 
 }
 

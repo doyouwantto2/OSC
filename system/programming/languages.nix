@@ -6,6 +6,7 @@
     gnumake
     cmake
     ccls
+    mesonlsp
 
     nodejs
     javascript-typescript-langserver
@@ -22,6 +23,7 @@
       matplotlib
       scikit-learn
     ]))
+    ty
 
     ruby
     rubyPackages.rails

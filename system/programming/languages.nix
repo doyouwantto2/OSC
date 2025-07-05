@@ -23,7 +23,8 @@
         scikit-learn
         pydbus
         pygls
-      ]))
+    ]))
+    ty
 
     ruby
     rubyPackages.rails

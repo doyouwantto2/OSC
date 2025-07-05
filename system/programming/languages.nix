@@ -8,9 +8,6 @@
 
     nodejs
     typescript
-    javascript-typescript-langserver
-
-    go
 
     lua-language-server
     luarocks

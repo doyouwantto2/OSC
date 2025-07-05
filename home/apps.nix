@@ -9,5 +9,12 @@
       ll = "ls -l";
     };
   };
+
+  
+  wayland.windowManager.hyprland.plugins = with pkgs.hyprlandPlugins; [
+    hyprspace
+    hyprexpo
+    hyprgrass
+  ];
   
 }

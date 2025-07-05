@@ -7,10 +7,10 @@
   ]; 
 
   programs.hyprland.enable = true;
-  programs.hyprpanel.enable = true;
   programs.hyprlock.enable = true;
 
   environment.systemPackages = with pkgs; [
+    hyprpanel
     hypridle
     hyprdim
     hyprshot

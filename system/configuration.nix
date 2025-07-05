@@ -112,6 +112,18 @@
      home-manager
   ];
 
+  fonts = {
+    enableDefaultPackages = true;
+    fontconfig.enable = true;
+
+    fonts = [
+      # Install ALL nerd fonts
+      (pkgs.nerdfonts.override {
+        fonts = pkgs.nerdfonts.availableFonts;
+      })
+    ];
+  };
+
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
   # programs.mtr.enable = true;

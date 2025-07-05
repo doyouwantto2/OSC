@@ -2,7 +2,7 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, ... }:
+{ config, pkgs, lib, ... }:
 
 {
   imports =
@@ -112,17 +112,9 @@
      home-manager
   ];
 
-  fonts = {
-    enableDefaultPackages = true;
-    fontconfig.enable = true;
-
-    fonts = [
-      # Install ALL nerd fonts
-      (pkgs.nerdfonts.override {
-        fonts = pkgs.nerdfonts.availableFonts;
-      })
-    ];
-  };
+  fonts.packages = [
+  # other fonts...
+  ] ++ builtins.filter lib.attrsets.isDerivation (builtins.attrValues pkgs.nerd-fonts);
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.

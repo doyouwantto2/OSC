@@ -10,11 +10,10 @@
   programs.hyprlock.enable = true;
 
   environment.systemPackages = with pkgs; [
-    hyprpanel
     hypridle
     hyprdim
     hyprshot
-    hyprspace
+    hyprlandPlugins.hyprspace
     hyprkeys
     hyprshade
     hyprpaper
@@ -24,6 +23,7 @@
     hyprland-protocols
 
     waypaper
+    waybar
     swww
   ];
  

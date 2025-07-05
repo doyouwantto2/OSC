@@ -17,7 +17,6 @@
     hyprshade
     hyprpaper
     hyprcursor
-    hyprcursor-themes.rose-pine
     hyprsysteminfo
     hyprland-protocols
 
@@ -26,6 +25,7 @@
     swaynotificationcenter
     swww
 
+    rose-pine-hyprcursor
   ];
  
 }

@@ -11,8 +11,5 @@
     lazygit
     imagemagick
     ghostscript
-    tectonic
-    graphviz
-    mermaid-cli
   ]; 
 }

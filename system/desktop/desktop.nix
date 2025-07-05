@@ -13,18 +13,19 @@
     hypridle
     hyprdim
     hyprshot
-    hyprlandPlugins.hyprspace
     hyprkeys
     hyprshade
     hyprpaper
     hyprcursor
-    hyprnotify
     hyprsysteminfo
     hyprland-protocols
 
     waypaper
     waybar
+    swaync
     swww
+
+    rose-pine-hyprcursor
   ];
  
 }

@@ -13,6 +13,7 @@
     luarocks
     luajit
     lua
+    ccls
 
     (python3.withPackages (ps:
       with ps; [
@@ -24,7 +25,6 @@
         pydbus
         pygls
     ]))
-    ty
 
     ruby
     rubyPackages.rails

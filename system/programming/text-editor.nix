@@ -14,6 +14,5 @@
     tectonic
     graphviz
     mermaid-cli
-    texlive.combined.scheme-full
   ]; 
 }

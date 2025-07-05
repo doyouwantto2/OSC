@@ -5,13 +5,10 @@
     gnat
     gnumake
     cmake
-    ccls
-    mesonlsp
 
     nodejs
     javascript-typescript-langserver
 
-    lua-language-server
     luarocks
     luajit
     lua
@@ -28,7 +25,7 @@
     ruby
     rubyPackages.rails
     rubyPackages.railties
-    rubyPackages.language_server-protocol
+    rubocop
 
     rustc
     cargo

@@ -20,8 +20,8 @@
     hyprland-protocols
 
     mpvpaper
+    eww
     swww
-    waybar
     hyprnotify
 
     rose-pine-hyprcursor

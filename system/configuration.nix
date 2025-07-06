@@ -72,6 +72,15 @@
     alsa.support32Bit = true;
     pulse.enable = true;
     jack.enable = true;
+    config.pipewire = {
+      "properties" = {
+        default.clock.allowed-rates = [ 44100 48000 96000 ];
+        "log.level" = 4;
+        "default.clock.quantum"       = 256;
+        "default.clock.min-quantum"   = 256;
+        "default.clock.max-quantum"   = 256;
+      };
+    };
   };
 
   # Enable touchpad support (enabled default in most desktopManager).

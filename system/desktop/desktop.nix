@@ -20,7 +20,7 @@
     hyprland-protocols
 
     mpvpaper
-    eww
+    waybar
     swww
     hyprnotify
 

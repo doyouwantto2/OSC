@@ -21,6 +21,7 @@
         opencv
         matplotlib
         scikit-learn
+        tensorflow
         pydbus
         pygls
       ]))

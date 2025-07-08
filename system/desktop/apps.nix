@@ -16,6 +16,7 @@
 
     #Menu
     rofi-wayland
+    cava
 
   ];
 

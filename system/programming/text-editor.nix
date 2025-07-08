@@ -14,5 +14,6 @@
     imagemagick
     ghostscript
     wget
+    libGLU
   ]; 
 }

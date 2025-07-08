@@ -22,7 +22,7 @@
         matplotlib
         scikit-learn
         ps.tensorflow.overridePythonAttrs (old: { 
-          meta = old.meta // { broken = false; }; # in case it's marked broken
+          meta = old.meta // { broken = false; }; 
         })
         pydbus
         pygls

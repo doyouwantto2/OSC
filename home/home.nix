@@ -9,6 +9,8 @@
   home.file = {
     ".config/hypr".source = ./dotfiles/hypr;
     ".config/nvim".source = ./dotfiles/nvim;
+    ".config/cava".source = ./dotfiles/cava;
+    ".config/wezterm".source = ./dotfiles/wezterm;
   };
 
   nixpkgs.config.allowUnfree = true;

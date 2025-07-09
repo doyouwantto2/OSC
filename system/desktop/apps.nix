@@ -18,8 +18,7 @@
     rofi-wayland
     cava
     networkmanager
-    networkmanager_dmenu
-
+    networkmanagerapplet
   ];
 
 }

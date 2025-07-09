@@ -5,12 +5,8 @@
     gnat
     gnumake
     cmake
-    cpplint
 
     nodejs
-    typescript
-
-    go
 
     lua-language-server
     luarocks

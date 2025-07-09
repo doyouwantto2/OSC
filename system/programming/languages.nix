@@ -5,9 +5,12 @@
     gnat
     gnumake
     cmake
+    cpplint
 
     nodejs
     typescript
+    flow
+    ezno
 
     lua-language-server
     luarocks
@@ -27,6 +30,7 @@
         pydbus
         pygls
       ]))
+    pyright
 
     ruby
     rubyPackages.rails

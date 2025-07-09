@@ -17,6 +17,8 @@
     #Menu
     rofi-wayland
     cava
+    networkmanager
+    networkmanager_dmenu
 
   ];
 

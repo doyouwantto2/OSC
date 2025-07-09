@@ -2,7 +2,7 @@ local wezterm = require("wezterm")
 local config = {}
 local act = wezterm.action
 
-config.color_scheme = "rebecca"
+config.color_scheme = "Catppuccin Mocha"
 config.window_background_opacity = 0.8
 config.warn_about_missing_glyphs = false
 config.enable_wayland = true

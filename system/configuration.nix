@@ -46,11 +46,7 @@
   i18n.inputMethod = {
     type = "fcitx5";
     enable = true;
-    fcitx5.addons = with pkgs; [
-      fcitx5-mozc
-      fcitx5-gtk
-      fcitx5-bamboo
-    ];
+    fcitx5.package = pkgs.fcitx5-with-addons;
   };
 
   # Enable the X11 windowing system.
@@ -122,6 +118,8 @@
     QT_IM_MODULE = "fcitx";
     XMODIFIERS = "@im=fcitx";
     INPUT_METHOD = "fcitx";
+    GTK_IM_MODULE = "";
+    GTK_USE_PORTAL = "1";
   };
 
   fonts.packages = [

@@ -9,9 +9,9 @@ return {
     smear_insert_mode = true,
 
     cursor_color = "#f5f5f5",
-    stiffness = 0.4,
-    trailing_stiffness = 0.1,
-    damping = 0.3,
+    stiffness = 0.5,
+    trailing_stiffness = 0.8,
+    damping = 0.7,
     trailing_exponent = 5,
     never_draw_over_target = true,
     hide_target_hack = true,

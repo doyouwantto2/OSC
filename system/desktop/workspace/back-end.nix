@@ -1,6 +1,9 @@
 { config, pkgs, ... }:
 
 {
+  programs.hyprland.xwayland.enable = true;
+  programs.xwayland.enable = true;
+
   environment.systemPackages = with pkgs; [
     brightnessctl
     hypridle

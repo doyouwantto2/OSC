@@ -118,8 +118,7 @@
   ];
 
   environment.sessionVariables = {
-    QT_IM_MODULE = "wayland";
-    GTK_IM_MODULE = "wayland";
+    QT_IM_MODULE = "fcitx";
     XMODIFIERS = "@im=fcitx";
     INPUT_METHOD = "fcitx";  
   };

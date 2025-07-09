@@ -43,6 +43,16 @@
     LC_TIME = "vi_VN";
   };
 
+  i18n.inputMethod = {
+    type = "fcitx5";
+    enable = true;
+    fcitx5.addons = with pkgs; [
+      fcitx5-mozc
+      fcitx5-gtk
+      fcitx5-bamboo
+    ];
+  };
+
   # Enable the X11 windowing system.
   services.xserver.enable = true;
 
@@ -52,6 +62,7 @@
 
   xdg.portal.wlr.enable = true;
   xdg.portal.enable = true;
+  xdg.portal.extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
 
   # Configure keymap in X11
   services.xserver.xkb = {
@@ -106,6 +117,12 @@
     home-manager
     pavucontrol
   ];
+
+  environment.sessionVariables = {
+    QT_IM_MODULE = "fcitx";
+    XMODIFIERS = "@im=fcitx";
+    INPUT_METHOD = "fcitx";
+  };
 
   fonts.packages = [
   # other fonts...

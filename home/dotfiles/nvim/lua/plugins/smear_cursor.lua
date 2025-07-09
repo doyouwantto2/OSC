@@ -8,7 +8,7 @@ return {
     legacy_computing_symbols_support = false,
 
     cursor_color = "#f5f5f5",
-    stiffness = 0.6
+    stiffness = 0.6,
     trailing_stiffness = 0.5,
     damping = 0.6,
     trailing_exponent = 5,

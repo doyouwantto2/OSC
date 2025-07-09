@@ -8,7 +8,6 @@
     hyprshade
     hyprdim
     hyprshot
-    hyprnotify
     hyprland-protocols
 
     mpvpaper

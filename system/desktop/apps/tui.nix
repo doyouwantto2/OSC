@@ -2,10 +2,12 @@
 
 {
   environment.systemPackages = with pkgs; [
-    wl-clipboard
+    cava
     unzip
     gnutar
     git
-  ]; 
+  ];
+
 }
+
 

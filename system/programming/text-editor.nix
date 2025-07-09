@@ -7,6 +7,7 @@
     neovim
 
     tree-sitter
+    wl-clipboard
     ripgrep
     fd
     sqlite

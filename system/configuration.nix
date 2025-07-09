@@ -44,15 +44,12 @@
   };
 
   i18n.inputMethod = {
-    type = "fcitx5";
-    enable = true;
-    fcitx5.addons = with pkgs; [
-      fcitx5-mozc
-      fcitx5-bamboo
-      fcitx5-gtk
+    enabled = "ibus";
+    ibus.engines = with pkgs.ibus-engines; [
+      mozc       
+      bamboo
     ];
-  };
-
+  }; 
   # Enable the X11 windowing system.
   services.xserver.enable = true;
 
@@ -117,16 +114,6 @@
     home-manager
     pavucontrol
   ];
-
-  lib.mkForce = {
-    environment.variables = {
-      #GTK_IM_MODULE = "fcitx";
-      QT_IM_MODULE = "fcitx";
-      XMODIFIERS = "@im=fcitx";
-      SDL_IM_MODULE = "fcitx";
-      GLFW_IM_MODULE = "ibus";
-    };
-  };
 
   fonts.packages = [
   # other fonts...

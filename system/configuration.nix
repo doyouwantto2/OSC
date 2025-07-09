@@ -15,10 +15,6 @@
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
-  boot.kernelModules = [ "snd_hda_intel" ];
-  boot.extraModprobeConfig = ''
-    options snd-hda-intel model=dell-headset-multi
-  '';
   networking.hostName = "nixos"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
@@ -108,8 +104,6 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
     home-manager
-    pavucontrol
-    sof-firmware
   ];
 
   fonts.packages = [

@@ -2,6 +2,9 @@ local wezterm = require("wezterm")
 local config = {}
 local act = wezterm.action
 
+local bar = wezterm.plugin.require("https://github.com/adriankarlen/bar.wezterm")
+bar.apply_to_config(config)
+
 config.color_scheme = "rebecca"
 config.window_background_opacity = 0.8
 config.warn_about_missing_glyphs = false

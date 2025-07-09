@@ -4,6 +4,7 @@
   environment.systemPackages = with pkgs; [
     brightnessctl
     hypridle
+    hyprshade
     hyprdim
     hyprshot
     hyprnotify

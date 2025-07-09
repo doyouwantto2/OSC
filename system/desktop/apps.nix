@@ -16,9 +16,12 @@
 
     #Menu
     rofi-wayland
+
     cava
     networkmanager
     networkmanagerapplet
+
+    neohtop
   ];
 
 }

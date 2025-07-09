@@ -9,6 +9,7 @@
     zoom-us
     foliate
     neohtop
+    rofi-wayland
   ];
 
 }

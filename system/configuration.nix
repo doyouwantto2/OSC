@@ -116,6 +116,12 @@
     pavucontrol
   ];
 
+  environment.sessionVariables = {
+    GTK_IM_MODULE = "ibus";
+    QT_IM_MODULE = "ibus";
+    XMODIFIERS = "@im=ibus";
+  };
+
   fonts.packages = [
   # other fonts...
   ] ++ builtins.filter lib.attrsets.isDerivation (builtins.attrValues pkgs.nerd-fonts);

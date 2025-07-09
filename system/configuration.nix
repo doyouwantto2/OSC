@@ -122,7 +122,6 @@
     QT_IM_MODULE = "fcitx";
     XMODIFIERS = "@im=fcitx";
     INPUT_METHOD = "fcitx";
-    GTK_IM_MODULE = "";
     GTK_USE_PORTAL = "1";
   };
 

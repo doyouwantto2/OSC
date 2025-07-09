@@ -64,7 +64,6 @@
   services.printing.enable = true;
 
   # Enable sound with pipewire.
-  sound.enable = true;
   services.pulseaudio.enable = false;
   services.pipewire = {
     enable = true;

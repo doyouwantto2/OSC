@@ -118,13 +118,6 @@
     pavucontrol
   ];
 
-  environment.sessionVariables = {
-    QT_IM_MODULE = "fcitx";
-    GTK_IM_MODULE = "fcitx";
-    XMODIFIERS = "@im=fcitx";
-    INPUT_METHOD = "fcitx";
-  };
-
   fonts.packages = [
   # other fonts...
   ] ++ builtins.filter lib.attrsets.isDerivation (builtins.attrValues pkgs.nerd-fonts);

@@ -44,13 +44,14 @@
   };
 
   i18n.inputMethod = {
-    type = "ibus";
+    type = "fcitx5";
     enable = true;
-    ibus.engines = with pkgs.ibus-engines; [
-      mozc       
-      bamboo
+    fcitx5.addons = with pkgs; [
+      fcitx5-mozc
+      fcitx5-bamboo
     ];
-  }; 
+  };
+
   # Enable the X11 windowing system.
   services.xserver.enable = true;
 
@@ -117,9 +118,7 @@
   ];
 
   environment.sessionVariables = {
-    GTK_IM_MODULE = "ibus";
-    XMODIFIERS = "@im=ibus";
-    QT_IM_MODULE = "ibus";
+    
   };
 
   fonts.packages = [

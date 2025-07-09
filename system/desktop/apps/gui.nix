@@ -10,8 +10,6 @@
     foliate
     neohtop
     rofi-wayland
-    fcitx5-gtk
-    fcitx5
     blueman
   ];
 

@@ -46,7 +46,11 @@
   i18n.inputMethod = {
     type = "fcitx5";
     enable = true;
-    fcitx5.package = pkgs.fcitx5-with-addons;
+    fcitx5.addons = with pkgs; [
+      fcitx5-mozc
+      fcitx5-bamboo
+      fcitx5-gtk
+    ];
   };
 
   # Enable the X11 windowing system.

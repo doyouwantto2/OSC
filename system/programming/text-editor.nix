@@ -13,8 +13,5 @@
     lazygit
     imagemagick
     ghostscript
-    tectonic
-    graphviz
-    mer
   ]; 
 }

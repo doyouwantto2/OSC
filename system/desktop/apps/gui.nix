@@ -10,6 +10,7 @@
     foliate
     neohtop
     rofi-wayland
+    fcitx5-gtk
   ];
 
 }

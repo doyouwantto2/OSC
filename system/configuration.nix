@@ -115,12 +115,14 @@
   environment.systemPackages = with pkgs; [
     home-manager
     pavucontrol
+    fcitx5-gtk
   ];
 
   environment.sessionVariables = {
-    QT_IM_MODULE = "fcitx";
+    INPUT_METHOD = "fcitx";
     XMODIFIERS = "@im=fcitx";
-    INPUT_METHOD = "fcitx";  
+    GTK_IM_MODULE = "fcitx";
+    QT_IM_MODULE = "fcitx";
   };
 
   fonts.packages = [

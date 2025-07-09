@@ -6,15 +6,15 @@
     micro
     neovim
 
-    tree-sitter
-    wl-clipboard
+    neovim
     ripgrep
     fd
     sqlite
     lazygit
     imagemagick
     ghostscript
-    wget
-    libGLU
+    tectonic
+    graphviz
+    mer
   ]; 
 }

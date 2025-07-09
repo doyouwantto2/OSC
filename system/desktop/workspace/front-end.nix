@@ -5,13 +5,10 @@
   programs.hyprlock.enable = true;
 
   environment.systemPackages = with pkgs; [
-    waybar
     waypaper
+    ags
 
     hyprcursor
-    hyprpaper
-    hyprsysteminfo
-
     rose-pine-hyprcursor
   ]; 
 }

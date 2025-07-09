@@ -11,6 +11,7 @@
     hyprland-protocols
 
     mpvpaper
+    hyprpaper
     swww
   ]; 
 }

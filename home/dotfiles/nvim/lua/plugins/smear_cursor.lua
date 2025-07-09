@@ -7,7 +7,7 @@ return {
     scroll_buffer_space = true,
     legacy_computing_symbols_support = false,
 
-    cursor_color = "#f5f5f5",
+    cursor_color = "#24b54b",
     stiffness = 0.6,
     trailing_stiffness = 0.5,
     damping = 0.6,

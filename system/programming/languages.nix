@@ -10,6 +10,8 @@
     nodejs
     typescript
 
+    go
+
     lua-language-server
     luarocks
     luajit

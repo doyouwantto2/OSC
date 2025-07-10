@@ -55,7 +55,7 @@ window {
     border-radius:               0px;
     border-color:                @selected;
     background-color:            @background;
-    backround-image:             url(".config/assets/eva.jpg");
+    backround-image:             url("wallpaper.jpg");
     cursor:                      "default";
 }
 

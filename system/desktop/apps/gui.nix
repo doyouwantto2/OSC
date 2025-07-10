@@ -9,7 +9,7 @@
     zoom-us
     foliate
     neohtop
-    tofi
+    walker
     blueman
   ];
 

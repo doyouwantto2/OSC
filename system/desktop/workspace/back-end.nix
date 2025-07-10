@@ -12,31 +12,25 @@
 
     mpvpaper
     hyprpaper
-    swww
 
-    (astal.withPackages (ps:
-      with ps; [
-        io
-        gjs
-        tray
-        cava
-        auth
-        apps
-        river
-        mpris
-        greet
-        source
-        notifd
-        astal4
-        astal3
-        wireplumber
-        powerprofiles
-        network
-        hyprland
-        bluetooth
-        battery
-        ags
-    ]))
+    astal.io
+    astal.gjs
+    astal.tray
+    astal.cava
+    astal.auth
+    astal.apps
+    astal.mpris
+    astal.greet
+    astal.source
+    astal.notifd
+    astal.asta4
+    astal.astal3
+    astal.wireplumber
+    astal.powerprofiles
+    astal.network
+    astal.hyprland
+    astal.bluetooth
+    astal.battery
 
     rose-pine-hyprcursor
 

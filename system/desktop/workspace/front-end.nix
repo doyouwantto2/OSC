@@ -9,7 +9,6 @@
     ags
 
     hyprcursor
-    rose-pine-hyprcursor
   ]; 
 }
 

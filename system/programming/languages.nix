@@ -7,6 +7,7 @@
     cmake
 
     nodejs
+    typescript
 
     lua-language-server
     luarocks
@@ -25,7 +26,7 @@
         })
         pydbus
         pygls
-      ]))
+    ]))
 
     ruby
     rubyPackages.rails

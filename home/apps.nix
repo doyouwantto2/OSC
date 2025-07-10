@@ -8,7 +8,7 @@
     shellAliases = {
       ll = "ls -l";
     };
-    shellInit = ''
+    initExtra = ''
       eval "$(starship init bash)"
     '';
   };

@@ -6,7 +6,7 @@
     micro
     neovim
 
-    neovim
+    wl-clipboard
     ripgrep
     fd
     sqlite

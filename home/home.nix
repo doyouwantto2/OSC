@@ -13,7 +13,6 @@
     ".config/wezterm".source = ./dotfiles/wezterm;
     ".config/starship".source = ./dotfiles/starship;
     ".config/rofi".source = ./dotfiles/rofi;
-    ".config/assets".source = ./dotfiles/assets;
   };
 
   nixpkgs.config.allowUnfree = true;

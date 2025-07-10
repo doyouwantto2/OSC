@@ -24,7 +24,6 @@
     astal.source
     astal.notifd
     astal.asta4
-    astal.astal3
     astal.wireplumber
     astal.powerprofiles
     astal.network

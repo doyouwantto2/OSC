@@ -7,6 +7,7 @@
     cmake
 
     nodejs
+    gjs
     typescript
 
     lua-language-server

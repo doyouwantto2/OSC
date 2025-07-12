@@ -6,6 +6,7 @@
     unzip
     gnutar
     git
+    fastfetch
   ];
 
 }

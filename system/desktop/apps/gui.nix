@@ -10,7 +10,9 @@
     foliate
     neohtop
     walker
+
     blueman
+    iwgtk
   ];
 
 }

@@ -11,7 +11,6 @@
     neohtop
     walker
 
-    networkmanagerapplet
     blueman
   ];
 

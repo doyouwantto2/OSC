@@ -12,7 +12,6 @@
     walker
 
     blueman
-    iwgtk
   ];
 
 }

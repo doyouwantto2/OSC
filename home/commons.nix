@@ -10,11 +10,6 @@
     };
     initExtra = ''
       eval "$(starship init bash)"
-
-      if [ -z "$FASTFETCH_SHOWN" ]; then
-        export FASTFETCH_SHOWN=1
-        fastfetch
-      fi
     '';
   };
 }

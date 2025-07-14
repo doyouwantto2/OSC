@@ -30,9 +30,8 @@
     ]))
 
     ruby
-    rubyPackages.rails
-    rubyPackages.railties
     rubyPackages.language_server-protocol
+    loco
 
     rustc
     cargo

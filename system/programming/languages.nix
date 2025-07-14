@@ -29,11 +29,8 @@
         pygls
     ]))
 
-    ruby
-    rubyPackages.language_server-protocol
-    loco
-
     rustc
+    rustup
     cargo
     rune-languageserver
 

@@ -41,5 +41,6 @@
     hyprlang
     hyprls
 
+    armips
   ];
 }

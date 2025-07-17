@@ -10,8 +10,8 @@
     hyprshot
     hyprland-protocols
 
-    mpvpaper
     hyprpaper
+    swww
 
     astal.io
     astal.gjs

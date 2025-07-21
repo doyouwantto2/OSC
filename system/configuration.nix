@@ -78,7 +78,7 @@
     enable = true;
     alsa.enable = true;
     alsa.support32Bit = true;
-    pulse.enable = false;
+    pulse.enable = true;
     jack.enable = true;
     wireplumber.enable = true;
   };
@@ -120,6 +120,7 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
     home-manager
+    alsa-utils
     pavucontrol
     fcitx5-gtk
   ];

@@ -120,7 +120,6 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
     home-manager
-    alsa-utils
     pavucontrol
     fcitx5-gtk
   ];

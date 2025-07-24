@@ -33,6 +33,14 @@
     astal.bluetooth
     astal.battery
 
+    gobject-introspection
+    gtk3
+    gtk-layer-shell
+    libnotify
+    libappindicator-gtk3
+    glib
+    gjs
+
     rose-pine-hyprcursor
 
   ]; 

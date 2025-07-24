@@ -34,6 +34,7 @@
     astal.battery
 
     gobject-introspection
+    gtk4
     gtk3
     gtk-layer-shell
     libnotify

@@ -26,8 +26,6 @@
         })
         pydbus
         pygls
-        wifi
-        habluetooth
     ]))
 
     rustc

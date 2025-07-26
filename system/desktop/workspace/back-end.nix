@@ -4,16 +4,15 @@
 
   environment.systemPackages = with pkgs; [
     brightnessctl
+    playerctl
     hypridle
     hyprshade
-    hyprdim
     hyprshot
     hyprland-protocols
 
     swww
 
     rose-pine-hyprcursor
-
   ]; 
 }
 

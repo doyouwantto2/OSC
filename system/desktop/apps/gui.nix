@@ -10,8 +10,6 @@
     foliate
     neohtop
     walker
-
-    blueman
   ];
 
 }

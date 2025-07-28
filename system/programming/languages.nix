@@ -31,6 +31,7 @@
     rustc
     rustup
     cargo
+    loco
     rune-languageserver
 
     nixel

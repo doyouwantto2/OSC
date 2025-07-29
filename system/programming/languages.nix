@@ -33,6 +33,7 @@
     cargo
     loco
     rune-languageserver
+    sea-orm-cli
 
     nixel
     nixf

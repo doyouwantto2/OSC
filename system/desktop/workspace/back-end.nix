@@ -4,7 +4,6 @@
 
   environment.systemPackages = with pkgs; [
     brightnessctl
-    playerctl
     hypridle
     hyprshade
     hyprshot

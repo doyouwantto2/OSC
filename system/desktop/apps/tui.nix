@@ -7,6 +7,7 @@
     gnutar
     git
     fastfetch
+    spotify-cli-linux
   ];
 
 }

@@ -30,9 +30,8 @@
 
     rustc
     rustup
+    dioxus-cli
     cargo
-    trunk
-    sea-orm-cli
 
     nixel
     nixf

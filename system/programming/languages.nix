@@ -31,8 +31,7 @@
     rustc
     rustup
     cargo
-    loco
-    rune-languageserver
+    trunk
     sea-orm-cli
 
     nixel
@@ -43,5 +42,6 @@
     hyprls
 
     nasm
+    wasmer
   ];
 }

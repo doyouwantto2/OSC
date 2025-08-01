@@ -42,5 +42,6 @@
 
     nasm
     wasmer
+    wasm-bindgen-cli_0_2_100
   ];
 }

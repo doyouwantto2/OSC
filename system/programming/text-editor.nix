@@ -5,6 +5,7 @@
     vscodium
     micro
     neovim
+    mysql-workbench
 
     wl-clipboard
     ripgrep

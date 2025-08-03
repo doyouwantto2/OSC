@@ -97,13 +97,6 @@
   services.displayManager.autoLogin.enable = true;
   services.displayManager.autoLogin.user = "emiya2467";
 
-  # Mysql
-  services.mysql = {
-    enable = true;
-    package = pkgs.mariadb;
-  };
-
-
   # Workaround for GNOME autologin: https://github.com/NixOS/nixpkgs/issues/103746#issuecomment-945091229
   systemd.services."getty@tty1".enable = false;
   systemd.services."autovt@tty1".enable = false;

@@ -44,4 +44,11 @@
     wasmer
     wasm-bindgen-cli_0_2_100
   ];
+
+  # Mysql
+  services.mysql = {
+    enable = true;
+    package = pkgs.mariadb;
+  };
+
 }

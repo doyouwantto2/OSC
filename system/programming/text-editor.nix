@@ -5,6 +5,7 @@
     vscodium
     micro
     neovim
+    dbgate
 
     wl-clipboard
     ripgrep

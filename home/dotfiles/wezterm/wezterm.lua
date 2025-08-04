@@ -78,8 +78,6 @@ config.colors = {
 		},
 	},
 
-  scrollbar_thumb = "#FFFFFF",
-
   split = "#FFFFFF",
 }
 
@@ -163,6 +161,5 @@ config.keys = {
 }
 
 config.enable_tab_bar = false
-config.enable_scroll_bar = true
 
 return config

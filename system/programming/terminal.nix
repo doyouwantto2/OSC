@@ -20,9 +20,6 @@
     # Fork of cat
     bat
 
-    # Correct syntax
-    thefuck
-
     # Find text in file
     ripgrep
 

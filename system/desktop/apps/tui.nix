@@ -8,6 +8,9 @@
     git
     fastfetch
     spotify-cli-linux
+    networkmanager
+    networkmanagerapplet
+    networkmanager-sstp
   ];
 
 }

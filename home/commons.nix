@@ -10,6 +10,8 @@
     };
     initExtra = ''
       eval "$(starship init bash)"
+      eval "$(fzf --bash)"
+      eval "$(zoxide init bash)"
     '';
   };
 }

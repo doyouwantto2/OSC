@@ -10,7 +10,7 @@
       el = "exa --icons --long";
       et = "exa --icons --tree";
       ea = "exa --icons --all";
-      eat = "exa --icons --all --tree"
+      eat = "exa --icons --all --tree";
     };
 
     initExtra = ''

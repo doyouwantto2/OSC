@@ -6,8 +6,12 @@
   programs.bash = {
     enable = true;
     shellAliases = {
-      ll = "ls -l";
+      ll = "exa --long --all --icons";
+      l = "exa --long --icons";
+      ls = "exa --icons";
+      tree = "exa --icons --tree";
     };
+
     initExtra = ''
       eval "$(starship init bash)"
       eval "$(fzf --bash)"

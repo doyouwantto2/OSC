@@ -7,6 +7,7 @@
     starship
     zoxide
     fzf
+    eza
   ]; 
 }
 

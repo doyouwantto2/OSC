@@ -9,7 +9,8 @@
     zoom-us
     foliate
     neohtop
-    walker
+
+    rofi-wayland
   ];
 
 }

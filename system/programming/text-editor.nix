@@ -8,8 +8,6 @@
     dbgate
 
     wl-clipboard
-    ripgrep
-    fd
     sqlite
     lazygit
     imagemagick

@@ -5,6 +5,8 @@
     wezterm
     kitty
     starship
+    zoxide
+    fzf
   ]; 
 }
 

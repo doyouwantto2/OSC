@@ -77,6 +77,10 @@ config.colors = {
 			fg_color = colors.text,
 		},
 	},
+
+  scrollbar_thumb = "#FFFFFF",
+
+  split = "#FFFFFF",
 }
 
 config.window_frame = {

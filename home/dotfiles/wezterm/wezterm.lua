@@ -78,7 +78,7 @@ config.colors = {
 		},
 	},
 
-  scrollbar_thumb = "#FFFFFF",
+  scrollbar_thumb = "#00B7EB",
 
   split = "#FFFFFF",
 }

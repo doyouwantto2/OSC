@@ -6,10 +6,11 @@
   programs.bash = {
     enable = true;
     shellAliases = {
-      ll = "exa --long --all --icons";
-      l = "exa --long --icons";
-      ls = "exa --icons";
-      tree = "exa --icons --tree";
+      e = "exa --icons --icons";
+      el = "exa --icons --long";
+      et = "exa --icons --tree";
+      ea = "exa --icons --all";
+      eat = "exa --icons --all --tree"
     };
 
     initExtra = ''

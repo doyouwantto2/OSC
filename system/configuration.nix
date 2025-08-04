@@ -132,6 +132,8 @@
     home-manager
     pavucontrol
     fcitx5-gtk
+    xdg-desktop-portal
+    xdg-desktop-portal-hyprland
   ];
 
   environment.sessionVariables = {

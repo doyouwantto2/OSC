@@ -5,7 +5,6 @@
     vscodium
     micro
     neovim
-    dbgate
 
     wl-clipboard
     sqlite

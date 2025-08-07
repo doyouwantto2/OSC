@@ -10,6 +10,7 @@
     foliate
     neohtop
     github-desktop
+    pgadmin4
 
     rofi-wayland
   ];

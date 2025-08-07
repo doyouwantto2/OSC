@@ -9,7 +9,6 @@
     zoom-us
     foliate
     neohtop
-    pgadmin4-desktopmode
 
     rofi-wayland
   ];

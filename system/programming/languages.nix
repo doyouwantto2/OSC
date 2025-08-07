@@ -48,7 +48,6 @@
 
     docker
     docker-ls
-    docker-client
   ];
 
 }

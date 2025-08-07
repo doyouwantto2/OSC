@@ -138,6 +138,8 @@ return {
         "c",
         "rust",
         "ruby",
+        "yuck",
+        "sql",
       },
     },
   },

@@ -45,6 +45,10 @@
     nasm
     wasmer
     wasm-bindgen-cli_0_2_100
+
+    docker
+    docker-ls
+    docker-client
   ];
 
 }

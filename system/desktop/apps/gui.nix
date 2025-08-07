@@ -9,6 +9,7 @@
     zoom-us
     foliate
     neohtop
+    github-desktop
 
     rofi-wayland
   ];

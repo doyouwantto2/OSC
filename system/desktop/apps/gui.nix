@@ -9,8 +9,7 @@
     zoom-us
     foliate
     neohtop
-    github-desktop
-    pgadmin4
+    pgadmin4-desktopmode
 
     rofi-wayland
   ];

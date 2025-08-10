@@ -9,6 +9,7 @@
     zoom-us
     foliate
     neohtop
+    blueman
 
     rofi-wayland
   ];

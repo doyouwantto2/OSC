@@ -6,7 +6,6 @@
 
   environment.systemPackages = with pkgs; [
     waypaper
-    waybar
     eww
 
     hyprcursor

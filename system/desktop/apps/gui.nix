@@ -2,7 +2,7 @@
 
 {
   environment.systemPackages = with pkgs; [
-    discord
+    legcord
     spotify
     slack
     teams-for-linux

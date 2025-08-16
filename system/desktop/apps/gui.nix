@@ -10,6 +10,7 @@
     foliate
     neohtop
     blueman
+    krita
 
     rofi-wayland
   ];

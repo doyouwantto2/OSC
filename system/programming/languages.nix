@@ -31,7 +31,6 @@
     rustc
     rustup
     dioxus-cli
-    sea-orm-cli
     sqlx-cli
     cargo
 

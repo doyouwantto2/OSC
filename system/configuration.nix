@@ -134,6 +134,8 @@
     fcitx5-gtk
     xdg-desktop-portal
     xdg-desktop-portal-hyprland
+    openssl
+    pkg-config
   ];
 
   environment.sessionVariables = {

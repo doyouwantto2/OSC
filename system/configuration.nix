@@ -136,6 +136,7 @@
     xdg-desktop-portal-hyprland
     openssl
     pkg-config
+    libiconv
   ];
 
   environment.sessionVariables = {

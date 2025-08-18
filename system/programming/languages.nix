@@ -5,6 +5,7 @@
     gnat
     gnumake
     cmake
+    libpq
 
     nodejs
     typescript

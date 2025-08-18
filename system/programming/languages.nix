@@ -31,7 +31,7 @@
     rustc
     rustup
     dioxus-cli
-    sqlx-cli
+    diesel-cli
     cargo
 
     nixel

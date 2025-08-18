@@ -4,10 +4,6 @@ return {
 		image = {
 			enable = true,
 		},
-    explorer = {
-      hidden = false,
-      ignored = false,
-    },
 		dashboard = {
 			preset = {
 				pick = function(cmd, opts)

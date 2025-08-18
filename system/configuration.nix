@@ -103,7 +103,6 @@
     ensureDatabases = [ "mydatabase" ];
     enableTCPIP = true;
     settings = {
-      ssl = true;
       port = 5432;
     };
     authentication = pkgs.lib.mkOverride 10 ''

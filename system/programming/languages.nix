@@ -44,7 +44,7 @@
     wasmer
     wasm-bindgen-cli_0_2_100
 
-    surrealdb
+    cockroachdb
   ];
 
 }

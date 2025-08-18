@@ -5,7 +5,6 @@
     gnat
     gnumake
     cmake
-    libpq
 
     nodejs
     typescript
@@ -32,7 +31,6 @@
     rustc
     rustup
     dioxus-cli
-    diesel-cli
     cargo
 
     nixel
@@ -46,6 +44,7 @@
     wasmer
     wasm-bindgen-cli_0_2_100
 
+    surrealdb
   ];
 
 }

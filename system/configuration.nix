@@ -102,6 +102,9 @@
     enable = true;
     package = pkgs.postgresql_17;
     enableTCPIP = true;
+    settings = {
+      ssl = true;
+    };
 
     ensureDatabases = [ "mydatabase" ];
     authentication = pkgs.lib.mkOverride 10 ''

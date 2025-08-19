@@ -28,9 +28,9 @@
         pygls
     ]))
 
-    #rustc
-    #rustup
-    #cargo
+    rustc
+    rustup
+    cargo
     dioxus-cli
     sea-orm-cli
 

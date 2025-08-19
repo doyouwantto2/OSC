@@ -28,11 +28,11 @@
         pygls
     ]))
 
-    rustc
-    rustup
+    #rustc
+    #rustup
+    #cargo
     dioxus-cli
     sea-orm-cli
-    cargo
 
     nixel
     nixf

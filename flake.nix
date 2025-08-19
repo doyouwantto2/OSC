@@ -9,7 +9,7 @@
   let
     user = rec {
        name = "emiya2467";
-       system = "x86_64-linux";
+       system = builtins.currentSystem;
        pkgs = nixpkgs.legacyPackages.${system};
     };
   in

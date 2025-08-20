@@ -21,8 +21,7 @@
         opencv
         matplotlib
         scikit-learn
-        ps.tensorflow.overridePythonAttrs (old: { 
-          meta = old.meta // { broken = false; }; 
+        tensorflow
         })
         pydbus
         pygls

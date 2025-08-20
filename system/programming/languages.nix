@@ -25,6 +25,7 @@
         torchvision
         torchaudio
         botorch
+        datasets
         pydbus
         pygls
     ]))

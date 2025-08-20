@@ -22,6 +22,9 @@
         matplotlib
         scikit-learn
         pytorch
+        torchvision
+        torchaudio
+        botorch
         pydbus
         pygls
     ]))

@@ -21,11 +21,10 @@
         opencv
         matplotlib
         scikit-learn
-        })
+        tensorflow
         pydbus
         pygls
     ]))
-    tensorflow
 
     rustc
     rustup

@@ -23,7 +23,7 @@
       with ps; [
         numpy
         pandas
-        opencv
+        opencv4
         matplotlib
         scikit-learn
         pytorch

@@ -21,18 +21,21 @@
 
     (python3.withPackages (ps:
       with ps; [
+        datasets
+
         numpy
         pandas
         opencv4
         matplotlib
         scikit-learn
+
         pytorch
         torchvision
         torchaudio
         botorch
-        datasets
+
         pydbus
-        pygls
+        pyserial
       ]))
     pyright
 

@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, rust, ... }:
 
 {
   environment.systemPackages = with pkgs; [
@@ -31,14 +31,18 @@
     ]))
     pyright
 
-    rustc
-    cargo
+    rust.rustc
+    rust.cargo
+    rust.clippy
+    rust.rustfmt
+    rust.rust-analyzer
     dioxus-cli
     sea-orm-cli
 
     nixel
     nixf
     nixd
+    nixpkgs-fmt
 
     hyprlang
     hyprls

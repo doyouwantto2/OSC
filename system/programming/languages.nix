@@ -12,7 +12,7 @@
 
     nodejs
     typescript
-    javascript-typescript-langserver
+    typescript-language-server
 
     lua-language-server
     luarocks

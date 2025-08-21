@@ -5,7 +5,7 @@
     gnat
     gnumake
     cmake
-    cpplint
+    ccls
 
     superhtml
     csslint

@@ -29,9 +29,11 @@
         pydbus
         pygls
     ]))
+    pyright
 
     rustc
     rustup
+    rust-analyzer
     cargo
     dioxus-cli
     sea-orm-cli

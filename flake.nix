@@ -9,29 +9,30 @@
   };
 
   outputs = { nixpkgs, home-manager, fenix, ... }@inputs:
-  let
-    user = rec {
-      name = "emiya2467";
-      system = "x86_64-linux";
-      pkgs = import nixpkgs {
-        inherit system;
-        overlays = [ fenix.overlay ];
+    let
+      user = rec {
+        name = "emiya2467";
+        system = "x86_64-linux";
+        pkgs = import nixpkgs {
+          inherit system;
+          overlays = [ fenix.overlays.default ];
+        };
+      };
+
+      rust = fenix.packages.${user.system}.stable;
+    in
+    {
+      nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
+        system = user.system;
+        modules = [ ./system/configuration.nix ];
+        specialArgs = { inherit rust; };
+      };
+
+      homeConfigurations.${user.name} = home-manager.lib.homeManagerConfiguration {
+        pkgs = user.pkgs;
+        extraSpecialArgs = { inherit user; };
+        modules = [ ./home/home.nix ];
       };
     };
-
-    rust = fenix.packages.${user.system}.stable;
-  in {
-    nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
-      system = user.system;
-      modules = [ ./system/configuration.nix ];
-      specialArgs = { inherit rust; };
-    };
-
-    homeConfigurations.${user.name} = home-manager.lib.homeManagerConfiguration {
-      pkgs = user.pkgs;
-      extraSpecialArgs = { inherit user; };
-      modules = [ ./home/home.nix ];
-    };
-  };
 }
 

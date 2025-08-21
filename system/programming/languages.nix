@@ -5,9 +5,14 @@
     gnat
     gnumake
     cmake
+    cpplint
+
+    superhtml
+    csslint
 
     nodejs
     typescript
+    javascript-typescript-langserver
 
     lua-language-server
     luarocks
@@ -28,7 +33,7 @@
         datasets
         pydbus
         pygls
-    ]))
+      ]))
     pyright
 
     rust.rustc
@@ -51,7 +56,6 @@
     wasmer
     wasm-bindgen-cli_0_2_100
 
-    cockroachdb
   ];
 
 }

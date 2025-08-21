@@ -116,6 +116,17 @@ return {
             },
           },
         },
+
+        ccls = {
+          cmd = { "ccls" }, -- ccls must be in PATH (from nixpkgs)
+          init_options = {
+            cache = {
+              directory = ".ccls-cache",
+            },
+            compilationDatabaseDirectory = "build", -- if you use compile_commands.json
+          },
+        },
+
       },
     },
   },
@@ -127,7 +138,6 @@ return {
     config = function()
       local lint = require("lint")
       lint.linters_by_ft = {
-        cpp = { "cpplint" },
         css = { "csslint" },
       }
       -- auto run on save

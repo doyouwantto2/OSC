@@ -3,39 +3,33 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
-
-    # Home Manager
     home-manager.url = "github:nix-community/home-manager";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
-
-    # Rust toolchains
     fenix.url = "github:nix-community/fenix";
   };
 
-  outputs = { nixpkgs, home-manager, fenix, ... }:
+  outputs = { nixpkgs, home-manager, fenix, ... }@inputs:
   let
-    system = "x86_64-linux";
-
-    pkgs = import nixpkgs {
-      inherit system;
-      overlays = [ fenix.overlays.default ];
+    user = rec {
+      name = "emiya2467";
+      system = "x86_64-linux";
+      pkgs = import nixpkgs {
+        inherit system;
+        overlays = [ fenix.overlay ];
+      };
     };
 
-    rust = fenix.packages.${system}.stable;
-
-    user = "emiya2467";
+    rust = fenix.packages.${user.system}.stable;
   in {
-    # NixOS system config
     nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
-      inherit system;
+      system = user.system;
       modules = [ ./system/configuration.nix ];
-      specialArgs = { inherit pkgs rust; };
+      specialArgs = { inherit rust; };
     };
 
-    # Home Manager config
-    homeConfigurations.${user} = home-manager.lib.homeManagerConfiguration {
-      inherit pkgs;
-      extraSpecialArgs = { inherit user rust; };
+    homeConfigurations.${user.name} = home-manager.lib.homeManagerConfiguration {
+      pkgs = user.pkgs;
+      extraSpecialArgs = { inherit user; };
       modules = [ ./home/home.nix ];
     };
   };

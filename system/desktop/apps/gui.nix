@@ -11,6 +11,7 @@
     neohtop
     blueman
     krita
+    gaphor
 
     rofi-wayland
   ];

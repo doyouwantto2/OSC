@@ -45,8 +45,7 @@
     rustPkgs.clippy
     rustPkgs.rustfmt
     rustPkgs.rust-analyzer
-
-    (rustPkgs.buildPackages."wasm32-unknown-unknown".rust-std)
+    rustup
 
     dioxus-cli
     sea-orm-cli

@@ -95,9 +95,12 @@ return {
           },
         },
 
-        -- HTML (superhtml if installed, fallback html)
-        superhtml = { cmd = { "superhtml-languageserver", "--stdio" } },
-        html = {},
+        -- HTMLHint
+        htmlhint_ls = {
+          cmd = { "htmlhint-ls", "--stdio" }, -- make sure this binary is in PATH
+          filetypes = { "html" },
+          root_dir = require("lspconfig.util").root_pattern(".git", "package.json"),
+        },
 
         -- CSS (use cssls for LSP features, csslint handled separately)
         cssls = {},

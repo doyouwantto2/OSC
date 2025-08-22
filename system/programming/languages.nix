@@ -39,7 +39,11 @@
       ]))
     pyright
 
-    rust
+    rust.rustc
+    rust.cargo
+    rust.clippy
+    rust.rustfmt
+    rust.rust-analyzer
 
     dioxus-cli
     sea-orm-cli

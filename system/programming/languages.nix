@@ -45,7 +45,6 @@
     rustPkgs.clippy
     rustPkgs.rustfmt
     rustPkgs.rust-analyzer
-    rustup
 
     dioxus-cli
     sea-orm-cli

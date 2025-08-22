@@ -6,7 +6,6 @@
     gnumake
     cmake
     ccls
-    clang
 
     superhtml
     csslint

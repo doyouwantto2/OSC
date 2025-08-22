@@ -121,15 +121,15 @@ return {
         tsserver = {},
 
         html = {
-          cmd = { "html-languageserver", "--stdio" },
+          cmd = { "vscode-html-languageserver", "--stdio" },
         },
 
         cssls = {
-          cmd = { "css-languageserver", "--stdio" },
+          cmd = { "vscode-css-languageserver", "--stdio" },
         },
 
         jsonls = {
-          cmd = { "json-languageserver", "--stdio" },
+          cmd = { "vscode-json-languageserver", "--stdio" },
         },
 
         -- Python

@@ -1,9 +1,8 @@
-{ config, pkgs, ... }:
+{ config, pkgs, rustPkgs, ... }:
 
 {
   environment.systemPackages = with pkgs; [
-    gcc
-    clang
+    gnat
     gnumake
     cmake
     ccls
@@ -40,14 +39,14 @@
       ]))
     pyright
 
-    rustup
-    rustc
-    cargo
-    clippy
-    rustfmt
-    rust-analyzer
+    rustPkgs.rust-src
+    rustPkgs.rustc
+    rustPkgs.cargo
+    rustPkgs.clippy
+    rustPkgs.rustfmt
+    rustPkgs.rust-analyzer
 
-    dioxus-cli
+    cargo-tauri
     sea-orm-cli
 
     nixel

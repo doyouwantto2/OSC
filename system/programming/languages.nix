@@ -7,7 +7,7 @@
     cmake
     ccls
 
-    superhtml
+    htmlhint
     csslint
 
     nodejs

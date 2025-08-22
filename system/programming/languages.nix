@@ -39,13 +39,13 @@
       ]))
     pyright
 
-    rustPkgs.stable.rust-src
-    rustPkgs.stable.rustc
-    rustPkgs.stable.cargo
-    rustPkgs.stable.clippy
-    rustPkgs.stable.rustfmt
-    rustPkgs.stable.rust-analyzer
-    rustPkgs.targets.wasm32-unknown-unknown.stable.rust-std
+    rustPkgs.rust-src
+    rustPkgs.rustc
+    rustPkgs.cargo
+    rustPkgs.clippy
+    rustPkgs.rustfmt
+    rustPkgs.rust-analyzer
+    rustup
 
     dioxus-cli
     sea-orm-cli

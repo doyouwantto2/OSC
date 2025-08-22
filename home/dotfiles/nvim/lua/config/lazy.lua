@@ -14,6 +14,7 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
+require("config.custom_lsp")
 require("lazy").setup({
   lockfile = vim.fn.stdpath("data") .. "/lazy-lock.json",  -- this path is writable,
   spec = {

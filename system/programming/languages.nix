@@ -46,7 +46,7 @@
     rustPkgs.stable.rust-analyzer
     rustPkgs.targets.wasm32-unknown-unknown.latest.rust-std
 
-    dioxus-clu
+    dioxus-cli
     sea-orm-cli
 
     nixel

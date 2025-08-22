@@ -19,7 +19,7 @@
         };
       };
 
-      rust = fenix.packages.${user.system}.stable.default.override {
+      rust = fenix.packages.${user.system}.stable.override {
         targets = [ "wasm32-unknown-unknown" ];
         extensions = [ "rust-src" "clippy" "rustfmt" "rust-analyzer" ];
       };

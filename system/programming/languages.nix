@@ -46,7 +46,7 @@
     rustPkgs.rustfmt
     rustPkgs.rust-analyzer
 
-    cargo-tauri
+    loco
     sea-orm-cli
 
     nixel

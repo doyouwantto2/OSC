@@ -7,8 +7,7 @@
     cmake
     ccls
 
-    htmlhint
-    csslint
+    vscode-langservers-extracted
 
     nodejs
     typescript

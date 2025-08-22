@@ -120,11 +120,17 @@ return {
         -- TS/JS (both modern and legacy LS)
         tsserver = {},
 
-        -- HTMLHint
-        htmlhint_ls = {},
+        html = {
+          cmd = { "html-languageserver", "--stdio" },
+        },
 
-        -- CSSLint
-        csslint_ls = {},
+        cssls = {
+          cmd = { "css-languageserver", "--stdio" },
+        },
+
+        jsonls = {
+          cmd = { "json-languageserver", "--stdio" },
+        },
 
         -- Python
         pyright = {

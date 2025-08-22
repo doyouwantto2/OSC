@@ -19,7 +19,7 @@
         };
       };
 
-      rustPkgs = fenix.packages.${user.system}.stable;
+      rustPkgs = fenix.packages.${user.system};
     in
     {
       nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {

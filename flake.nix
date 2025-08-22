@@ -21,9 +21,8 @@
 
       rust = fenix.packages.${user.system}.stable.default.override {
         targets = [ "wasm32-unknown-unknown" ];
-        extensions = [ "rustc" "cargo" "clippy" "rustfmt" "rust-analyzer" ];
+        extensions = [ "rust-src" "clippy" "rustfmt" "rust-analyzer" ];
       };
-
     in
     {
       nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {

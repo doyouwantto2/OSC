@@ -26,7 +26,7 @@
       nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
         system = user.system;
         modules = [ ./system/configuration.nix ];
-        specialArgs = { inherit rust; };
+        specialArgs = { inherit rust rust-wasm32-std; };
       };
 
       homeConfigurations.${user.name} = home-manager.lib.homeManagerConfiguration {

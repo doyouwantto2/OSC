@@ -19,11 +19,11 @@
         };
       };
 
-      rust = fenix.toolchain.${user.system}.fromToolchain {
+      rust = fenix.packages.${user.system}.fromToolchain {
         channel = "stable";
         targets = [ "wasm32-unknown-unknown" ];
         extensions = [ "rust-src" "clippy" "rustfmt" "rust-analyzer" ];
-        sha256 = "0000000000000000000000000000000000000000000000000000"; # will update
+        sha256 = "0000000000000000000000000000000000000000000000000000"; # update after build
       };
     in
     {

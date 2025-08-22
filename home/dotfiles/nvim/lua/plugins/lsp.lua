@@ -1,3 +1,25 @@
+local lspconfig = require("lspconfig")
+
+-- Register HTMLHint as a custom LSP server
+lspconfig.htmlhint_ls = {
+  default_config = {
+    cmd = { "htmlhint-ls", "--stdio" }, -- make sure htmlhint-language-server is in PATH
+    filetypes = { "html" },
+    root_dir = lspconfig.util.root_pattern(".git", "package.json"),
+    settings = {},
+  },
+}
+
+-- Register CSSLint as a custom LSP server
+lspconfig.csslint_ls = {
+  default_config = {
+    cmd = { "csslint", "--stdio" }, -- make sure csslint is in PATH
+    filetypes = { "css" },
+    root_dir = lspconfig.util.root_pattern(".git", "package.json"),
+    settings = {},
+  },
+}
+
 return {
   -- change trouble config
   {
@@ -95,18 +117,14 @@ return {
           },
         },
 
-        -- HTMLHint
-        htmlhint_ls = {
-          cmd = { "htmlhint-ls", "--stdio" }, -- make sure this binary is in PATH
-          filetypes = { "html" },
-          root_dir = require("lspconfig.util").root_pattern(".git", "package.json"),
-        },
-
-        -- CSS (use cssls for LSP features, csslint handled separately)
-        cssls = {},
-
         -- TS/JS (both modern and legacy LS)
         tsserver = {},
+
+        -- HTMLHint
+        htmlhint_ls = {},
+
+        -- CSSLint
+        csslint_ls = {},
 
         -- Python
         pyright = {

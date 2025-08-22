@@ -1,4 +1,4 @@
-{ config, pkgs, rust, ... }:
+{ config, pkgs, rustPkgs, ... }:
 
 {
   environment.systemPackages = with pkgs; [
@@ -39,14 +39,14 @@
       ]))
     pyright
 
-    rust.rustc
-    rust.cargo
-    rust.clippy
-    rust.rustfmt
-    rust.rust-analyzer
-    rust.targets.wasm32-unknown-unknown.latest.rust-std
+    rustPkgs.stable.rustc
+    rustPkgs.stable.cargo
+    rustPkgs.stable.clippy
+    rustPkgs.stable.rustfmt
+    rustPkgs.stable.rust-analyzer
+    rustPkgs.targets.wasm32-unknown-unknown.latest.rust-std
 
-    dioxus-cli
+    dioxus-clu
     sea-orm-cli
 
     nixel

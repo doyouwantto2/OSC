@@ -1,4 +1,4 @@
-{ config, pkgs, rustPkgs, ... }:
+{ config, pkgs, ... }:
 
 {
   environment.systemPackages = with pkgs; [
@@ -39,13 +39,12 @@
       ]))
     pyright
 
-    rustPkgs.rust-src
-    rustPkgs.rustc
-    rustPkgs.cargo
-    rustPkgs.clippy
-    rustPkgs.rustfmt
-    rustPkgs.rust-analyzer
     rustup
+    rustc
+    cargo
+    clippy
+    rustfmt
+    rust-analyzer
 
     dioxus-cli
     sea-orm-cli

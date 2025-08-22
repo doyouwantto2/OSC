@@ -39,6 +39,7 @@
       ]))
     pyright
 
+    rustPkgs.stable.rust-src
     rustPkgs.stable.rustc
     rustPkgs.stable.cargo
     rustPkgs.stable.clippy

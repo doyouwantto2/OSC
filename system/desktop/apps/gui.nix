@@ -12,7 +12,7 @@
     blueman
     krita
     gaphor
-
+    obs-studio
     rofi-wayland
   ];
 

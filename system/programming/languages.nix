@@ -1,4 +1,4 @@
-{ config, pkgs, rust, ... }:
+{ config, pkgs, rust, rust-wasm32-std, ... }:
 
 {
   environment.systemPackages = with pkgs; [
@@ -44,7 +44,7 @@
     rust.clippy
     rust.rustfmt
     rust.rust-analyzer
-    rust.targets.wasm32-unknown-unknown.latest.rust-std
+    rust-wasm32-std
 
     dioxus-cli
     sea-orm-cli

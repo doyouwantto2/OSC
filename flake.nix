@@ -20,6 +20,7 @@
       };
 
       rust = fenix.packages.${user.system}.stable;
+      rust-wasm32-std = fenix.packages.${user.system}.targets.wasm32-unknown-unknown.latest.rust-std;
     in
     {
       nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {

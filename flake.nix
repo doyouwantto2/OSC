@@ -19,14 +19,17 @@
         };
       };
 
-      rust = fenix.packages.${user.system}.stable;
-      rust-wasm32-std = fenix.packages.${user.system}.targets.wasm32-unknown-unknown.stable.rust-std;
+      rust = fenix.packages.${user.system}.stable.default.override {
+        targets = [ "wasm32-unknown-unknown" ];
+        extensions = [ "rustc" "cargo" "clippy" "rustfmt" "rust-analyzer" ];
+      };
+
     in
     {
       nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
         system = user.system;
         modules = [ ./system/configuration.nix ];
-        specialArgs = { inherit rust rust-wasm32-std; };
+        specialArgs = { inherit rust; };
       };
 
       homeConfigurations.${user.name} = home-manager.lib.homeManagerConfiguration {

@@ -19,7 +19,9 @@
         };
       };
 
-      rust = fenix.packages.${user.system}.stable.override {
+      rust = fenix.packages.${user.system}.fromToolchain {
+        channel = "stable";
+        sha256 = "0000000000000000000000000000000000000000000000000000"; # auto-fill hash
         targets = [ "wasm32-unknown-unknown" ];
         extensions = [ "rust-src" "clippy" "rustfmt" "rust-analyzer" ];
       };

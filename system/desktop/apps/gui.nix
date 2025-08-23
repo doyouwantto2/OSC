@@ -7,8 +7,8 @@
     slack
     teams-for-linux
     zoom-us
-    calibre
     neohtop
+    koodo-reader
     blueman
     krita
     gaphor

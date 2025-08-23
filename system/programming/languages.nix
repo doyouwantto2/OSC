@@ -37,7 +37,7 @@
 
         python-lsp-server
         pylsp-mypy
-        pylsp-black
+        pylsp-rope
       ]))
 
     rustPkgs.rust-src

@@ -35,7 +35,7 @@
         pydbus
         pyserial
       ]))
-    pyright
+    pylyzer
 
     rustPkgs.rust-src
     rustPkgs.rustc

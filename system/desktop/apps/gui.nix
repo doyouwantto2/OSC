@@ -7,7 +7,7 @@
     slack
     teams-for-linux
     zoom-us
-    readest
+    alexandria
     neohtop
     blueman
     krita

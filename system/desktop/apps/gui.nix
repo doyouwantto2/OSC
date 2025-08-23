@@ -7,7 +7,7 @@
     slack
     teams-for-linux
     zoom-us
-    koreader
+    bookworm
     neohtop
     blueman
     krita

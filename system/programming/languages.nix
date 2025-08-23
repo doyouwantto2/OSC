@@ -35,7 +35,7 @@
         pydbus
         pyserial
       ]))
-    ruff
+    ty
 
     rustPkgs.rust-src
     rustPkgs.rustc

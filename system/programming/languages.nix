@@ -34,11 +34,8 @@
 
         pydbus
         pyserial
-
-        python-lsp-server
-        pylsp-mypy
-        pylsp-rope
       ]))
+    ruff
 
     rustPkgs.rust-src
     rustPkgs.rustc

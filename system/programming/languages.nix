@@ -34,8 +34,11 @@
 
         pydbus
         pyserial
+
+        python-lsp-server
+        pylsp-mypy
+        pylsp-black
       ]))
-    pylyzer
 
     rustPkgs.rust-src
     rustPkgs.rustc

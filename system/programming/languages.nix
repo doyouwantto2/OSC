@@ -6,6 +6,7 @@
     gnumake
     cmake
     ccls
+    clang-tools
 
     arduino-cli
     arduino-language-server

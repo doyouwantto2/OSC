@@ -2,7 +2,7 @@
 
 {
   environment.systemPackages = with pkgs; [
-    webcord
+    vesktop
     spotify
     slack
     teams-for-linux

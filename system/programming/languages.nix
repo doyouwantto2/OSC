@@ -9,7 +9,6 @@
     clang-tools
 
     arduino-cli
-    arduino-language-server
 
     vscode-langservers-extracted
     nodejs

@@ -38,7 +38,6 @@
         pydbus
         pyserial
       ]))
-    micropython
     pyright
 
     rustPkgs.rust-src

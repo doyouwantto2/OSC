@@ -7,7 +7,6 @@
     cmake
     ccls
 
-    arduino-ide
     arduino-cli
     arduino-language-server
 

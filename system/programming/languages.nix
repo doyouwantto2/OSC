@@ -7,6 +7,10 @@
     cmake
     ccls
 
+    arduino
+    arduino-ide
+    arduino-language-server
+
     vscode-langservers-extracted
     nodejs
     typescript

@@ -7,8 +7,8 @@
     cmake
     ccls
 
-    arduino
     arduino-ide
+    arduino-cli
     arduino-language-server
 
     vscode-langservers-extracted

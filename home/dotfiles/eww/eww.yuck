@@ -57,7 +57,7 @@
 (defwidget workspace []
   (eventbox
     :class "workspace"
-    :onclick "wezterm"
+    :onclick "firefox"
     (label :class "workspace" :text "${workspace}")
   )
 )

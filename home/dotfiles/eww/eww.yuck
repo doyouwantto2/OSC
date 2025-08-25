@@ -1,4 +1,4 @@
-(defpoll time :interval "1s" "date")
+(defpoll time :interval "0.1s" "date")
 (defpoll workspace :interval "0.1s" "hyprctl activeworkspace | awk '/workspace ID/ {print $3}'")
 
 (defwindow bar
@@ -27,13 +27,14 @@
   (eventbox
     :class "battery"
     :onclick "eww open --toggle tray"
-    (label :class "battery_wrapper" :text "󰯉     [  ${EWW_BATTERY.BAT0.capacity}%  ]      󰯉")
+    (label :class "battery_wrapper" :text "󰯉          [${EWW_BATTERY.BAT0.capacity}%]      󰯉")
   )
 )
 
 (defwidget date_time []
-    (box
+    (eventbox
       :class "date_time"
+      :onclick "eww open --toggle calendar"
       (label :text "${time}")
     )
 )
@@ -57,7 +58,6 @@
 (defwidget workspace []
   (eventbox
     :class "workspace"
-    :onclick "firefox"
     (label :class "workspace" :text "${workspace}")
   )
 )
@@ -73,5 +73,20 @@
     :width "32%")
   :exclusive true
   :stacking "fg"
-  (systray :orientation "horizontal")
+  (systray :class "tray" :orientation "horizontal")
+)
+
+(defwindow calendar
+  :monitor 0
+  :geometry (geometry
+    :anchor "top left"
+    :x "2.1%"
+    :y "1%"
+    :height "15%"
+    :width "32%")
+  :exclusive false
+  :stacking "fg"
+  (calendar
+    :class "calendar"
+  )
 )

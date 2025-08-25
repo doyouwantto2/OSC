@@ -11,6 +11,7 @@
     ".config/wezterm".source = ./dotfiles/wezterm;
     ".config/starship".source = ./dotfiles/starship;
     ".config/hypr".source = ./dotfiles/hypr;
+    ".config/eww".source = ./dotfiles/eww;
   };
 
   nixpkgs.config.allowUnfree = true;

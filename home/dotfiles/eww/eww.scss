@@ -1,0 +1,45 @@
+window.bar {
+  background-color: transparent;
+  border-radius: 20px;
+  color: white;
+}
+
+window.tray {
+  border: 5px solid aqua;
+  border-radius: 10px;
+  background-color: whitesmoke;
+}
+
+.date_time {
+  font-size: 20px;
+  border: 3px solid aqua;
+  border-radius: 20px;
+
+}
+
+.battery {
+  font-size: 25px;
+  border: 3px solid aqua;
+  border-radius: 20px;
+
+}
+
+.previous_workspace {
+  font-size: 50px;
+  border: none;
+}
+
+.next_workspace {
+  font-size: 50px;
+}
+
+.workspace {
+  font-size: 35px;
+  border: 2px white solid;
+  border-radius: 50px;
+}
+
+.workspace:hover {
+  background: aqua;
+  color: black;
+}

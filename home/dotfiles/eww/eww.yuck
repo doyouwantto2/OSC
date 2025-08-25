@@ -1,0 +1,77 @@
+(defpoll time :interval "1s" "date")
+(defpoll workspace :interval "0.1s" "hyprctl activeworkspace | awk '/workspace ID/ {print $3}'")
+
+(defwindow bar
+  :monitor 0
+  :geometry (geometry
+    :anchor "top center"
+    :y "1.5%"
+    :height "5%"
+    :width "96%")
+  :exclusive true
+  :stacking "fg"
+  (box
+    (date_time)
+
+    (box
+      (previous_workspace)
+      (workspace)
+      (next_workspace)
+    )
+
+    (battery)
+  )
+)
+
+(defwidget battery []
+  (eventbox
+    :class "battery"
+    :onclick "eww open --toggle tray"
+    (label :class "battery_wrapper" :text "󰯉     [  ${EWW_BATTERY.BAT0.capacity}%  ]      󰯉")
+  )
+)
+
+(defwidget date_time []
+    (box
+      :class "date_time"
+      (label :text "${time}")
+    )
+)
+
+(defwidget previous_workspace []
+  (eventbox
+    :class "previous_workspace"
+    :onclick "hyprctl dispatch workspace -1"
+    (label :text "󰒮")
+  )
+)
+
+(defwidget next_workspace []
+  (eventbox
+    :class "next_workspace"
+    :onclick "hyprctl dispatch workspace +1"
+    (label :text "󰒭")
+  )
+)
+
+(defwidget workspace []
+  (eventbox
+    :class "workspace"
+    :onclick "wezterm"
+    (label :class "workspace" :text "${workspace}")
+  )
+)
+
+
+(defwindow tray
+  :monitor 0
+  :geometry (geometry
+    :anchor "top right"
+    :x "2%"
+    :y "1%"
+    :height "8%"
+    :width "32%")
+  :exclusive true
+  :stacking "fg"
+  (systray :orientation "horizontal")
+)

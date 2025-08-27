@@ -6,7 +6,8 @@
 
 {
   imports =
-    [ # Include the results of the hardware scan.
+    [
+      # Include the results of the hardware scan.
       ./hardware-configuration.nix
       ./programming/programming.nix
       ./desktop/desktop.nix
@@ -17,12 +18,12 @@
   boot.loader.efi.canTouchEfiVariables = true;
   networking.hostName = "nixos"; # Define your hostname.
 
-    users.users.emiya2467 = {
+  users.users.emiya2467 = {
     isNormalUser = true;
     description = "Anastasia";
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [
-    #  thunderbird
+      #  thunderbird
     ];
   };
 
@@ -61,7 +62,7 @@
       fcitx5-bamboo
     ];
   };
-  
+
   xdg.portal.wlr.enable = true;
   xdg.portal.enable = true;
   xdg.portal.extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
@@ -164,7 +165,7 @@
   };
 
   fonts.packages = [
-  # other fonts...
+    # other fonts...
   ] ++ builtins.filter lib.attrsets.isDerivation (builtins.attrValues pkgs.nerd-fonts);
 
   # Some programs need SUID wrappers, can be configured further or are
@@ -193,6 +194,6 @@
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "25.05"; # Did you read the comment?
-  nix.settings.experimental-features = [ "nix-command" "flakes"]; 
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
 }

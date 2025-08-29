@@ -37,6 +37,7 @@
 
         pydbus
         pyserial
+        pygame
       ]))
     pyright
 
@@ -48,6 +49,7 @@
     rustPkgs.rust-analyzer
     rustTargets.wasm32-unknown-unknown.latest.rust-std
 
+    dioxus-cli
     sqlx-cli
     sea-orm-cli
 

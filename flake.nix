@@ -33,13 +33,13 @@
         };
       };
 
-      rust = fenix.packages.${user.system};
+      rustPkgs = fenix.packages.${user.system};
     in
     {
       nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
         system = user.system;
         modules = [ ./system/configuration.nix ];
-        specialArgs = { inherit rust; };
+        specialArgs = { inherit rustPkgs; };
       };
 
       homeConfigurations.${user.name} = home-manager.lib.homeManagerConfiguration {

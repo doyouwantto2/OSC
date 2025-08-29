@@ -43,6 +43,7 @@
 
     rustPkgs
     rust-analyzer
+    clippy
 
     dioxus-cli
     sqlx-cli
@@ -57,6 +58,7 @@
     hyprls
 
     wasm-pack
+    wasm-bindgen-cli
     llvmPackages.bintools
   ];
 

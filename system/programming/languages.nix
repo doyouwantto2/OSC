@@ -43,8 +43,8 @@
 
     rustPkgs
     rust-analyzer
-    clippy
     rustfmt
+    clippy
 
     dioxus-cli
     sqlx-cli

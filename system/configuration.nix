@@ -2,7 +2,7 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, lib, ... }:
+{ config, pkgs, lib, hyprland-plugins, ... }:
 
 {
   imports =
@@ -122,7 +122,6 @@
       GRANT ALL PRIVILEGES ON DATABASE nixcloud TO nixcloud;
     '';
   };
-
 
   # Workaround for GNOME autologin: https://github.com/NixOS/nixpkgs/issues/103746#issuecomment-945091229
   systemd.services."getty@tty1".enable = false;

@@ -1,16 +1,6 @@
 { config, pkgs, user, ... }@inputs:
 
 {
-  wayland.windowManager.hyprland = {
-    enable = true;
-
-    plugins = [
-      inputs.hyprland-plugins.packages.${pkgs.stdenv.hostPlatform.system}.hyprspace
-    ];
-  };
-
-  programs.home-manager.enable = true;
-
   programs.bash = {
     enable = true;
     shellAliases = {

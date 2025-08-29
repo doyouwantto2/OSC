@@ -13,13 +13,6 @@
       url = "github:nix-community/fenix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-
-    hyprland.url = "github:hyprwm/Hyprland";
-
-    hyprland-plugins = {
-      url = "github:hyprwm/hyprland-plugins";
-      inputs.hyprland.follows = "hyprland";
-    };
   };
 
   outputs = { nixpkgs, home-manager, fenix, ... }@inputs:

@@ -9,32 +9,37 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    oxalica = {
-      url = "github:oxalica/rust-overlay";
+    fenix = {
+      url = "github:nix-community/fenix";
       inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    hyprland.url = "github:hyprwm/Hyprland";
+
+    hyprland-plugins = {
+      url = "github:hyprwm/hyprland-plugins";
+      inputs.hyprland.follows = "hyprland";
     };
   };
 
-  outputs = { nixpkgs, home-manager, oxalica, ... }@inputs:
+  outputs = { nixpkgs, home-manager, fenix, ... }@inputs:
     let
       user = rec {
         name = "emiya2467";
         system = "x86_64-linux";
         pkgs = import nixpkgs {
           inherit system;
-          overlays = [ oxalica.overlays.default ];
+          overlays = [ fenix.overlays.default ];
         };
       };
 
-      rustPkgs = user.pkgs.rust-bin.nightly.latest.default.override {
-        targets = [ "wasm32-unknown-unknown" ];
-      };
+      rust = fenix.packages.${user.system};
     in
     {
       nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
         system = user.system;
         modules = [ ./system/configuration.nix ];
-        specialArgs = { inherit rustPkgs; };
+        specialArgs = { inherit rust; };
       };
 
       homeConfigurations.${user.name} = home-manager.lib.homeManagerConfiguration {

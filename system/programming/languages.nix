@@ -41,12 +41,13 @@
       ]))
     pyright
 
-    rustPkgs
-    rust-analyzer
-    rustfmt
-    clippy
+    rustPkgs.rust-src
+    rustPkgs.rustc
+    rustPkgs.cargo
+    rustPkgs.clippy
+    rustPkgs.rustfmt
+    rustPkgs.rust-analyzer
 
-    dioxus-cli
     sqlx-cli
     sea-orm-cli
 
@@ -54,13 +55,10 @@
     nixf
     nixd
     nixpkgs-fmt
+    devenv
 
     hyprlang
     hyprls
-
-    wasm-pack
-    wasm-bindgen-cli
-    llvmPackages.bintools
   ];
 
 }

@@ -55,7 +55,9 @@
     nixf
     nixd
     nixpkgs-fmt
+
     devenv
+    cachix
 
     hyprlang
     hyprls

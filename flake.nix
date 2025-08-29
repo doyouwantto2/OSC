@@ -19,7 +19,16 @@
         };
       };
 
-      rustPkgs = fenix.packages.${user.system}.stable;
+      rustPkgs = fenix.packages.${user.system}.stable.withComponents [
+        "rustc"
+        "cargo"
+        "rust-src"
+        "clippy"
+        "rustfmt"
+        "rust-analyzer"
+      ].withTargets [
+        "wasm32-unknown-unknown"
+      ];
     in
     {
       nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {

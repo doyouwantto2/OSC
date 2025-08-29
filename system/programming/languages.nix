@@ -40,13 +40,7 @@
       ]))
     pyright
 
-    rustPkgs.rust-src
-    rustPkgs.rustc
-    rustPkgs.cargo
-    rustPkgs.clippy
-    rustPkgs.rustfmt
-    rustPkgs.rust-analyzer
-    rustPkgs.targets.wasm32-unknown-unknown.latest.rust-std
+    rustPkgs
 
     sqlx-cli
     sea-orm-cli

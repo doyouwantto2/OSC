@@ -162,6 +162,7 @@
     OPENSSL_LIB_DIR = "${pkgs.openssl.out}/lib";
     OPENSSL_INCLUDE_DIR = "${pkgs.openssl.dev}/include";
     PKG_CONFIG_PATH = "${pkgs.openssl.dev}/lib/pkgconfig";
+    CARGO_TARGET_WASM32_UNKNOWN_UNKNOWN_LINKER = "lld";
   };
 
   fonts.packages = [

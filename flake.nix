@@ -19,22 +19,14 @@
         };
       };
 
-      rustPkgs = fenix.packages.${user.system}.stable.withComponents [
-        "rustc"
-        "cargo"
-        "rust-src"
-        "clippy"
-        "rustfmt"
-        "rust-analyzer"
-      ].withTargets [
-        "wasm32-unknown-unknown"
-      ];
+      rustPkgs = fenix.packages.${user.system}.stable;
+      rustTargets = fenix.packages.${user.system}.targets;
     in
     {
       nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
         system = user.system;
         modules = [ ./system/configuration.nix ];
-        specialArgs = { inherit rustPkgs; };
+        specialArgs = { inherit rustPkgs rustTargets; };
       };
 
       homeConfigurations.${user.name} = home-manager.lib.homeManagerConfiguration {

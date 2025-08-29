@@ -42,6 +42,7 @@
     pyright
 
     rustPkgs
+    rustPkgs.rust-analyzer
 
     dioxus-cli
     sqlx-cli

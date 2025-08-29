@@ -47,7 +47,6 @@
     rustPkgs.clippy
     rustPkgs.rustfmt
     rustPkgs.rust-analyzer
-    rustTargets.wasm32-unknown-unknown.latest.rust-std
 
     dioxus-cli
     sqlx-cli
@@ -60,6 +59,9 @@
 
     hyprlang
     hyprls
+
+    wasm-pack
+    llvmPackages.bintools
   ];
 
 }

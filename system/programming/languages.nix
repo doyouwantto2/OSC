@@ -1,4 +1,4 @@
-{ config, pkgs, rustPkgs, rustTargets, ... }:
+{ config, pkgs, rustPkgs, ... }:
 
 {
   environment.systemPackages = with pkgs; [
@@ -41,12 +41,7 @@
       ]))
     pyright
 
-    rustPkgs.rust-src
-    rustPkgs.rustc
-    rustPkgs.cargo
-    rustPkgs.clippy
-    rustPkgs.rustfmt
-    rustPkgs.rust-analyzer
+    rustPkgs
 
     dioxus-cli
     sqlx-cli

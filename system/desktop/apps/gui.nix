@@ -11,7 +11,6 @@
     koodo-reader
     blueman
     krita
-    gaphor
     obs-studio
     rofi-wayland
   ];

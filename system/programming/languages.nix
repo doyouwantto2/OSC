@@ -1,4 +1,4 @@
-{ config, pkgs, rustPkgs, ... }:
+{ config, pkgs, rustPkgs, quickshell, user, ... }:
 
 {
   environment.systemPackages = with pkgs; [
@@ -47,6 +47,8 @@
     rustPkgs.clippy
     rustPkgs.rustfmt
     rustPkgs.rust-analyzer
+
+    quickshell.packages.${user.system}.default
 
     sqlx-cli
     sea-orm-cli

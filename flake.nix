@@ -13,9 +13,14 @@
       url = "github:nix-community/fenix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    quickshell = {
+      url = "git+https://git.outfoxxed.me/outfoxxed/quickshell";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = { nixpkgs, home-manager, fenix, ... }@inputs:
+  outputs = { nixpkgs, home-manager, fenix, quickshell, ... }@inputs:
     let
       user = rec {
         name = "emiya2467";
@@ -32,7 +37,7 @@
       nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
         system = user.system;
         modules = [ ./system/configuration.nix ];
-        specialArgs = { inherit rustPkgs; };
+        specialArgs = { inherit rustPkgs quickshell user; };
       };
 
       homeConfigurations.${user.name} = home-manager.lib.homeManagerConfiguration {

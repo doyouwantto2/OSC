@@ -2,7 +2,7 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, lib, hyprland-plugins, ... }:
+{ config, pkgs, lib, user, ... } @inputs:
 
 {
   imports =
@@ -161,6 +161,7 @@
     OPENSSL_LIB_DIR = "${pkgs.openssl.out}/lib";
     OPENSSL_INCLUDE_DIR = "${pkgs.openssl.dev}/include";
     PKG_CONFIG_PATH = "${pkgs.openssl.dev}/lib/pkgconfig";
+    QML2_IMPORT_PATH = "${inputs.quickshell.packages.${user.system}.default}/lib/qt-6/qml";
   };
 
   fonts.packages = [

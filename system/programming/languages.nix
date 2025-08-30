@@ -62,7 +62,12 @@
     hyprlang
     hyprls
 
-    libsForQt5.full
+    qt6.qtbase
+    qt6.qtdeclarative
+    qt6.qtmultimedia
+    qt6.qttools
+    qt6.qtsvg
+    qt6.qtwayland
   ];
 
 }

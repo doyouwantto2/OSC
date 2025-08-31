@@ -1,22 +1,16 @@
 { config, pkgs, user, ... }:
 
 {
-  imports = [ ./commons.nix ];
+  imports = [
+    ./commons.nix
+    ./dotfiles/
+    ./utilities.nix
+  ];
 
   home.username = user.name;
   home.homeDirectory = "/home/${user.name}";
-  home.file = {
-    #".config/nvim".source = ./dotfiles/nvim;
-    ".config/cava".source = ./dotfiles/cava;
-    ".config/wezterm".source = ./dotfiles/wezterm;
-    ".config/starship".source = ./dotfiles/starship;
-    ".config/assets".source = ./dotfiles/assets;
-    #".config/hypr".source = ./dotfiles/hypr;
-    #".config/eww".source = ./dotfiles/eww;
-  };
 
   nixpkgs.config.allowUnfree = true;
 
   home.stateVersion = "25.05"; # Please read the comment before changing.
-
 }

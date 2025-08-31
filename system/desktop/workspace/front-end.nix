@@ -1,4 +1,4 @@
-{ config, pkgs, quickshell, user, ... }:
+{ config, pkgs, quickShell, ... }:
 
 {
   programs.hyprland.enable = true;
@@ -6,7 +6,7 @@
 
   environment.systemPackages = with pkgs; [
     waypaper
-    quickshell.packages.${user.system}.default
+    quickShell
 
     hyprcursor
     hyprpaper

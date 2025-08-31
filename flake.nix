@@ -20,7 +20,7 @@
     };
   };
 
-  outputs = { nixpkgs, home-manager, fenix, quickshell, ... }@inputs:
+  outputs = { nixpkgs, home-manager, fenix, ... }@inputs:
     let
       user = rec {
         name = "emiya2467";
@@ -32,12 +32,13 @@
       };
 
       rustPkgs = fenix.packages.${user.system}.stable;
+      quickShell = inputs.quickshell.packages.${user.system}.default;
     in
     {
       nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
         system = user.system;
         modules = [ ./system/configuration.nix ];
-        specialArgs = { inherit rustPkgs quickshell user; };
+        specialArgs = { inherit rustPkgs quickShell; };
       };
 
       homeConfigurations.${user.name} = home-manager.lib.homeManagerConfiguration {

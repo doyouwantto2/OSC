@@ -13,8 +13,8 @@
     #".config/eww".source = ./dotfiles/eww;
 
     # For extra things
-    "Documents/books".source = ./extra/books;
-    "Pictures/assets".source = ./extra/assets;
+    "Documents/books".source = ./extra/Books;
+    "Pictures/assets".source = ./extra/Assets;
   };
 
 

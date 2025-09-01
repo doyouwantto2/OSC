@@ -23,6 +23,7 @@
     (python3.withPackages (ps:
       with ps; [
         datasets
+        kaggle
 
         numpy
         pandas

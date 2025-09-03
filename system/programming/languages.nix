@@ -14,6 +14,8 @@
     nodejs
     typescript
     typescript-language-server
+    tailwindcss
+    tailwindcss-language-server
 
     lua-language-server
     luarocks

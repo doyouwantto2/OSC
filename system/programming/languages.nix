@@ -16,7 +16,6 @@
     vscode-langservers-extracted
 
     tailwindcss
-    tailwindcss-language-server
 
     lua-language-server
     luarocks

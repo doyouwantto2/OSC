@@ -7,8 +7,8 @@
     gnutar
     git
     fastfetch
+    cointop
     spotify-cli-linux
-    batmon
     networkmanager
     networkmanagerapplet
     networkmanager-sstp

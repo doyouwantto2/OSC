@@ -7,7 +7,7 @@
     gnutar
     git
     fastfetch
-    cointop
+    neohtop
     spotify-cli-linux
     networkmanager
     networkmanagerapplet

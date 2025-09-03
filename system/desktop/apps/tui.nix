@@ -8,6 +8,7 @@
     git
     fastfetch
     spotify-cli-linux
+    batmon
     networkmanager
     networkmanagerapplet
     networkmanager-sstp

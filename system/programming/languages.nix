@@ -71,6 +71,12 @@
     qt6.qttools
     qt6.qtsvg
     qt6.qtwayland
+    qt6.qtspeech
+    qt6.qtpositioning
+    qt6.qtvirtualkeyboard
+    qt6.qtwebsockets
+    qt6.qtquick3d
+
   ];
 
 }

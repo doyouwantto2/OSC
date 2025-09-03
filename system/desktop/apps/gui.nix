@@ -7,6 +7,7 @@
     slack
     teams-for-linux
     zoom-us
+    squirreldisk
     koodo-reader
     blueman
     krita

@@ -15,6 +15,9 @@
     typescript-language-server
     vscode-langservers-extracted
 
+    tailwindcss
+    tailwindcss-language-server
+
     lua-language-server
     luarocks
     luajit

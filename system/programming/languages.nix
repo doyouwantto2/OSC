@@ -18,7 +18,6 @@
 
     tailwindcss
     autoprefixer
-    postcss
 
     tailwindcss-language-server
 

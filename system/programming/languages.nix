@@ -71,7 +71,6 @@
     qt6.qttools
     qt6.qtsvg
     qt6.qtwayland
-    qt6.qtspeech
     qt6.qtvirtualkeyboard
 
   ];

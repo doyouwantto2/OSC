@@ -10,11 +10,15 @@
 
     arduino-cli
 
-    vscode-langservers-extracted
     nodejs
     typescript
     typescript-language-server
+
+    vscode-langservers-extracted
+
     tailwindcss
+    autoprefixer
+    postcss-cli
     tailwindcss-language-server
 
     lua-language-server

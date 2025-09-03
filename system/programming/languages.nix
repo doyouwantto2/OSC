@@ -14,12 +14,11 @@
     typescript
     typescript-language-server
 
+    sass
+    sassc
+    libsass
+
     vscode-langservers-extracted
-
-    tailwindcss
-    autoprefixer
-
-    tailwindcss-language-server
 
     lua-language-server
     luarocks

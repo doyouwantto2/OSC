@@ -11,6 +11,7 @@
     koodo-reader
     blueman
     krita
+    wpsoffice
     obs-studio
     rofi-wayland
   ];

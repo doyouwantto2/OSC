@@ -13,11 +13,6 @@
     nodejs
     typescript
     typescript-language-server
-
-    sass
-    sassc
-    libsass
-
     vscode-langservers-extracted
 
     lua-language-server

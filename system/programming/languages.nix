@@ -18,7 +18,8 @@
 
     tailwindcss
     autoprefixer
-    postcss-cli
+    postcss
+
     tailwindcss-language-server
 
     lua-language-server

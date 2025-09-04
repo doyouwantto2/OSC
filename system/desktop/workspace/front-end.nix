@@ -9,7 +9,7 @@
 
     (quickShell.withModules [ qt6.full ])
     qt6.full
-    caelestica
+    #caelestica
 
     hyprcursor
     hyprpaper

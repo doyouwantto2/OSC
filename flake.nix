@@ -20,7 +20,7 @@
     };
   };
 
-  outputs = { nixpkgs, home-manager, fenix, quickshell, caelestia-shell, ... }@inputs:
+  outputs = { nixpkgs, home-manager, fenix, quickshell, ... }@inputs:
     let
       user = rec {
         name = "emiya2467";

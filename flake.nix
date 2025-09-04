@@ -18,9 +18,14 @@
       url = "git+https://git.outfoxxed.me/outfoxxed/quickshell";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    caelestia-shell = {
+      url = "github:caelestia-dots/shell";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = { nixpkgs, home-manager, fenix, quickshell, ... }@inputs:
+  outputs = { nixpkgs, home-manager, fenix, quickshell, caelestia-shell, ... }@inputs:
     let
       user = rec {
         name = "emiya2467";
@@ -33,12 +38,13 @@
 
       rustPkgs = fenix.packages.${user.system}.stable;
       quickShell = quickshell.packages.${user.system}.default;
+      caelestia = caelestia-shell.packages.${user.system}.default;
     in
     {
       nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
         system = user.system;
         modules = [ ./system/configuration.nix ];
-        specialArgs = { inherit rustPkgs quickShell; };
+        specialArgs = { inherit rustPkgs quickShell caelestia; };
       };
 
       homeConfigurations.${user.name} = home-manager.lib.homeManagerConfiguration {

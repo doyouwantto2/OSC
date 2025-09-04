@@ -4,6 +4,7 @@
 
   environment.systemPackages = with pkgs; [
     brightnessctl
+    snixembed
     hypridle
     hyprshade
     hyprshot
@@ -12,6 +13,6 @@
     swww
 
     rose-pine-hyprcursor
-  ]; 
+  ];
 }
 

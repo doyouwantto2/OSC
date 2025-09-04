@@ -6,10 +6,8 @@
 
   environment.systemPackages = with pkgs; [
     waypaper
-    (quickShell.withModules
-      [
-        qt6.full
-      ])
+
+    (quickShell.withModules [ qt6.full ])
     qt6.full
 
     hyprcursor

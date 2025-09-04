@@ -38,13 +38,13 @@
 
       rustPkgs = fenix.packages.${user.system}.stable;
       quickShell = quickshell.packages.${user.system}.default;
-      caelestia = caelestia-shell.packages.${user.system}.default;
+      caelestia-shell = caelestia-shell.packages.${user.system}.default;
     in
     {
       nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
         system = user.system;
         modules = [ ./system/configuration.nix ];
-        specialArgs = { inherit rustPkgs quickShell caelestia; };
+        specialArgs = { inherit rustPkgs quickShell caelestia-shell; };
       };
 
       homeConfigurations.${user.name} = home-manager.lib.homeManagerConfiguration {

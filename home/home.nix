@@ -14,8 +14,7 @@
 
     # For extra things
     "Documents/Books".source = ./extra/books;
-    "Pictures/Assets".source = ./extra/assets;
-    ".local/state/caelestia/wallpaper/Assets".source = ./extra/assets;
+    "Pictures/Wallpapers".source = ./extra/assets;
   };
 
 

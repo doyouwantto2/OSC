@@ -1,4 +1,4 @@
-{ config, pkgs, quickShell, caelestica, ... }:
+{ config, pkgs, quickShell, caelestia, ... }:
 
 {
   programs.hyprland.enable = true;
@@ -9,7 +9,7 @@
 
     (quickShell.withModules [ qt6.full ])
     qt6.full
-    caelestica
+    caelestia
 
     hyprcursor
     hyprpaper

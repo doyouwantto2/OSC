@@ -4,11 +4,11 @@
 
   environment.systemPackages = with pkgs; [
     brightnessctl
-    snixembed
     hypridle
     hyprshade
     hyprshot
     hyprland-protocols
+    with-cli
 
     swww
 

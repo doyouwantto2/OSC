@@ -38,24 +38,13 @@
 
       rustPkgs = fenix.packages.${user.system}.stable;
       quickShell = quickshell.packages.${user.system}.default;
-      caelestiaShellPkg = caelestia-shell.packages.${user.system}.default;
+      caelestia = caelestia-shell.packages.${user.system}.default;
     in
     {
       nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
         system = user.system;
-
-        modules = [
-          ./system/configuration.nix
-          # Import Caelestica module with required argument
-          (import caelestia-shell.nixosModule {
-            inherit pkgs;
-            config = { };
-            caelestica = { enable = true; };
-          })
-        ];
-
-        # Keep other specialArgs as before
-        specialArgs = { inherit rustPkgs quickShell; };
+        modules = [ ./system/configuration.nix ];
+        specialArgs = { inherit rustPkgs quickShell caelestia; };
       };
 
       homeConfigurations.${user.name} = home-manager.lib.homeManagerConfiguration {
@@ -65,3 +54,4 @@
       };
     };
 }
+

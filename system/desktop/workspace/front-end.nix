@@ -10,6 +10,8 @@
     (quickShell.withModules [ qt6.full ])
     qt6.full
 
+    eww-wayland
+
     hyprcursor
     hyprpaper
   ];

@@ -8,7 +8,8 @@
     hyprshade
     hyprshot
     hyprland-protocols
-    with-cli
+
+    with-shell
 
     swww
 

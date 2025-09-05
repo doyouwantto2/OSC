@@ -9,6 +9,7 @@
     ".config/cava".source = ./dotfiles/cava;
     ".config/wezterm".source = ./dotfiles/wezterm;
     ".config/starship".source = ./dotfiles/starship;
+    ".config/kaggle".source = ./dotfiles/kaggle;
     #".config/hypr".source = ./dotfiles/hypr;
 
     # For extra things

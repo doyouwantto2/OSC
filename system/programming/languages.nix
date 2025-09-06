@@ -8,8 +8,6 @@
     ccls
     clang-tools
 
-    arduino-cli
-
     nodejs
     typescript
     typescript-language-server

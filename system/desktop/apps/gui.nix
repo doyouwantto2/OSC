@@ -13,6 +13,7 @@
     wpsoffice
     obs-studio
     rofi-wayland
+    insomnia
   ];
 
 }

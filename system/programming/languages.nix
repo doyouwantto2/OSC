@@ -49,6 +49,7 @@
     rustPkgs.rustfmt
     rustPkgs.rust-analyzer
 
+    bacon
     sqlx-cli
     sea-orm-cli
 

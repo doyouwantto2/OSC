@@ -11,6 +11,7 @@
     networkmanager
     networkmanagerapplet
     networkmanager-sstp
+    restman
   ];
 
 }

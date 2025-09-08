@@ -13,7 +13,6 @@
     wpsoffice
     obs-studio
     rofi-wayland
-    restman
   ];
 
 }

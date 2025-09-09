@@ -95,20 +95,6 @@ return {
     "neovim/nvim-lspconfig",
     opts = {
       servers = {
-        --[[
-        -- Rust
-        rust_analyzer = {
-          cmd = { "rust-analyzer" },
-          settings = {
-            ["rust-analyzer"] = {
-              cargo = { allFeatures = true, loadOutDirsFromCheck = true },
-              checkOnSave = { command = "clippy" },
-              procMacro = { enable = true },
-            },
-          },
-        },
-        ]]
-
         -- Nix
         nixd = {
           cmd = { "nixd" },
@@ -204,11 +190,14 @@ return {
   },
 
   {
-    "stevearc/conform.nvim",
-    opts = {
-      formatters_by_ft = {
-        sql = { "sql-formatter" }, -- npm install -g sql-formatter
+    'mrcjkb/rustaceanvim',
+    version = '^6', -- Recommended
+    lazy = false,   -- This plugin is already lazy
+    ["rust-analyzer"] = {
+      cargo = {
+        allFeatures = true,
       },
     },
-  }
+  },
+
 }

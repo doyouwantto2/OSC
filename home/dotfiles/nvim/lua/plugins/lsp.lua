@@ -95,6 +95,7 @@ return {
     "neovim/nvim-lspconfig",
     opts = {
       servers = {
+        --[[
         -- Rust
         rust_analyzer = {
           cmd = { "rust-analyzer" },
@@ -106,6 +107,7 @@ return {
             },
           },
         },
+        ]]
 
         -- Nix
         nixd = {

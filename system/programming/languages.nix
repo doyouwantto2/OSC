@@ -64,7 +64,7 @@
     hyprls
 
     sqls
-    sqruff
+    sleek
   ];
 
 

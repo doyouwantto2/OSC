@@ -65,6 +65,7 @@
 
     sqls
     sql-formatter
+    postgres-lsp
   ];
 
 

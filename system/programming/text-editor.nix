@@ -11,5 +11,5 @@
     lazygit
     imagemagick
     ghostscript
-  ];
+  ]; 
 }

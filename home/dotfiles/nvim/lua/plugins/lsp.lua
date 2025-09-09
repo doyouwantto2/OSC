@@ -172,22 +172,10 @@ return {
           },
         },
 
-        sqls = {
-          cmd = { "sqls" }, -- must be installed
-          on_attach = function(client, bufnr)
-            -- Enable formatting from sqls
-            client.server_capabilities.documentFormattingProvider = true
-
-            -- Optional: keymaps
-            local opts = { noremap = true, silent = true, buffer = bufnr }
-            vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, opts)
-            vim.keymap.set("n", "gr", vim.lsp.buf.references, opts)
-          end,
-        },
       },
-
     },
   },
+
 
   {
     'mrcjkb/rustaceanvim',

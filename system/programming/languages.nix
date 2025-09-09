@@ -64,6 +64,7 @@
     hyprls
 
     sqls
+    sql-formatter
   ];
 
 

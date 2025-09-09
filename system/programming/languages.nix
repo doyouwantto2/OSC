@@ -64,7 +64,7 @@
     hyprls
 
     sqls
-    sql-formatter
+    sqruff
   ];
 
 

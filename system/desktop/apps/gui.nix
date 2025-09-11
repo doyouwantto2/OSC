@@ -10,6 +10,7 @@
     koodo-reader
     blueman
     krita
+    dbgate
     wpsoffice
     obs-studio
     rofi-wayland

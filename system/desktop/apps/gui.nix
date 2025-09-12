@@ -5,6 +5,7 @@
     vesktop
     spotify
     slack
+    telegram-desktop
     teams-for-linux
     zoom-us
     koodo-reader

@@ -52,6 +52,7 @@
 
     sqlx-cli
     sea-orm-cli
+    cargo-tauri
 
     nixel
     nixf

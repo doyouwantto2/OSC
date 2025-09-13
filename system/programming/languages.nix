@@ -9,6 +9,7 @@
     clang-tools
 
     nodejs
+    vue-language-server
     typescript
     typescript-language-server
     vscode-langservers-extracted

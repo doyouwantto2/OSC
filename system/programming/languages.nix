@@ -8,6 +8,8 @@
     ccls
     clang-tools
 
+    nasm
+
     nodejs
     typescript
     typescript-language-server
@@ -68,10 +70,6 @@
     sleek
 
     marksman
-
-    asm-lsp
-    nasm
-    nasmfmt
   ];
 
 

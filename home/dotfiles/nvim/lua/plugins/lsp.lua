@@ -186,6 +186,20 @@ return {
           end,
         },
 
+        astro = {
+          cmd = { "astro-ls", "--stdio" },
+          filetypes = { "astro" },
+          root_dir = function(fname)
+            return require("lspconfig.util").root_pattern(
+              "astro.config.mjs",
+              "astro.config.ts",
+              "package.json",
+              "tsconfig.json",
+              ".git"
+            )(fname)
+          end,
+        }
+
       },
     },
   },

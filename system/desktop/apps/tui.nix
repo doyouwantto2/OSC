@@ -7,6 +7,7 @@
     gnutar
     git
     fastfetch
+    htop
     spotify-cli-linux
     networkmanager
     networkmanagerapplet

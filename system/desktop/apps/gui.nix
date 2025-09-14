@@ -14,7 +14,6 @@
     dbgate
     wpsoffice
     obs-studio
-    process-viewer
     rofi-wayland
   ];
 

@@ -68,6 +68,10 @@
     sleek
 
     marksman
+
+    asm-lsp
+    nasm
+    nasmfmt
   ];
 
 

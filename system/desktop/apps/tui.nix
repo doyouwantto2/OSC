@@ -6,6 +6,7 @@
     unzip
     gnutar
     git
+    vercel-pkg
     fastfetch
     spotify-cli-linux
     networkmanager

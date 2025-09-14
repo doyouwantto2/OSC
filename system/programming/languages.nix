@@ -67,7 +67,7 @@
     sqls
     sleek
 
-    markdown-oxide
+    marksman
   ];
 
 

@@ -8,7 +8,7 @@
     git
     netlify-cli
     fastfetch
-    htop
+    btop
     spotify-cli-linux
     networkmanager
     networkmanagerapplet

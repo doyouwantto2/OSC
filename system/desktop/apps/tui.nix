@@ -6,6 +6,7 @@
     unzip
     gnutar
     git
+    netlify-cli
     fastfetch
     htop
     spotify-cli-linux

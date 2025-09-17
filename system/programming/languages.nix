@@ -19,7 +19,7 @@
 
     tailwindcss
     tailwindcss-language-server
-    rustywind
+    prettierd
 
     lua-language-server
     luarocks

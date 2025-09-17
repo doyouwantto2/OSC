@@ -19,7 +19,6 @@
 
     tailwindcss
     tailwindcss-language-server
-    prettierd
 
     lua-language-server
     luarocks

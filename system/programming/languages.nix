@@ -12,11 +12,14 @@
 
     nodejs
     typescript
-    astro-language-server
     typescript-language-server
     vscode-langservers-extracted
 
+    astro-language-server
+
     tailwindcss
+    tailwindcss-language-server
+    rustywind
 
     lua-language-server
     luarocks

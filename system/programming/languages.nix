@@ -72,7 +72,6 @@
     sqls
     sleek
 
-    marksman
   ];
 
 

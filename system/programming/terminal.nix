@@ -15,7 +15,7 @@
     fzf
 
     # ls alternative
-    eza
+    pls
 
     # Fork of cat
     bat
@@ -25,6 +25,6 @@
 
     # List all children directory
     fd
-  ]; 
+  ];
 }
 

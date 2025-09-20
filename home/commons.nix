@@ -3,14 +3,7 @@
 {
   programs.bash = {
     enable = true;
-    shellAliases = {
-      e = "exa --icons --icons";
-      el = "exa --icons --long";
-      et = "exa --icons --tree";
-      ea = "exa --icons --all";
-      eat = "exa --icons --all --tree";
-      eal = "exa --icons --all --long";
-    };
+    shellAliases = { };
 
     initExtra = ''
       eval "$(starship init bash)"

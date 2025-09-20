@@ -15,7 +15,7 @@
     fzf
 
     # ls alternative
-    pls
+    eza
 
     # Fork of cat
     bat

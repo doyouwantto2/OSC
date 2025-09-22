@@ -72,6 +72,7 @@
     sqls
     sleek
 
+    graphql-language-service-cli
   ];
 
 

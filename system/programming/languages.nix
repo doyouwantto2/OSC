@@ -73,6 +73,7 @@
     sleek
 
     graphql-language-service-cli
+    altair
   ];
 
 

@@ -7,6 +7,7 @@
     hypridle
     hyprshade
     hyprshot
+    hyprpaper
     hyprland-protocols
 
     with-shell

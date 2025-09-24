@@ -14,7 +14,7 @@
     dbgate
     wpsoffice
     obs-studio
-    rofi-wayland
+    rofi
   ];
 
 }

@@ -10,8 +10,6 @@
     astal.packages.${user.system}.astal3
     astal.packages.${user.system}.astal4
 
-    waypaper
-
     hyprcursor
     hyprpaper
   ];

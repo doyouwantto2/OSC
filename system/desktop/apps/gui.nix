@@ -15,6 +15,8 @@
     wpsoffice
     obs-studio
     rofi
+    logisim
+    mars-mips
   ];
 
 }

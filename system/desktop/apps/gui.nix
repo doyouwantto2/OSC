@@ -10,14 +10,15 @@
     zoom-us
     koodo-reader
     blueman
-    krita
     dbgate
     wpsoffice
     obs-studio
     rofi
     logisim
     mars-mips
-    umbrello
+    plantuml
+    penpot-desktop
+    inkscape
   ];
 
 }

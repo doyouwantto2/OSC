@@ -16,9 +16,8 @@
     rofi
     logisim
     mars-mips
-    plantuml
-    penpot-desktop
     inkscape
+    planuml-c4
   ];
 
 }

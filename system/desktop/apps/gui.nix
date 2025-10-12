@@ -17,7 +17,7 @@
     logisim
     mars-mips
     inkscape
-    planuml-c4
+    drawio
   ];
 
 }

@@ -17,7 +17,7 @@
     rofi
     logisim
     mars-mips
-    staruml
+    umbrello
   ];
 
 }

@@ -14,6 +14,7 @@
     networkmanagerapplet
     networkmanager-sstp
     restman
+    putty
   ];
 
 }

@@ -17,6 +17,7 @@
     rofi
     logisim
     mars-mips
+    staruml
   ];
 
 }

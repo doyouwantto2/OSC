@@ -5,7 +5,8 @@
 
 {
   imports =
-    [ (modulesPath + "/installer/scan/not-detected.nix")
+    [
+      (modulesPath + "/installer/scan/not-detected.nix")
     ];
 
   boot.initrd.availableKernelModules = [ "xhci_pci" "nvme" "usb_storage" "sd_mod" "rtsx_pci_sdmmc" ];
@@ -14,12 +15,14 @@
   boot.extraModulePackages = [ ];
 
   fileSystems."/" =
-    { device = "/dev/disk/by-uuid/484782d0-dd61-45a8-b927-a27f8a796124";
+    {
+      device = "/dev/disk/by-uuid/484782d0-dd61-45a8-b927-a27f8a796124";
       fsType = "ext4";
     };
 
   fileSystems."/boot" =
-    { device = "/dev/disk/by-uuid/6AE6-999F";
+    {
+      device = "/dev/disk/by-uuid/6AE6-999F";
       fsType = "vfat";
       options = [ "fmask=0077" "dmask=0077" ];
     };
@@ -36,5 +39,5 @@
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
   hardware.cpu.intel.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
   hardware.alsa.enablePersistence = true;
-
+  hardware.bluetooth.enable = true;
 }

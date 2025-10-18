@@ -9,7 +9,6 @@
     teams-for-linux
     zoom-us
     koodo-reader
-    blueman
     dbgate
     wpsoffice
     obs-studio

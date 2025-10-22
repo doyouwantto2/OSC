@@ -10,7 +10,7 @@
     ".config/wezterm".source = ./dotfiles/wezterm;
     ".config/starship".source = ./dotfiles/starship;
     ".kaggle".source = ./dotfiles/kaggle;
-    #".config/hypr".source = ./dotfiles/hypr;
+    ".config/hypr".source = ./dotfiles/hypr;
 
     # For extra things
     "Documents/Books".source = ./extra/books;

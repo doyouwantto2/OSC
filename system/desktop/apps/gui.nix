@@ -17,8 +17,7 @@
     mars-mips
     inkscape
 
-    kando
-    gnomeExtensions.kando-integration
+    mars-mips
   ];
 
 }

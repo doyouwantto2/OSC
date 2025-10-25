@@ -73,6 +73,10 @@
     sleek
 
     altair
+
+    nasm
+    nasmfmt
+    asm-lsp
   ];
 
 

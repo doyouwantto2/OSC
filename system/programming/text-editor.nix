@@ -11,5 +11,6 @@
     lazygit
     imagemagick
     ghostscript
-  ]; 
+    tree-sitter
+  ];
 }

@@ -5,7 +5,7 @@
 
   home.file = {
     # For dotfiles
-    #".config/nvim".source = ./dotfiles/nvim;
+    ".config/nvim".source = ./dotfiles/nvim;
     ".config/cava".source = ./dotfiles/cava;
     ".config/wezterm".source = ./dotfiles/wezterm;
     ".config/starship".source = ./dotfiles/starship;

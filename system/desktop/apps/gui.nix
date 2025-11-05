@@ -19,7 +19,7 @@
 
     mars-mips
     libreoffice
-    vlc
+    obs-studio
   ];
 
 }

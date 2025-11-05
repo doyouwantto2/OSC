@@ -18,6 +18,7 @@
     inkscape
 
     mars-mips
+    libreoffice
   ];
 
 }

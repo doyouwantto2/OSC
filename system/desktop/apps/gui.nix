@@ -19,6 +19,7 @@
 
     mars-mips
     libreoffice
+    vlc
   ];
 
 }

@@ -30,6 +30,7 @@
     luarocks
     luajit
     lua
+    stylua
 
     (python3.withPackages (ps:
       with ps; [

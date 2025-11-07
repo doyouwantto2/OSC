@@ -20,7 +20,6 @@
     mars-mips
     libreoffice
     vlc
-    qtspim
   ];
 
 }

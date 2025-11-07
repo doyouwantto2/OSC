@@ -7,6 +7,11 @@
     cmake
     ccls
     clang-tools
+    wget
+    tectonic
+    mmdbctl
+    csslint
+    openjdk
 
     nasm
 

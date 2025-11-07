@@ -12,6 +12,7 @@
     mmdbctl
     csslint
     openjdk
+    lldb
 
     nasm
 

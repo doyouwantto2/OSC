@@ -4,7 +4,7 @@
   imports = [
     ./file.nix
     ./shrc.nix
-    ./style.nix
+    ./style/style.nix
   ];
 
   home.username = user.name;

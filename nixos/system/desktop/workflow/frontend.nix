@@ -1,11 +1,11 @@
-{ config, pkg, user, ags, astal, ... }:
+{ config, pkg, ags, astal, system, ... }:
 
 {
   environment.systemPackages = [
-    ags.packages.${user.system}.agsFull
-    astal.packages.${user.system}.io
-    astal.packages.${user.system}.astal3
-    astal.packages.${user.system}.astal4
+    ags.packages.${system}.agsFull
+    astal.packages.${system}.io
+    astal.packages.${system}.astal3
+    astal.packages.${system}.astal4
   ];
 }
 

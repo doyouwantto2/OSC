@@ -39,15 +39,17 @@
   outputs = { self, nixpkgs, home-manager, fenix, ags, astal, stylix, ... }@inputs:
 
     let
-      name = "emiya2467";
-      system = "x86_64-linux";
+      user = {
+        name = "emiya2467";
+        system = "x86_64-linux";
+      };
 
       pkgs = import nixpkgs {
-        inherit system;
+        inherit (user) system;
         overlays = [ fenix.overlays.default ];
       };
 
-      rustPkgs = fenix.packages.${system}.stable;
+      rustPkgs = fenix.packages.${user.system}.stable;
     in
     {
       nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
@@ -56,17 +58,17 @@
           ./nixos/system/zone.nix
         ];
         specialArgs = {
-          inherit rustPkgs ags astal inputs;
+          inherit user rustPkgs ags astal inputs;
         };
       };
 
-      homeConfigurations.${name} = home-manager.lib.homeManagerConfiguration {
+      homeConfigurations.${user.name} = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
         modules = [
           ./nixos/user/user.nix
         ];
         extraSpecialArgs = {
-          inherit inputs;
+          inherit user inputs;
         };
       };
     };

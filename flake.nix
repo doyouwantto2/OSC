@@ -2,10 +2,8 @@
   description = "A clean, basic flake configuration for NixOS and Home Manager.";
 
   inputs = {
-
     stable.url = "github:NixOS/nixpkgs/nixos-25.05";
-
-    unstable.url = "github:nixos/nixpkgs/nixos-unstable";
+    unstable.url = "github:NixOS/nixpkgs/nixos-unstable";
 
     nixpkgs.follows = "unstable";
 
@@ -37,22 +35,24 @@
   };
 
   outputs = { self, nixpkgs, home-manager, fenix, ags, astal, stylix, ... }@inputs:
-
     let
+      system = "x86_64-linux";
+
       user = {
         name = "emiya2467";
-        system = "x86_64-linux";
       };
 
       pkgs = import nixpkgs {
-        inherit (user);
+        inherit system;
         overlays = [ fenix.overlays.default ];
       };
 
-      rustPkgs = fenix.packages.${user.system}.stable;
+      rustPkgs = fenix.packages.${system}.stable;
+
     in
     {
       nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
+        inherit system;
         modules = [
           stylix.nixosModules.stylix
           ./nixos/system/zone.nix

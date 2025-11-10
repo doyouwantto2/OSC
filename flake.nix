@@ -7,7 +7,7 @@
 
     unstable.url = "github:nixos/nixpkgs/nixos-unstable";
 
-    nixpkgs.follows = "stable";
+    nixpkgs.follows = "unstable";
 
     home-manager = {
       url = "github:nix-community/home-manager";

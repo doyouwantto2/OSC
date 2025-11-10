@@ -1,8 +1,13 @@
 {
-  description = "My super machine";
+  description = "A clean, basic flake configuration for NixOS and Home Manager.";
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
+
+    stable.url = "github:NixOS/nixpkgs/nixos-25.05";
+
+    unstable.url = "github:nixos/nixpkgs/nixos-unstable";
+
+    nixpkgs.follows = "unstable";
 
     home-manager = {
       url = "github:nix-community/home-manager";
@@ -24,32 +29,47 @@
       inputs.nixpkgs.follows = "nixpkgs";
       inputs.astal.follows = "astal";
     };
+
+    stylix = {
+      url = "github:nix-community/stylix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = { nixpkgs, home-manager, fenix, ags, astal, ... }@inputs:
+  outputs = { self, nixpkgs, home-manager, fenix, ags, astal, stylix, ... }@inputs:
+
     let
-      user = rec {
+      user = {
         name = "emiya2467";
         system = "x86_64-linux";
-        pkgs = import nixpkgs {
-          inherit system;
-          overlays = [ fenix.overlays.default ];
-        };
+      };
+
+      pkgs = import nixpkgs {
+        inherit (user);
+        overlays = [ fenix.overlays.default ];
       };
 
       rustPkgs = fenix.packages.${user.system}.stable;
     in
     {
       nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
-        system = user.system;
-        modules = [ ./system/configuration.nix ];
-        specialArgs = { inherit user rustPkgs ags astal; };
+        modules = [
+          stylix.nixosModules.stylix
+          ./nixos/system/zone.nix
+        ];
+        specialArgs = {
+          inherit user rustPkgs ags astal inputs;
+        };
       };
 
       homeConfigurations.${user.name} = home-manager.lib.homeManagerConfiguration {
-        pkgs = user.pkgs;
-        extraSpecialArgs = { inherit user; };
-        modules = [ ./home/home.nix ];
+        inherit pkgs;
+        modules = [
+          ./nixos/user/user.nix
+        ];
+        extraSpecialArgs = {
+          inherit user inputs;
+        };
       };
     };
 }

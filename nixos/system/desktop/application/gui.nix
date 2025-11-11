@@ -4,6 +4,7 @@
   environment.systemPackages = with pkgs; [
     rofi
     discord
+    waypaper
     slack
     osu-lazer
     libreoffice

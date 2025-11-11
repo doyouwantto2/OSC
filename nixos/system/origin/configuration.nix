@@ -1,4 +1,4 @@
-# Edit this configuration file to define what should be installed on
+#Edit this configuration file to define what should be installed on
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
@@ -6,8 +6,7 @@
 
 {
   imports =
-    [
-      # Include the results of the hardware scan.
+    [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
     ];
 
@@ -26,29 +25,29 @@
   networking.networkmanager.enable = true;
 
   # Set your time zone.
-  time.timeZone = "Asia/Tokyo";
+  time.timeZone = "Asia/Ho_Chi_Minh";
 
   # Select internationalisation properties.
   i18n.defaultLocale = "en_US.UTF-8";
 
   i18n.extraLocaleSettings = {
-    LC_ADDRESS = "ja_JP.UTF-8";
-    LC_IDENTIFICATION = "ja_JP.UTF-8";
-    LC_MEASUREMENT = "ja_JP.UTF-8";
-    LC_MONETARY = "ja_JP.UTF-8";
-    LC_NAME = "ja_JP.UTF-8";
-    LC_NUMERIC = "ja_JP.UTF-8";
-    LC_PAPER = "ja_JP.UTF-8";
-    LC_TELEPHONE = "ja_JP.UTF-8";
-    LC_TIME = "ja_JP.UTF-8";
+    LC_ADDRESS = "vi_VN";
+    LC_IDENTIFICATION = "vi_VN";
+    LC_MEASUREMENT = "vi_VN";
+    LC_MONETARY = "vi_VN";
+    LC_NAME = "vi_VN";
+    LC_NUMERIC = "vi_VN";
+    LC_PAPER = "vi_VN";
+    LC_TELEPHONE = "vi_VN";
+    LC_TIME = "vi_VN";
   };
 
   # Enable the X11 windowing system.
   services.xserver.enable = true;
 
   # Enable the GNOME Desktop Environment.
-  services.displayManager.gdm.enable = true;
-  services.desktopManager.gnome.enable = true;
+  services.xserver.displayManager.gdm.enable = true;
+  services.xserver.desktopManager.gnome.enable = true;
 
   # Configure keymap in X11
   services.xserver.xkb = {
@@ -81,12 +80,20 @@
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.emiya2467 = {
     isNormalUser = true;
-    description = "emiya2467";
+    description = "Anastasia";
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [
-      #  thunderbird
+    #  thunderbird
     ];
   };
+
+  # Enable automatic login for the user.
+  services.displayManager.autoLogin.enable = true;
+  services.displayManager.autoLogin.user = "emiya2467";
+
+  # Workaround for GNOME autologin: https://github.com/NixOS/nixpkgs/issues/103746#issuecomment-945091229
+  systemd.services."getty@tty1".enable = false;
+  systemd.services."autovt@tty1".enable = false;
 
   # Install firefox.
   programs.firefox.enable = true;
@@ -97,6 +104,10 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
+  #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
+  #  wget
+     neovim
+     wezterm
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
@@ -125,5 +136,6 @@
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "25.05"; # Did you read the comment?
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nix.settings.experimental-features = [ "nix-command" "flakes"]; 
+
 }

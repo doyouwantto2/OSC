@@ -46,6 +46,7 @@
 
       pkgs = import nixpkgs {
         inherit (user);
+        system = user.system;
         overlays = [ fenix.overlays.default ];
       };
 
@@ -53,6 +54,7 @@
     in
     {
       nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
+        system = user.system;
         modules = [
           stylix.nixosModules.stylix
           ./nixos/system/zone.nix

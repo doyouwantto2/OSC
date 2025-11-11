@@ -9,8 +9,10 @@
     osu-lazer
     libreoffice
     veloren
-    aircrack-ng
     vlc
+    koodo-reader
     mars-mips
+
+
   ];
 }

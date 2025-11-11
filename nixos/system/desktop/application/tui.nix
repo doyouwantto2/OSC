@@ -2,22 +2,31 @@
 
 {
   environment.systemPackages = with pkgs; [
+    unzip
+    zip
+
+    gdb
+    dmidecode
+
     bat
     eza
     zoxide
+
     cava
     hyprshot
-    dmidecode
-    btop
+    screenfetch
+
     gnumake
     cmake
-    screenfetch
+
+    btop
     crunch
     tshark
     termshark
-    unzip
-    zip
-    gdb
+    aircrack-ng
+    sqlmap
+    thc-hydra
+    nmap
   ];
 }
 

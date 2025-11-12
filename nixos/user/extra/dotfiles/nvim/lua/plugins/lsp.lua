@@ -83,7 +83,14 @@ return {
 
         -- Solidity
         solidity = {
-          cmd = { "vscode-solidity-server" },
+          cmd = { "vscode-solidity-server", "--stdio" },
+          filetypes = { "solidity" },
+          root_dir = require("lspconfig.util").root_pattern(
+            ".git",
+            "hardhat.config.js",
+            "foundry.toml",
+            "truffle-config.js"
+          ),
         },
       },
 

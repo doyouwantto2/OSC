@@ -80,6 +80,7 @@ return {
             nixd = { formatting = { command = { "nixpkgs-fmt" } } },
           },
         },
+      },
 
       setup = {
         tsserver = function(_, opts)

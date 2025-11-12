@@ -79,5 +79,9 @@
 
     sqls
     sleek
+
+    solc
+    solc-select
+    slither-analyzer
   ];
 }

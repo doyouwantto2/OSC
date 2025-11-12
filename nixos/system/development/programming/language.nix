@@ -83,6 +83,6 @@
     solc
     solc-select
     vscode-solidity-server
-    optimism
+    trufflehog
   ];
 }

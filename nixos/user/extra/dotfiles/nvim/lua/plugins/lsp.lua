@@ -81,22 +81,6 @@ return {
           },
         },
 
-        -- Solidity
-        solidity = {
-          cmd = { "vscode-solidity-server", "--stdio" },
-          filetypes = { "solidity" },
-          root_dir = function(fname)
-            return require("lspconfig.util").root_pattern(
-              ".git",
-              "hardhat.config.js",
-              "foundry.toml",
-              "truffle-config.js"
-            )(fname) or vim.fn.getcwd()
-          end,
-          single_file_support = true,
-        },
-      },
-
       setup = {
         tsserver = function(_, opts)
           local ts_tools = require("typescript-tools")

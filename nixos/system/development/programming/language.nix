@@ -82,6 +82,7 @@
 
     solc
     solc-select
-    slither-analyzer
+    vscode-solidity-server
+    optimism
   ];
 }

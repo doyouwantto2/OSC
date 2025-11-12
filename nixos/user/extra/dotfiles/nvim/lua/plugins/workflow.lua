@@ -52,6 +52,7 @@ return {
         "scss",
         "latex",
         "astro",
+        "solidity",
       },
     },
   },

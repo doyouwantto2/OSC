@@ -69,10 +69,7 @@ return {
           cmd = { "astro-ls", "--stdio" },
           filetypes = { "astro" },
           root_dir = function(fname)
-            return fs.root(
-              fname,
-              { "astro.config.mjs", "astro.config.ts", "package.json", "tsconfig.json", ".git" }
-            )
+            return fs.root(fname, { "astro.config.mjs", "astro.config.ts", "package.json", "tsconfig.json", ".git" })
           end,
         },
 
@@ -82,6 +79,11 @@ return {
           settings = {
             nixd = { formatting = { command = { "nixpkgs-fmt" } } },
           },
+        },
+
+        -- Solidity
+        solidity = {
+          cmd = { "vscode-solidity-server" },
         },
       },
 
@@ -98,8 +100,8 @@ return {
   { "pmizio/typescript-tools.nvim" },
 
   {
-    'mrcjkb/rustaceanvim',
-    version = '^6',
+    "mrcjkb/rustaceanvim",
+    version = "^6",
     lazy = false, -- Load immediately for Rust files
     ["rust-analyzer"] = {
       cargo = {
@@ -117,12 +119,12 @@ return {
       "nvim-telescope/telescope.nvim",
       "neovim/nvim-lspconfig",
     },
-    opts = {}
+    opts = {},
   },
 
   {
-    'MeanderingProgrammer/render-markdown.nvim',
-    dependencies = { 'nvim-treesitter/nvim-treesitter', 'nvim-mini/mini.nvim' },
+    "MeanderingProgrammer/render-markdown.nvim",
+    dependencies = { "nvim-treesitter/nvim-treesitter", "nvim-mini/mini.nvim" },
     opts = {},
   },
 
@@ -134,9 +136,9 @@ return {
     },
     config = function()
       local jdtls = require("jdtls")
-      local root_markers = { 'gradlew', 'pom.xml', '.git' }
+      local root_markers = { "gradlew", "pom.xml", ".git" }
 
-      local root_dir = fs.root(0, root_markers) or os.getenv('HOME')
+      local root_dir = fs.root(0, root_markers) or os.getenv("HOME")
 
       local config = {
         cmd = { "jdtls" },
@@ -153,7 +155,7 @@ return {
         },
         on_attach = function(client, bufnr)
           if client.server_capabilities.codeActionProvider then
-            jdtls.setup_dap(client.env.data_dir .. '/java-debug-adapter', {})
+            jdtls.setup_dap(client.env.data_dir .. "/java-debug-adapter", {})
           end
         end,
       }

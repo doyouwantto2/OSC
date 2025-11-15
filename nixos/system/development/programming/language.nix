@@ -82,7 +82,6 @@
 
     solc
     solc-select
-    vscode-solidity-server
     trufflehog
   ];
 }

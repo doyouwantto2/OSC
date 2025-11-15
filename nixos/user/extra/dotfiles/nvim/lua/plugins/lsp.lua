@@ -80,28 +80,6 @@ return {
             nixd = { formatting = { command = { "nixpkgs-fmt" } } },
           },
         },
-
-        -- Solidity
-        solidity = {
-          cmd = { "vscode-solidity-server", "--stdio" },
-          filetypes = { "solidity" },
-          root_dir = function(fname)
-            return require("lspconfig.util").root_pattern(
-              "foundry.toml",
-              "hardhat.config.js",
-              "truffle-config.js",
-              ".git"
-            )(fname)
-          end,
-          settings = {
-            solidity = {
-              includePath = "node_modules",
-              remapping = {
-                ["@openzeppelin/"] = "node_modules/@openzeppelin/",
-              },
-            },
-          },
-        },
       },
 
       setup = {

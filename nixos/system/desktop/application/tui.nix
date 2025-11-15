@@ -27,6 +27,8 @@
     sqlmap
     thc-hydra
     nmap
+
+    opencode
   ];
 }
 

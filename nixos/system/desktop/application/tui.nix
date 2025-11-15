@@ -28,7 +28,8 @@
     thc-hydra
     nmap
 
-    windsurf
+    opencode
+    lsof
   ];
 }
 

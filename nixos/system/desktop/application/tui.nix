@@ -29,6 +29,7 @@
     nmap
 
     opencode
+    lsof
   ];
 }
 

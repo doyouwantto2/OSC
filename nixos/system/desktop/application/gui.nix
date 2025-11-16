@@ -3,7 +3,7 @@
 {
   environment.systemPackages = with pkgs; [
     rofi
-    discord
+    vesktop
     slack
     waypaper
     osu-lazer
@@ -12,7 +12,5 @@
     vlc
     koodo-reader
     mars-mips
-
-
   ];
 }

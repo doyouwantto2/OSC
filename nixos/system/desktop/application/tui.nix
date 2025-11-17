@@ -6,7 +6,7 @@
     zip
 
     gdb
-    dmidecode
+    inxi
 
     bat
     eza

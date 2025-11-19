@@ -12,5 +12,6 @@
     vlc
     koodo-reader
     mars-mips
+    inkscape
   ];
 }

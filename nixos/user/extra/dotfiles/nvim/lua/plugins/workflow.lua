@@ -134,7 +134,7 @@ return {
 
       toggleterm.setup({
         direction = "float",
-        shell = "zsh",
+        shell = vim.o.shell,
         open_mapping = "<M-\\>",
         float_opts = {
           border = "curved",

@@ -17,5 +17,9 @@
         eval "$(direnv hook bash)"
       '';
     };
+
+    nushell = {
+      enalle = true;
+    };
   };
 }

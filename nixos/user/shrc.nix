@@ -40,6 +40,7 @@
           "fzf"
           "eza"
           "direnv"
+          "rust"
         ];
       };
 

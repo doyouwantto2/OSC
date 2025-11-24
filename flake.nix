@@ -50,7 +50,7 @@
         overlays = [ fenix.overlays.default ];
       };
 
-      rustPkgs = fenix.packages.${user.system}.stable;
+      rustPkgs = fenix.packages.${pkgs.stdenv.hostPlatform.system}.stable;
     in
     {
       nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {

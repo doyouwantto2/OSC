@@ -40,7 +40,6 @@
           "fzf"
           "eza"
           "direnv"
-          "rust"
         ];
       };
 
@@ -49,6 +48,8 @@
         eval "$(fzf --zsh)"
         eval "$(zoxide init zsh)"
         eval "$(direnv hook zsh)"
+        export PROMPT_EOL_MARK=""
+
       '';
     };
   };

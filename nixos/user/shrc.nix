@@ -19,7 +19,7 @@
     };
 
     nushell = {
-      enalle = true;
+      enable = true;
     };
   };
 }

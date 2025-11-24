@@ -10,9 +10,8 @@
   environment.systemPackages = with pkgs; [
     git
     wezterm
-    zellij
+    ghostty
     kitty
-    alacritty
     wl-clipboard
     xdg-desktop-portal
     xdg-desktop-portal-hyprland

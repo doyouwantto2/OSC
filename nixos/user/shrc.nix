@@ -18,8 +18,15 @@
       '';
     };
 
-    nushell = {
+    fish = {
       enable = true;
+      preferAbbrs = true;
+      generateCompletions = true;
+      shellInit = ''
+        starship init fish | source
+        fzf --fish | source
+        zoxide init fish | source
+      '';
     };
   };
 }

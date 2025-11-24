@@ -54,7 +54,7 @@
     in
     {
       nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
-        system = user.system;
+        system = pkgs.stdenv.hostPlatform.system;
         modules = [
           stylix.nixosModules.stylix
           ./nixos/system/zone.nix

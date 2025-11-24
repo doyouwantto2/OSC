@@ -191,6 +191,4 @@ config.keys = {
 
 config.enable_tab_bar = true
 
-config.default_prog = { "zsh" }
-
 return config

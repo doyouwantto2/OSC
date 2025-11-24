@@ -10,6 +10,7 @@
   environment.systemPackages = with pkgs; [
     git
     wezterm
+    zellij
     kitty
     alacritty
     wl-clipboard

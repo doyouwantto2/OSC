@@ -21,12 +21,19 @@
     fish = {
       enable = true;
       preferAbbrs = true;
+
       generateCompletions = true;
       shellInit = ''
         starship init fish | source
         fzf --fish | source
         zoxide init fish | source
       '';
+
+      shellAliases = {
+        systemSync = "sudo nixos-rebuild switch --flake .";
+        userSync = "nix run home-manager -- switch --flake .";
+      };
+
     };
   };
 }

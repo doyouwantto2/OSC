@@ -43,8 +43,9 @@
         end
 
         set fish_greeting \
-          (set_color cyan)"$_greeting、"(set_color green)(whoami)(set_color cyan)" さん！"(set_color normal)"\n" \
-          (set_color yellow)"今日は "(date +"%Y年%m月%d日 (%A)")" です。"(set_color normal)
+          (set_color --bold cyan)"$_greeting、"(set_color --bold green)(whoami)(set_color cyan)" さん！"(set_color normal) \
+          "\n"(set_color yellow)"今日は "(set_color magenta)(date +"%Y年%m月%d日 (%A)") \
+          (set_color yellow)" です！"(set_color normal)
       '';
 
       shellAliases = {

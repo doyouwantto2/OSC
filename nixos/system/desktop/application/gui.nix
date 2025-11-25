@@ -2,16 +2,22 @@
 
 {
   environment.systemPackages = with pkgs; [
+    brave
+
     rofi
+    waypaper
+
     vesktop
     slack
-    waypaper
-    osu-lazer
+
     libreoffice
-    veloren
-    vlc
     koodo-reader
-    mars-mips
     inkscape
+
+    osu-lazer
+    veloren
+
+    vlc
+    mars-mips
   ];
 }

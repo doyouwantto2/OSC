@@ -7,5 +7,6 @@
     "${config.xdg.configHome}/wezterm".source = config.lib.file.mkOutOfStoreSymlink ./extra/dotfiles/wezterm;
 
     "${config.xdg.configHome}/hypr".source = config.lib.file.mkOutOfStoreSymlink ./extra/dotfiles/hypr;
+    "${config.xdg.configHome}/starship.toml".source = config.lib.file.mkOutOfStoreSymlink ./extra/dotfiles/starship.toml;
   };
 }

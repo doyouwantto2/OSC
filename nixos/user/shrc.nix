@@ -37,7 +37,7 @@
 
         # Build the greeting with colors
         set fish_greeting \
-          (set_color --bold magenta)"Welcome,"(set_color normal)" "(set_color --bold white)$_user(set_color normal)"!" \
+          (set_color --bold magenta)"Welcome,"(set_color normal)" "(set_color --bold white)$_user!(set_color normal) \
           " - " \
           (set_color --bold green)$_date(set_color normal)" " \
           (set_color --bold yellow)$_weekday(set_color normal)

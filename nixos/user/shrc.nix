@@ -30,9 +30,21 @@
       '';
 
       interactiveShellInit = ''
+        set hour (date +"%H")
+
+        if test $hour -ge 5 -a $hour -lt 11
+          set _greeting "おはようございます"
+        else if test $hour -ge 11 -a $hour -lt 17
+          set _greeting "こんにちは"
+        else if test $hour -ge 17 -a $hour -lt 22
+          set _greeting "こんばんは"
+        else
+          set _greeting "おやすみなさい"
+        end
+
         set fish_greeting \
-          (set_color cyan)"Welcome, "(whoami)(set_color normal)"! Today is " \
-          (set_color yellow)(date +'%A, %d %B %Y')(set_color normal)
+          (set_color cyan)"$_greeting、"(set_color green)(whoami)(set_color cyan)" さん！"(set_color normal)"\n" \
+          (set_color yellow)"今日は "(date +"%Y年%m月%d日 (%A)")" です。"(set_color normal)
       '';
 
       shellAliases = {

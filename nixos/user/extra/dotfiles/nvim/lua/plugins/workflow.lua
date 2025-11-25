@@ -134,7 +134,7 @@ return {
 
       toggleterm.setup({
         direction = "float",
-        shell = vim.o.shell,
+        shell = "fish",
         open_mapping = "<M-\\>",
         float_opts = {
           border = "curved",

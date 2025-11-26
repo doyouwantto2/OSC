@@ -17,8 +17,7 @@
     osu-lazer
 
     qemu
+    dynamips
     mars-mips
-    gns3-server
-    gns3-gui
   ];
 }

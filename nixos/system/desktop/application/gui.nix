@@ -15,7 +15,6 @@
     inkscape
 
     osu-lazer
-    veloren
 
     vlc
     mars-mips

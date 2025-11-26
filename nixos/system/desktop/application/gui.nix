@@ -16,7 +16,9 @@
 
     osu-lazer
 
+    qemu
     mars-mips
-    ciscoPacketTracer8
+    gns3-server
+    gns3-gui
   ];
 }

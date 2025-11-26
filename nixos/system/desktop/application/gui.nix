@@ -5,6 +5,7 @@
     brave
 
     rofi
+    blueman
     waypaper
 
     vesktop

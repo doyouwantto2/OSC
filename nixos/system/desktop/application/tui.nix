@@ -31,6 +31,7 @@
     vpcs
     dynamips
     ubridge
+    libcap
   ];
 }
 

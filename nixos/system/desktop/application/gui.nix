@@ -18,7 +18,5 @@
     osu-lazer
 
     mars-mips
-
-    ciscoPacketTracer8
   ];
 }

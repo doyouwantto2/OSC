@@ -27,6 +27,10 @@
     sqlmap
     thc-hydra
     nmap
+    gns3-server
+    vpcs
+    dynamips
+    ubridge
   ];
 }
 

@@ -16,7 +16,8 @@
 
     osu-lazer
 
-    vlc
     mars-mips
+    gns3-server
+    gns3-gui
   ];
 }

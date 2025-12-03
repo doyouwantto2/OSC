@@ -11,6 +11,7 @@
     nasm
 
     nodejs
+    bun
     typescript
     typescript-language-server
     vscode-langservers-extracted

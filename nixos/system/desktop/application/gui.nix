@@ -14,7 +14,7 @@
     libreoffice
     koodo-reader
     inkscape
-    plantuml
+    umbrello
 
     osu-lazer
 

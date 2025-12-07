@@ -14,7 +14,7 @@
     libreoffice
     koodo-reader
     inkscape
-    staruml
+    umlet
 
     osu-lazer
 

@@ -14,7 +14,7 @@
     libreoffice
     koodo-reader
     inkscape
-    visual-paradigm-ce
+    staruml
 
     osu-lazer
 

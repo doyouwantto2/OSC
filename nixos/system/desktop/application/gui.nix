@@ -14,7 +14,7 @@
     libreoffice
     koodo-reader
     inkscape
-    umbrello
+    visual-paradigm-ce
 
     osu-lazer
 

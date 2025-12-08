@@ -54,10 +54,10 @@
     in
     {
       nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
-        system = pkgs.stdenv.hostPlatform.system;
         modules = [
           stylix.nixosModules.stylix
           ./nixos/system/zone.nix
+          { nixpkgs.hostPlatform = pkgs.stdenv.hostPlatform.system; }
         ];
         specialArgs = {
           inherit user rustPkgs ags astal inputs;

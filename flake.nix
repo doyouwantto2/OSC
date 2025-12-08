@@ -39,13 +39,12 @@
   outputs = { self, nixpkgs, home-manager, fenix, ags, astal, stylix, ... }@inputs:
 
     let
-      user = {
+      user = rec {
         name = "emiya2467";
         system = "x86_64-linux";
       };
 
       pkgs = nixpkgs.legacyPackages.${user.system};
-
       rustPkgs = fenix.packages.${pkgs.stdenv.hostPlatform.system}.stable;
     in
     {

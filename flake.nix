@@ -48,9 +48,6 @@
         inherit (user);
         system = user.system;
         overlays = [ fenix.overlays.default ];
-        config = {
-          allowUnfree = true;
-        };
       };
 
       rustPkgs = fenix.packages.${pkgs.stdenv.hostPlatform.system}.stable;
@@ -58,7 +55,6 @@
     {
       nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
         system = pkgs.stdenv.hostPlatform.system;
-        inherit pkgs;
         modules = [
           stylix.nixosModules.stylix
           ./nixos/system/zone.nix

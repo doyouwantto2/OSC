@@ -4,6 +4,7 @@
   environment.systemPackages = with pkgs; [
     unzip
     zip
+    dos2unix
 
     gdb
     inxi

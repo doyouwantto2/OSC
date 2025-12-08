@@ -44,11 +44,7 @@
         system = "x86_64-linux";
       };
 
-      pkgs = import nixpkgs {
-        inherit (user);
-        system = user.system;
-        overlays = [ fenix.overlays.default ];
-      };
+      pkgs = nixpkgs.legacyPackages.${user.system};
 
       rustPkgs = fenix.packages.${pkgs.stdenv.hostPlatform.system}.stable;
     in
@@ -60,7 +56,7 @@
           { nixpkgs.hostPlatform = pkgs.stdenv.hostPlatform.system; }
         ];
         specialArgs = {
-          inherit user rustPkgs ags astal inputs;
+          inherit rustPkgs ags astal inputs;
         };
       };
 

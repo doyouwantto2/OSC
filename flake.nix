@@ -46,7 +46,7 @@
 
       pkgs = import nixpkgs {
         inherit (user);
-        system = user.system;
+        stdenv.hostPlatform.system = user.system;
         overlays = [ fenix.overlays.default ];
       };
 

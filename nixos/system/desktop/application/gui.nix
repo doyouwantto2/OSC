@@ -14,7 +14,7 @@
     libreoffice
     koodo-reader
     inkscape
-    linuxsampler
+    carla
 
     osu-lazer
 

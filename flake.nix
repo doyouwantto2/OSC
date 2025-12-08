@@ -46,7 +46,7 @@
 
       pkgs = import nixpkgs {
         inherit (user);
-        stdenv.hostPlatform.system = user.system;
+        system = user.system;
         overlays = [ fenix.overlays.default ];
       };
 
@@ -55,6 +55,7 @@
     {
       nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
         system = pkgs.stdenv.hostPlatform.system;
+        inherit pkgs;
         modules = [
           stylix.nixosModules.stylix
           ./nixos/system/zone.nix

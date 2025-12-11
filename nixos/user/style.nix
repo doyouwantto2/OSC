@@ -16,7 +16,6 @@
   stylix.targets.firefox.enable = true;
   stylix.targets.firefox.profileNames = [ "default-release" ];
   stylix.targets.firefox.colorTheme.enable = true;
-  stylix.targets.firefox.colorTheme.polarity = "dark";
   stylix.targets.firefox.firefoxGnomeTheme.enable = true;
 
   # Btop

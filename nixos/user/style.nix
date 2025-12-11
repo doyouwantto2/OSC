@@ -24,8 +24,6 @@
 
   # Vesktop
   stylix.targets.vesktop.enable = true;
-  stylix.targets.vesktop.colors.enable = true;
-  stylix.targets.vesktop.fonts.enable = true;
 
   # Lazygit
   stylix.targets.lazygit.enable = true;

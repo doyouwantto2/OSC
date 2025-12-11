@@ -34,6 +34,9 @@
   # Micro
   stylix.targets.micro.enable = true;
 
-  # Cursor
-  stylix.cursor.package = pkgs.bibata-cursors;
+  stylix.cursor = {
+    name = "Bibata-Modern-Ice";
+    package = pkgs.bibata-cursors;
+    size = 24;
+  };
 }

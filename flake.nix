@@ -65,7 +65,7 @@
           ./nixos/user/user.nix
         ];
         extraSpecialArgs = {
-          inherit user inputs;
+          inherit user inputs stylix;
         };
       };
     };

@@ -3,7 +3,7 @@
 {
   stylix.enable = true;
   stylix.image = ./extra/wallpapers/GloriousEva.png;
-  stylix.polarity = false;
+  stylix.polarity = "either";
 
   # GNOME
   stylix.targets.gnome.enable = true;

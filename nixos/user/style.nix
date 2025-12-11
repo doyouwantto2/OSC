@@ -30,8 +30,8 @@
 
   # Cursor
   stylix.cursor = {
-    name = "BreezeX-RoséPine";
-    package = pkgs.rose-pine-cursor;
+    name = "Bibata-Modern-Classic";
+    package = pkgs.bibata-cursors;
     size = 22;
   };
 }

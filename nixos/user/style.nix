@@ -29,7 +29,6 @@
 
   # Lazygit
   stylix.targets.lazygit.enable = true;
-  stylix.targets.lazygit.colors.enable = true;
 
   # Fzf
   stylix.targets.fzf.enable = true;

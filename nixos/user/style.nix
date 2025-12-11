@@ -3,7 +3,6 @@
 {
   stylix.enable = true;
   stylix.image = ./extra/wallpapers/GloriousEva.png;
-  stylix.polarity = "either";
 
   # GNOME
   stylix.targets.gnome.enable = true;
@@ -30,9 +29,6 @@
 
   # Fzf
   stylix.targets.fzf.enable = true;
-
-  # Wezterm
-  stylix.targets.wezterm.enable = false;
 
   # Cursor
   stylix.cursor = {

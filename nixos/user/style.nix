@@ -4,7 +4,7 @@
   # General
   stylix.enable = true;
   stylix.image = ./extra/wallpapers/GloriousEva.png;
-  stylix.base16Scheme = "$[pkgs.base16-schemes}/share/themes/rebecca.yaml";
+  stylix.base16Scheme = "rebecca";
 
   # GNOME
   stylix.targets.gnome.enable = true;

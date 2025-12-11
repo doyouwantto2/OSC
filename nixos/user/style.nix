@@ -34,7 +34,6 @@
 
   # Fzf
   stylix.targets.fzf.enable = true;
-  stylix.targets.fzf.colors.enable = true;
 
   # Micro
   stylix.targets.micro.enable = true;

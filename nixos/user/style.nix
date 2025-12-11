@@ -19,10 +19,6 @@
   stylix.targets.firefox.colorTheme.enable = true;
   stylix.targets.firefox.firefoxGnomeTheme.enable = true;
 
-  # Btop
-  stylix.targets.btop.enable = true;
-  stylix.targets.btop.opacity.enable = true;
-
   # Vesktop
   stylix.targets.vesktop.enable = true;
 
@@ -34,8 +30,8 @@
 
   # Cursor
   stylix.cursor = {
-    name = "Bibata-Modern-Classic";
-    package = pkgs.bibata-cursors;
-    size = 24;
+    name = "BreezeX-RoséPine";
+    package = pkgs.rose-pine-cursor;
+    size = 22;
   };
 }

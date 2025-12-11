@@ -21,6 +21,7 @@
 
   # Btop
   stylix.targets.btop.enable = true;
+  stylix.targets.wezterm.opacity.enable = true;
 
   # Vesktop
   stylix.targets.vesktop.enable = true;

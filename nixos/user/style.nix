@@ -33,7 +33,6 @@
 
   # Wezterm
   stylix.targets.wezterm.enable = false;
-  stylix.targets.wezterm.colors.override = true;
 
   # Micro
   stylix.targets.micro.enable = true;

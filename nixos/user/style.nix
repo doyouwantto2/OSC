@@ -1,4 +1,4 @@
-{ config, stylix, ... }@inputs:
+{ config, pkgs, stylix, ... }@inputs:
 
 {
   stylix.enable = true;
@@ -18,4 +18,12 @@
   stylix.targets.firefox.profileNames = [ "default-release" ];
   stylix.targets.firefox.colorTheme.enable = true;
   stylix.targets.firefox.firefoxGnomeTheme.enable = true;
+
+  # Cursor
+  stylix.cursor = {
+    enable = true;
+    package = pkgs.bibata-cursors;
+    name = "Bibata-Modern-Ice";
+    size = 24;
+  };
 }

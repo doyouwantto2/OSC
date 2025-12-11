@@ -33,9 +33,6 @@
   # Wezterm
   stylix.targets.wezterm.enable = false;
 
-  # Micro
-  stylix.targets.micro.enable = true;
-
   # Cursor
   stylix.cursor = {
     name = "Bibata-Modern-Classic";

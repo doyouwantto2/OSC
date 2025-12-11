@@ -3,7 +3,7 @@
 {
   stylix.enable = true;
   stylix.image = ./extra/wallpapers/GloriousEva.png;
-  stylix.polarity = "dark";
+  stylix.polarity = "modern";
 
   # GNOME
   stylix.targets.gnome.enable = true;
@@ -34,6 +34,7 @@
   # Micro
   stylix.targets.micro.enable = true;
 
+  # Cursor
   stylix.cursor = {
     name = "Bibata-Modern-Ice";
     package = pkgs.bibata-cursors;

@@ -8,6 +8,12 @@
   # GNOME
   stylix.targets.gnome.enable = true;
   stylix.targets.gnome.useWallpaper = true;
+  stylix.targets.gnome.cursor = {
+    enable = true;
+    package = pkgs.bibata-cursors;
+    name = "Bibata-Modern-Ice";
+    size = 24; # optional
+  };
 
   # GTK
   stylix.targets.gtk.enable = true;

@@ -8,7 +8,6 @@
   # GNOME
   stylix.targets.gnome.enable = true;
   stylix.targets.gnome.useWallpaper = true;
-  stylix.targets.gnome.fonts.enable = true;
 
   # GTK
   stylix.targets.gtk.enable = true;

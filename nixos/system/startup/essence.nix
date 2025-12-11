@@ -20,6 +20,7 @@
     gobject-introspection
     gtk3
     gtk4
+    gtk2
     libiconv
   ];
 

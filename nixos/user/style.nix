@@ -3,7 +3,6 @@
 {
   stylix.enable = true;
   stylix.image = ./extra/wallpapers/GloriousEva.png;
-  stylix.polarity = "dark";
 
   # GNOME
   stylix.targets.gnome.enable = true;
@@ -17,6 +16,7 @@
   stylix.targets.firefox.enable = true;
   stylix.targets.firefox.profileNames = [ "default-release" ];
   stylix.targets.firefox.colorTheme.enable = true;
+  stylix.targets.firefox.colorTheme.polarity = "dark";
   stylix.targets.firefox.firefoxGnomeTheme.enable = true;
 
   # Btop

@@ -1,10 +1,9 @@
 { config, pkgs, stylix, ... }@inputs:
 
 {
-  # General
   stylix.enable = true;
   stylix.image = ./extra/wallpapers/GloriousEva.png;
-  stylix.base16Scheme = "${pkgs.base16-schemes}/share/themes/rebecca.yaml";
+  stylix.polarity = "dark";
 
   # GNOME
   stylix.targets.gnome.enable = true;
@@ -34,4 +33,8 @@
 
   # Micro
   stylix.targets.micro.enable = true;
+
+  # Cursor
+  stylix.cursor.package = pkgs.bibata-cursors;
+  stylix.cursor.name = "Bibata-Modern-Ice";
 }

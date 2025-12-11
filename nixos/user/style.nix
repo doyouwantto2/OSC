@@ -1,4 +1,4 @@
-{ stylix, ... }:
+{ config, stylix, ... }@inputs:
 
 {
   stylix.enable = true;

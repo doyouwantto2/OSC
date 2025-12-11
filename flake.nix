@@ -62,10 +62,11 @@
       homeConfigurations.${user.name} = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
         modules = [
+          inputs.stylix.homeModules.stylix
           ./nixos/user/user.nix
         ];
         extraSpecialArgs = {
-          inherit user inputs stylix;
+          inherit user inputs;
         };
       };
     };

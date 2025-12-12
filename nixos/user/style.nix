@@ -295,7 +295,6 @@
       dock = {
         enabled = true;
         displayMode = "auto_hide";
-        backgroundOpacity = 1;
         floatingRatio = 1;
         size = 1;
         onlySameOutput = true;
@@ -346,7 +345,6 @@
         monitors = [ ];
         location = "top_right";
         overlayLayer = true;
-        backgroundOpacity = 1;
         respectExpireTimeout = false;
         lowUrgencyDuration = 3;
         normalUrgencyDuration = 8;
@@ -367,7 +365,6 @@
         location = "top_right";
         autoHideMs = 2000;
         overlayLayer = true;
-        backgroundOpacity = 1;
         enabledTypes = [
           0
           1

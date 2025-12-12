@@ -17,6 +17,8 @@
     wl-clipboard
     pulseaudio
     xdg-desktop-portal
+    xdg-desktop-portal-gtk
+    xdg-desktop-portal-gnome
     xdg-desktop-portal-hyprland
     openssl
     pkg-config

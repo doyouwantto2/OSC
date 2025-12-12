@@ -63,10 +63,6 @@
     google-java-format
     jdt-language-server
 
-    kotlin
-    ktfmt
-    kotlin-language-server
-
     nixel
     nixf
     nixd

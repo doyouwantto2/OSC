@@ -1,11 +1,17 @@
-{ config, pkgs, ags, astal, ... }:
+{ config, pkgs, quickshell, noctalia, ... }@inputs:
 
 {
   environment.systemPackages = [
-    ags.packages.${pkgs.stdenv.hostPlatform.system}.agsFull
-    astal.packages.${pkgs.stdenv.hostPlatform.system}.io
-    astal.packages.${pkgs.stdenv.hostPlatform.system}.astal3
-    astal.packages.${pkgs.stdenv.hostPlatform.system}.astal4
+    quickshell.packages.${pkgs.stdenv.hostPlatform.system}.default
+    pkgs.qt6.qtdeclarative
+    pkgs.qt6.qtquickcontrols2
+    pkgs.qt6.qtwayland
+    pkgs.qt6.qttools
+    pkgs.qt6.qtsvg
+    pkgs.qt6.qtimageformats
+    pkgs.qt6.qtmultimedia
+    pkgs.qt6.qt5compat
+    noctalia.packages.${pkgs.stdenv.hostPlatform.system}.default
   ];
 }
 

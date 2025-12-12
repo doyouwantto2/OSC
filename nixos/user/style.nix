@@ -51,7 +51,6 @@
       mSecondary = "#a7a7a7";
       mShadow = "#000000";
       mSurface = "#111111";
-      mHover = "#1f1f1f";
       mSurfaceVariant = "#191919";
       mTertiary = "#cccccc";
     };

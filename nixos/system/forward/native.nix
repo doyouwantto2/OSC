@@ -29,7 +29,6 @@
     OPENSSL_LIB_DIR = "${pkgs.openssl.out}/lib";
     OPENSSL_INCLUDE_DIR = "${pkgs.openssl.dev}/include";
     PKG_CONFIG_PATH = "${pkgs.openssl.dev}/lib/pkgconfig";
-    PIPEWIRE_FRAMEBUFFER_DISABLE_MODIFIERS = "1";
     GI_TYPELIB_PATH = lib.makeSearchPath "lib/girepository-1.0" (
       with pkgs;
       [

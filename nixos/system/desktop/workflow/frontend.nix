@@ -1,15 +1,15 @@
-{ config, pkgs, quickshell, ... }@inputs:
+{ config, pkgs, ... }@inputs:
 
 {
-  environment.systemPackages = [
-    quickshell.packages.${pkgs.stdenv.hostPlatform.system}.default
-    pkgs.qt6.qtdeclarative
-    pkgs.qt6.qtwayland
-    pkgs.qt6.qttools
-    pkgs.qt6.qtsvg
-    pkgs.qt6.qtimageformats
-    pkgs.qt6.qtmultimedia
-    pkgs.papirus-icon-theme
+  environment.systemPackages = with pkgs; [
+    quickshell
+    qt6.qtdeclarative
+    qt6.qtwayland
+    qt6.qttools
+    qt6.qtsvg
+    qt6.qtimageformats
+    qt6.qtmultimedia
+    papirus-icon-theme
   ];
 }
 

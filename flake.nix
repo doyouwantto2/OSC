@@ -19,11 +19,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    quickshell = {
-      url = "git+https://git.outfoxxed.me/outfoxxed/quickshell";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
     stylix = {
       url = "github:nix-community/stylix";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -35,7 +30,7 @@
     };
   };
 
-  outputs = { self, nixpkgs, home-manager, fenix, quickshell, stylix, noctalia, ... }@inputs:
+  outputs = { self, nixpkgs, home-manager, fenix, stylix, noctalia, ... }@inputs:
 
     let
       user = rec {
@@ -54,7 +49,7 @@
           { nixpkgs.hostPlatform = pkgs.stdenv.hostPlatform.system; }
         ];
         specialArgs = {
-          inherit rustPkgs quickshell inputs;
+          inherit rustPkgs inputs;
         };
       };
 

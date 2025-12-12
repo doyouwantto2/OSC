@@ -200,7 +200,7 @@
       wallpaper = {
         enabled = true;
         overviewEnabled = false;
-        directory = "./extra/wallpapers";
+        directory = "";
         monitorDirectories = [ ];
         enableMultiMonitorDirectories = false;
         recursiveSearch = false;

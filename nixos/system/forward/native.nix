@@ -19,7 +19,6 @@
   xdg.portal.extraPortals = [ pkgs.xdg-desktop-portal-gtk pkgs.xdg-desktop-portal-hyprland pkgs.xdg-desktop-portal-gnome ];
   xdg.portal.configPackages = [ pkgs.xdg-desktop-portal-wlr ];
 
-
   nix.extraOptions = ''
     keep-outputs = true
     keep-derivations = true

@@ -2,7 +2,7 @@
 
 {
   imports = [
-    ./startup/startup.nix
+    ./forward/forward.nix
 
     ./origin/configuration.nix
 

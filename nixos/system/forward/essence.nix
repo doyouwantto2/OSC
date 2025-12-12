@@ -14,6 +14,7 @@
     git
     wezterm
     kitty
+    disko
     wl-clipboard
     pulseaudio
     xdg-desktop-portal

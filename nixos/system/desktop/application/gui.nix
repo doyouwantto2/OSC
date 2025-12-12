@@ -4,7 +4,7 @@
   environment.systemPackages = with pkgs; [
     brave
 
-    rofi-wayland
+    walker
     blueman
     waypaper
 

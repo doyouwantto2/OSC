@@ -66,8 +66,8 @@
         showCapsule = true;
         capsuleOpacity = 1;
         floating = false;
-        marginVertical = 0.25;
-        marginHorizontal = 0.25;
+        marginVertical = 0.75;
+        marginHorizontal = 0.75;
         outerCorners = true;
         exclusive = true;
         widgets = {

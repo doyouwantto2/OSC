@@ -1,4 +1,4 @@
-{ config, pkgs, quickshell, noctalia, ... }@inputs:
+{ config, pkgs, quickshell, ... }@inputs:
 
 {
   environment.systemPackages = [
@@ -10,7 +10,6 @@
     pkgs.qt6.qtimageformats
     pkgs.qt6.qtmultimedia
     pkgs.qt6.qt5compat
-    noctalia.packages.${pkgs.stdenv.hostPlatform.system}.default
   ];
 }
 

@@ -180,10 +180,6 @@
             enabled = true;
             id = "timer-card";
           }
-          {
-            enabled = true;
-            id = "weather-card";
-          }
         ];
       };
       screenRecorder = {
@@ -200,7 +196,7 @@
       wallpaper = {
         enabled = true;
         overviewEnabled = false;
-        directory = "home/${user.name}/Desktop/OSC/nixos/user/extra/wallpapers";
+        directory = "/home/${user.name}/Desktop/OSC/nixos/user/extra/wallpapers";
         monitorDirectories = [ ];
         enableMultiMonitorDirectories = false;
         recursiveSearch = false;

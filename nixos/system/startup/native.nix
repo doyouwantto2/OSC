@@ -34,6 +34,7 @@
         gobject-introspection
       ]
     );
+    XDG_DATA_DIRS = "${pkgs.papirus-icon-theme}/share:${pkgs.libsForQt6.breeze-icons}/share:${config.environment.sessionVariables.XDG_DATA_DIRS}";
   };
 
 }

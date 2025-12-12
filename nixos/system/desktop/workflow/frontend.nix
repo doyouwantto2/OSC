@@ -10,7 +10,7 @@
     pkgs.qt6.qtimageformats
     pkgs.qt6.qtmultimedia
     pkgs.qt6.qt5compat
-    pkgs.libsForQt6.breeze-icons
+    pkgs.libsForQt5.breeze-icons
     pkgs.papirus-icon-theme
   ];
 }

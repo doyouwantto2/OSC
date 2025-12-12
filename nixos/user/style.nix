@@ -38,22 +38,6 @@
   programs.noctalia-shell = {
     enable = true;
     systemd.enable = true;
-    colors = {
-      mOnError = "#111111";
-      mOnPrimary = "#111111";
-      mOnSecondary = "#111111";
-      mOnSurface = "#828282";
-      mOnSurfaceVariant = "#5d5d5d";
-      mOnTertiary = "#111111";
-      mOnHover = "#ffffff";
-      mOutline = "#3c3c3c";
-      mPrimary = "#aaaaaa";
-      mSecondary = "#a7a7a7";
-      mShadow = "#000000";
-      mSurface = "#111111";
-      mSurfaceVariant = "#191919";
-      mTertiary = "#cccccc";
-    };
     settings = {
       settingsVersion = 26;
       bar = {

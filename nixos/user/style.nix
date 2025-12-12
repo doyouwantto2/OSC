@@ -1,4 +1,4 @@
-{ config, pkgs, user, stylix, ... }@inputs:
+{ config, lib, pkgs, user, stylix, ... }@inputs:
 
 {
   stylix.enable = true;
@@ -41,7 +41,7 @@
       settingsVersion = 26;
       bar = {
         position = "top";
-        backgroundOpacity = 1;
+        backgroundOpacity = lib.mkDorce 1;
         monitors = [ ];
         density = "default";
         showCapsule = true;
@@ -391,7 +391,7 @@
       };
       colorSchemes = {
         useWallpaperColors = false;
-        predefinedScheme = "Noctalia";
+        predefinedScheme = "Noctalia (default)";
         darkMode = true;
         schedulingMode = "off";
         manualSunrise = "06:30";

@@ -1,4 +1,4 @@
-{ config, lib, pkgs, user, stylix, ... }@inputs:
+{ config, pkgs, user, stylix, ... }@inputs:
 
 {
   stylix.enable = true;
@@ -41,7 +41,7 @@
       settingsVersion = 26;
       bar = {
         position = "top";
-        backgroundOpacity = lib.mkForce 1;
+        backgroundOpacity = 1;
         monitors = [ ];
         density = "default";
         showCapsule = true;

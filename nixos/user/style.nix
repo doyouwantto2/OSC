@@ -62,7 +62,7 @@
         position = "top";
         backgroundOpacity = 1;
         monitors = [ ];
-        density = "default";
+        density = "large";
         showCapsule = true;
         capsuleOpacity = 1;
         floating = false;
@@ -126,7 +126,7 @@
         dimmerOpacity = 0.6;
         showScreenCorners = false;
         forceBlackScreenCorners = false;
-        scaleRatio = 2;
+        scaleRatio = 1;
         radiusRatio = 1;
         iRadiusRatio = 1;
         boxRadiusRatio = 1;

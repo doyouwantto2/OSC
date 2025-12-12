@@ -180,6 +180,10 @@
             enabled = true;
             id = "timer-card";
           }
+          {
+            enabled = true;
+            id = "weather-card";
+          }
         ];
       };
       screenRecorder = {

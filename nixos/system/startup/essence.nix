@@ -18,6 +18,7 @@
     pulseaudio
     xdg-desktop-portal
     xdg-desktop-portal-gtk
+    xdg-desktop-portal-wlr
     xdg-desktop-portal-gnome
     xdg-desktop-portal-hyprland
     openssl
@@ -28,9 +29,4 @@
     gtk4
     libiconv
   ];
-
-  nix.extraOptions = ''
-    keep-outputs = true
-    keep-derivations = true
-  '';
 }

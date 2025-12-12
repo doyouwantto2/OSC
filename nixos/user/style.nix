@@ -39,7 +39,6 @@
     enable = true;
     systemd.enable = true;
     colors = {
-      mError = "#dddddd";
       mOnError = "#111111";
       mOnPrimary = "#111111";
       mOnSecondary = "#111111";

@@ -122,7 +122,7 @@
         };
       };
       general = {
-        avatarImage = "home/{user.name}/Desktop/OSC/nixos/user/extra/wallpapers/Shinji.jpg";
+        avatarImage = "home/{user.name}/.face";
         dimmerOpacity = 0.6;
         showScreenCorners = false;
         forceBlackScreenCorners = false;

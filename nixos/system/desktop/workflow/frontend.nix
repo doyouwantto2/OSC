@@ -1,8 +1,9 @@
-{ config, pkgs, ... }@inputs:
+{ config, pkgs, noctalia, ... }@inputs:
 
 {
   environment.systemPackages = with pkgs; [
     quickshell
+    noctalia.packages.${pkgs.stdenv.hostPlatform.system}.default
     qt6.qtdeclarative
     qt6.qtwayland
     qt6.qttools

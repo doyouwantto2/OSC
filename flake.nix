@@ -49,7 +49,7 @@
           { nixpkgs.hostPlatform = pkgs.stdenv.hostPlatform.system; }
         ];
         specialArgs = {
-          inherit rustPkgs inputs;
+          inherit rustPkgs noctalia inputs;
         };
       };
 
@@ -57,7 +57,6 @@
         inherit pkgs;
         modules = [
           inputs.stylix.homeModules.stylix
-          inputs.noctalia.homeModules.default
           ./nixos/user/user.nix
         ];
         extraSpecialArgs = {

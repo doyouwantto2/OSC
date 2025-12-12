@@ -15,6 +15,7 @@
     wezterm
     kitty
     wl-clipboard
+    pulseaudio
     xdg-desktop-portal
     xdg-desktop-portal-hyprland
     openssl

@@ -41,7 +41,7 @@
       settingsVersion = 26;
       bar = {
         position = "top";
-        backgroundOpacity = lib.mkDorce 1;
+        backgroundOpacity = lib.mkForce 1;
         monitors = [ ];
         density = "default";
         showCapsule = true;

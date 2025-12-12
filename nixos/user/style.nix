@@ -1,4 +1,4 @@
-{ config, pkgs, stylix, ... }@inputs:
+{ config, pkgs, user, stylix, ... }@inputs:
 
 {
   stylix.enable = true;
@@ -122,7 +122,7 @@
         };
       };
       general = {
-        avatarImage = "";
+        avatarImage = "home/{user.name}/Desktop/OSC/nixos/user/extra/wallpapers/Shinji.jpg";
         dimmerOpacity = 0.6;
         showScreenCorners = false;
         forceBlackScreenCorners = false;
@@ -200,7 +200,7 @@
       wallpaper = {
         enabled = true;
         overviewEnabled = false;
-        directory = "";
+        directory = "home/${user.name}/Desktop/OSC/nixos/user/extra/wallpapers";
         monitorDirectories = [ ];
         enableMultiMonitorDirectories = false;
         recursiveSearch = false;

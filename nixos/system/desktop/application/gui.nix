@@ -4,10 +4,6 @@
   environment.systemPackages = with pkgs; [
     brave
 
-    rofi
-    blueman
-    waypaper
-
     vesktop
     slack
 

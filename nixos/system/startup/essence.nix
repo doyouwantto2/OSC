@@ -7,6 +7,9 @@
   programs.nix-ld.enable = true;
   programs.xwayland.enable = true;
 
+  services.power-profiles-daemon.enable = true;
+  services.upower.enable = true;
+
   environment.systemPackages = with pkgs; [
     git
     wezterm

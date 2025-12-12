@@ -46,6 +46,7 @@
         pydbus
         pyserial
         pygame
+        pygobject3
       ]))
     pyright
 

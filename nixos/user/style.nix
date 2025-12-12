@@ -391,7 +391,7 @@
       };
       colorSchemes = {
         useWallpaperColors = false;
-        predefinedScheme = "Noctalia (default)";
+        predefinedScheme = "Noctalia";
         darkMode = true;
         schedulingMode = "off";
         manualSunrise = "06:30";

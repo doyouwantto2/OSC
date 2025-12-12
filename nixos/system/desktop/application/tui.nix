@@ -2,6 +2,8 @@
 
 {
   environment.systemPackages = with pkgs; [
+    flatpak
+
     unzip
     zip
     dos2unix

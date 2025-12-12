@@ -54,7 +54,7 @@
           { nixpkgs.hostPlatform = pkgs.stdenv.hostPlatform.system; }
         ];
         specialArgs = {
-          inherit rustPkgs quickshell inputs;
+          inherit rustPkgs quickshell inputs noctalia;
         };
       };
 

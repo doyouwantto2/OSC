@@ -66,8 +66,8 @@
         showCapsule = true;
         capsuleOpacity = 1;
         floating = false;
-        marginVertical = 0.75;
-        marginHorizontal = 0.75;
+        marginVertical = 0.25;
+        marginHorizontal = 0.25;
         outerCorners = true;
         exclusive = true;
         widgets = {
@@ -315,7 +315,7 @@
         displayMode = "auto_hide";
         backgroundOpacity = 1;
         floatingRatio = 1;
-        size = 2;
+        size = 1;
         onlySameOutput = true;
         monitors = [ ];
         pinnedApps = [ ];

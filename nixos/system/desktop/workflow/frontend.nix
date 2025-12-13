@@ -12,9 +12,6 @@
     qt6.qtimageformats
     qt6.qtmultimedia
 
-    qt6.qt5compat
-    libsForQt5.qt5.qtgraphicaleffects
-
     papirus-icon-theme
   ];
 }

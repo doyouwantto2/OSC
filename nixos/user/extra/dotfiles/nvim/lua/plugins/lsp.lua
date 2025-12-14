@@ -19,6 +19,13 @@ local get_common_root = function(bufnr)
   return fs.root(bufnr, { ".git", "package.json" })
 end
 
+local capabilities = vim.lsp.protocol.make_client_capabilities()
+
+local ok, cmp_lsp = pcall(require, "cmp_nvim_lsp")
+if ok then
+  capabilities = cmp_lsp.default_capabilities(capabilities)
+end
+
 return {
   {
     "neovim/nvim-lspconfig",
@@ -77,6 +84,7 @@ return {
         volar = {
           cmd = { "vue-language-server", "--stdio" },
           filetypes = { "vue" },
+          capabilities = capabilities,
           root_dir = function(fname)
             return fs.root(fname, {
               "package.json",
@@ -87,9 +95,8 @@ return {
             })
           end,
           init_options = {
-            vue = { hybridMode = false },
-            typescript = {
-              tsdk = vim.fn.system("dirname $(dirname $(readlink -f $(which tsc)))"):gsub("%s+", "") .. "/lib",
+            vue = {
+              hybridMode = false,
             },
           },
         },
@@ -105,6 +112,7 @@ return {
 
       setup = {
         tsserver = function(_, opts)
+          opts.capabilities = capabilities
           local ts_tools = require("typescript-tools")
           ts_tools.setup({ server = opts })
           return true

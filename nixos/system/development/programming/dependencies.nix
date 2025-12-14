@@ -14,6 +14,7 @@
     lldb
     tree-sitter
     direnv
+    nix-direnv
     dotenvx
   ];
 }

@@ -87,9 +87,12 @@ return {
             })
           end,
           init_options = {
-            vue = { hybridMode = false },
+            vue = {
+              hybridMode = false,
+            },
             typescript = {
-              tsdk = vim.fn.getcwd() .. "/node_modules/typescript/lib",
+              -- NixOS: use system TypeScript
+              tsdk = vim.fn.system("dirname $(dirname $(readlink -f $(which tsc)))"):gsub("%s+", "") .. "/lib",
             },
           },
         },

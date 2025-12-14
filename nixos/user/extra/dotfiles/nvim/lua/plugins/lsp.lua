@@ -73,6 +73,27 @@ return {
           end,
         },
 
+        -- Vue (Volar)
+        volar = {
+          cmd = { "vue-language-server", "--stdio" },
+          filetypes = { "vue" },
+          root_dir = function(fname)
+            return fs.root(fname, {
+              "package.json",
+              "vue.config.js",
+              "vite.config.ts",
+              "vite.config.js",
+              ".git",
+            })
+          end,
+          init_options = {
+            vue = { hybridMode = false },
+            typescript = {
+              tsdk = vim.fn.getcwd() .. "/node_modules/typescript/lib",
+            },
+          },
+        },
+
         -- Nix
         nixd = {
           cmd = { "nixd" },

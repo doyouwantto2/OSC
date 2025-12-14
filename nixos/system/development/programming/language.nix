@@ -15,8 +15,9 @@
 
     typescript
     typescript-language-server
-    vue-language-server
     vscode-langservers-extracted
+
+    angular-language-server
 
     astro-language-server
 

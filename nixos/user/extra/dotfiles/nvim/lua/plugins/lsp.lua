@@ -80,25 +80,27 @@ return {
           end,
         },
 
-        -- Vue (Volar)
-        volar = {
-          cmd = { "vue-language-server", "--stdio" },
-          filetypes = { "vue" },
-          capabilities = capabilities,
+        -- Angular
+        angularls = {
+          cmd = {
+            "angular-language-server",
+            "--stdio",
+            "--tsProbeLocations",
+            vim.fn.getcwd() .. "/node_modules",
+            "--ngProbeLocations",
+            vim.fn.getcwd() .. "/node_modules",
+          },
+          filetypes = { "typescript", "html" },
           root_dir = function(fname)
-            return fs.root(fname, {
+            return vim.fs.root(fname, {
+              "angular.json",
+              "project.json",
+              "nx.json",
               "package.json",
-              "vue.config.js",
-              "vite.config.ts",
-              "vite.config.js",
               ".git",
             })
           end,
-          init_options = {
-            vue = {
-              hybridMode = false,
-            },
-          },
+          capabilities = capabilities,
         },
 
         -- Nix

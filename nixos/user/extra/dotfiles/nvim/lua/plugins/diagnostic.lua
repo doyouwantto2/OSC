@@ -74,13 +74,16 @@ return {
       "hrsh7th/cmp-nvim-lsp",
       "saadparwaiz1/cmp_luasnip",
       "hrsh7th/cmp-emoji",
-      "neovim/nvim-lspconfig",
       "L3MON4D3/LuaSnip",
     },
     opts = function(_, opts)
       local clangd_scores = require("clangd_extensions.cmp_scores")
 
-      table.insert(opts.sources, { name = "emoji" })
+      opts.sources = {
+        { name = "nvim_lsp" }, -- 🔴 REQUIRED
+        { name = "luasnip" },
+        { name = "emoji" },
+      }
 
       opts.sorting = opts.sorting or {}
       opts.sorting.comparators = opts.sorting.comparators or {}

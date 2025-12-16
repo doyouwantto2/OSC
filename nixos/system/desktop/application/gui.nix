@@ -6,6 +6,7 @@
 
     vesktop
     slack
+    telegram-desktop
 
     libreoffice
     koodo-reader

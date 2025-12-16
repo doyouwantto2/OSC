@@ -80,29 +80,6 @@ return {
           end,
         },
 
-        -- Angular
-        angularls = {
-          cmd = {
-            "angular-language-server",
-            "--stdio",
-            "--tsProbeLocations",
-            vim.fn.getcwd() .. "/node_modules",
-            "--ngProbeLocations",
-            vim.fn.getcwd() .. "/node_modules",
-          },
-          filetypes = { "typescript", "html" },
-          root_dir = function(fname)
-            return vim.fs.root(fname, {
-              "angular.json",
-              "project.json",
-              "nx.json",
-              "package.json",
-              ".git",
-            })
-          end,
-          capabilities = capabilities,
-        },
-
         -- Nix
         nixd = {
           cmd = { "nixd" },

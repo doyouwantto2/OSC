@@ -59,6 +59,7 @@
     rustPkgs.clippy
     rustPkgs.rustfmt
     rustPkgs.rust-analyzer
+    cargo-tauri
     sqlx-cli
     sea-orm-cli
 

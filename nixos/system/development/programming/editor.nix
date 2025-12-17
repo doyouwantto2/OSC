@@ -5,7 +5,6 @@
     neovim
     vscodium
     micro
-    notepadqq
     godot
     blender
   ];

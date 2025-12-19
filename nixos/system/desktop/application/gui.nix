@@ -12,7 +12,6 @@
     libreoffice
     koodo-reader
     inkscape
-    vikunja
 
     osu-lazer
 

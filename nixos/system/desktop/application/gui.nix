@@ -3,11 +3,11 @@
 {
   environment.systemPackages = with pkgs; [
     brave
+    librewolf
 
     vesktop
     slack
     telegram-desktop
-    caprine
 
     libreoffice
     koodo-reader

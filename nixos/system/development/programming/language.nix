@@ -50,6 +50,9 @@
         pyserial
         pygame
         pygobject3
+
+        fastapi
+        fastapi-cli
       ]))
     pyright
 

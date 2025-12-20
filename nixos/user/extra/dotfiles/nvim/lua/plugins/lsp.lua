@@ -1,10 +1,36 @@
 local lspconfig = require("lspconfig")
-local keymap = vim.keymap.set
 local fs = vim.fs
+local keymap = vim.keymap.set
 
--- Function to set common keymaps on LSP attach
+--------------------------------------------------
+-- Root helper (Neovim 0.10+ safe)
+--------------------------------------------------
+local function root_from_file(fname, patterns)
+  if not fname or fname == "" then
+    return nil
+  end
+  return fs.root(fname, patterns)
+end
+
+local function root_from_buf(bufnr, patterns)
+  local fname = vim.api.nvim_buf_get_name(bufnr)
+  return root_from_file(fname, patterns)
+end
+
+--------------------------------------------------
+-- Capabilities (nvim-cmp support)
+--------------------------------------------------
+local capabilities = vim.lsp.protocol.make_client_capabilities()
+local ok, cmp_lsp = pcall(require, "cmp_nvim_lsp")
+if ok then
+  capabilities = cmp_lsp.default_capabilities(capabilities)
+end
+
+--------------------------------------------------
+-- Common on_attach (TypeScript example)
+--------------------------------------------------
 local ts_on_attach = function(client, bufnr)
-  -- Disable default formatter for tsserver since you are using conform or another tool
+  -- Disable formatting (handled elsewhere)
   client.server_capabilities.documentFormattingProvider = false
   client.server_capabilities.documentRangeFormattingProvider = false
 
@@ -14,44 +40,71 @@ local ts_on_attach = function(client, bufnr)
   keymap("n", "<leader>rn", vim.lsp.buf.rename, opts)
 end
 
--- Standard root finding function using native Neovim API
-local get_common_root = function(bufnr)
-  return fs.root(bufnr, { ".git", "package.json" })
-end
-
-local capabilities = vim.lsp.protocol.make_client_capabilities()
-
-local ok, cmp_lsp = pcall(require, "cmp_nvim_lsp")
-if ok then
-  capabilities = cmp_lsp.default_capabilities(capabilities)
-end
-
+--------------------------------------------------
+-- Plugins
+--------------------------------------------------
 return {
+  ------------------------------------------------
+  -- LSPCONFIG
+  ------------------------------------------------
   {
     "neovim/nvim-lspconfig",
     opts = {
       servers = {
-        --Lua language server
+        ------------------------------------------------
+        -- Lua
+        ------------------------------------------------
         lua_ls = {
           cmd = { "lua-language-server" },
+          capabilities = capabilities,
         },
-        -- Base LSPs
-        html = { cmd = { "vscode-html-language-server", "--stdio" } },
-        cssls = { cmd = { "vscode-css-language-server", "--stdio" } },
-        jsonls = { cmd = { "vscode-json-language-server", "--stdio" } },
 
-        -- TypeScript/JavaScript
+        ------------------------------------------------
+        -- Web
+        ------------------------------------------------
+        html = {
+          cmd = { "vscode-html-language-server", "--stdio" },
+          capabilities = capabilities,
+        },
+
+        cssls = {
+          cmd = { "vscode-css-language-server", "--stdio" },
+          capabilities = capabilities,
+        },
+
+        jsonls = {
+          cmd = { "vscode-json-language-server", "--stdio" },
+          capabilities = capabilities,
+        },
+
+        ------------------------------------------------
+        -- TypeScript / JavaScript
+        -- (handled by typescript-tools)
+        ------------------------------------------------
         tsserver = {
           cmd = { "typescript-language-server", "--stdio" },
-          filetypes = { "javascript", "javascriptreact", "typescript", "typescriptreact" },
+          filetypes = {
+            "javascript",
+            "javascriptreact",
+            "typescript",
+            "typescriptreact",
+          },
           root_dir = function(fname)
-            return fs.root(fname, { ".git", "package.json", "tsconfig.json" })
+            return root_from_file(fname, {
+              "tsconfig.json",
+              "package.json",
+              ".git",
+            })
           end,
           on_attach = ts_on_attach,
+          capabilities = capabilities,
         },
 
+        ------------------------------------------------
         -- Python
+        ------------------------------------------------
         pyright = {
+          capabilities = capabilities,
           settings = {
             python = {
               analysis = {
@@ -62,50 +115,81 @@ return {
           },
         },
 
-        -- C/C++
+        ------------------------------------------------
+        -- C / C++
+        ------------------------------------------------
         ccls = {
           cmd = { "ccls" },
+          capabilities = capabilities,
           init_options = {
             cache = { directory = ".ccls-cache" },
             compilationDatabaseDirectory = "build",
           },
         },
 
-        -- Astro
+        ------------------------------------------------
+        -- Astro (FIXED)
+        ------------------------------------------------
         astro = {
           cmd = { "astro-ls", "--stdio" },
           filetypes = { "astro" },
+          capabilities = capabilities,
           root_dir = function(fname)
-            return fs.root(fname, { "astro.config.mjs", "astro.config.ts", "package.json", "tsconfig.json", ".git" })
+            return root_from_file(fname, {
+              "astro.config.mjs",
+              "astro.config.ts",
+              "package.json",
+              "tsconfig.json",
+              ".git",
+            })
           end,
         },
 
+        ------------------------------------------------
         -- Nix
+        ------------------------------------------------
         nixd = {
           cmd = { "nixd" },
+          capabilities = capabilities,
           settings = {
-            nixd = { formatting = { command = { "nixpkgs-fmt" } } },
+            nixd = {
+              formatting = {
+                command = { "nixpkgs-fmt" },
+              },
+            },
           },
         },
       },
 
+      ------------------------------------------------
+      -- typescript-tools integration
+      ------------------------------------------------
       setup = {
         tsserver = function(_, opts)
-          opts.capabilities = capabilities
           local ts_tools = require("typescript-tools")
-          ts_tools.setup({ server = opts })
-          return true
+          ts_tools.setup({
+            server = opts,
+          })
+          return true -- prevent lspconfig from setting tsserver again
         end,
       },
     },
   },
 
-  { "pmizio/typescript-tools.nvim" },
+  ------------------------------------------------
+  -- TypeScript Tools
+  ------------------------------------------------
+  {
+    "pmizio/typescript-tools.nvim",
+  },
 
+  ------------------------------------------------
+  -- Rust
+  ------------------------------------------------
   {
     "mrcjkb/rustaceanvim",
     version = "^6",
-    lazy = false, -- Load immediately for Rust files
+    lazy = false,
     ["rust-analyzer"] = {
       cargo = {
         allFeatures = true,
@@ -113,6 +197,9 @@ return {
     },
   },
 
+  ------------------------------------------------
+  -- Tailwind
+  ------------------------------------------------
   {
     "luckasRanarison/tailwind-tools.nvim",
     name = "tailwind-tools",
@@ -125,25 +212,30 @@ return {
     opts = {},
   },
 
+  ------------------------------------------------
+  -- Markdown
+  ------------------------------------------------
   {
     "MeanderingProgrammer/render-markdown.nvim",
-    dependencies = { "nvim-treesitter/nvim-treesitter", "nvim-mini/mini.nvim" },
+    dependencies = {
+      "nvim-treesitter/nvim-treesitter",
+      "nvim-mini/mini.nvim",
+    },
     opts = {},
   },
 
+  ------------------------------------------------
+  -- Java (JDTLS)
+  ------------------------------------------------
   {
     "mfussenegger/nvim-jdtls",
     ft = { "java" },
-    dependencies = {
-      "mfussenegger/nvim-dap",
-    },
+    dependencies = { "mfussenegger/nvim-dap" },
     config = function()
       local jdtls = require("jdtls")
-      local root_markers = { "gradlew", "pom.xml", ".git" }
+      local root_dir = root_from_buf(0, { "gradlew", "pom.xml", ".git" }) or vim.loop.cwd()
 
-      local root_dir = fs.root(0, root_markers) or os.getenv("HOME")
-
-      local config = {
+      jdtls.start_or_attach({
         cmd = { "jdtls" },
         root_dir = root_dir,
         settings = {
@@ -156,14 +248,12 @@ return {
             },
           },
         },
-        on_attach = function(client, bufnr)
+        on_attach = function(client)
           if client.server_capabilities.codeActionProvider then
             jdtls.setup_dap(client.env.data_dir .. "/java-debug-adapter", {})
           end
         end,
-      }
-
-      jdtls.start_or_attach(config)
+      })
     end,
   },
 }

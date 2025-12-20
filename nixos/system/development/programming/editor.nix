@@ -3,7 +3,7 @@
 {
   environment.systemPackages = with pkgs; [
     neovim
-    zed-editor
+    windsurf
     micro
     godot
     blender

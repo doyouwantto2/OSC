@@ -4,10 +4,12 @@
   stylix.enable = true;
   stylix.image = ./extra/wallpapers/GloriousEva.png;
   stylix.polarity = "dark";
+  stylix.autoEnable = false;
 
   # GNOME
   stylix.targets.gnome.enable = true;
   stylix.targets.gnome.useWallpaper = true;
+
 
   # GTK
   stylix.targets.gtk.enable = true;
@@ -21,13 +23,6 @@
 
   # Vesktop
   stylix.targets.vesktop.enable = true;
-
-  stylix.targets = {
-    lazygit.enable = false;
-    fzf.enable = false;
-    wezterm.enable = false;
-  };
-
 
   # Cursor
   stylix.cursor = {

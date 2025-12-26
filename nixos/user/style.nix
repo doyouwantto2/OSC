@@ -28,6 +28,10 @@
   # Fzf
   stylix.targets.fzf.enable = true;
 
+  # Wezterm
+  stylix.targets.wezterm.colors.override = false;
+
+
   # Cursor
   stylix.cursor = {
     name = "Bibata-Modern-Classic";

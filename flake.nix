@@ -42,16 +42,6 @@
       rustPkgs = fenix.packages.${pkgs.stdenv.hostPlatform.system}.stable;
     in
     {
-      nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
-        modules = [
-          ./nixos/system/zone.nix
-          { nixpkgs.hostPlatform = pkgs.stdenv.hostPlatform.system; }
-        ];
-        specialArgs = {
-          inherit rustPkgs noctalia inputs;
-        };
-      };
-
       homeConfigurations.${user.name} = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
         modules = [
@@ -60,6 +50,16 @@
         ];
         extraSpecialArgs = {
           inherit user inputs;
+        };
+      };
+
+      nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
+        modules = [
+          ./nixos/system/zone.nix
+          { nixpkgs.hostPlatform = pkgs.stdenv.hostPlatform.system; }
+        ];
+        specialArgs = {
+          inherit rustPkgs noctalia inputs;
         };
       };
     };

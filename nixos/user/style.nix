@@ -22,13 +22,9 @@
   # Vesktop
   stylix.targets.vesktop.enable = true;
 
-  # Lazygit
-  stylix.targets.lazygit.enable = true;
-
-  # Fzf
-  stylix.targets.fzf.enable = true;
-
-  # Wezterm
+  # Not override
+  stylix.targets.lazygit.colors.override = false;
+  stylix.targets.fzf.colors.override = false;
   stylix.targets.wezterm.colors.override = false;
 
 

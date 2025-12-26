@@ -23,9 +23,9 @@
   stylix.targets.vesktop.enable = true;
 
   # Not override
-  stylix.targets.lazygit.colors.override = false;
-  stylix.targets.fzf.colors.override = false;
-  stylix.targets.wezterm.colors.override = false;
+  stylix.targets.lazygit.enable = false;
+  stylix.targets.fzf.enable = false;
+  stylix.targets.wezterm.enable = false;
 
 
   # Cursor

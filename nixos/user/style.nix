@@ -22,10 +22,11 @@
   # Vesktop
   stylix.targets.vesktop.enable = true;
 
-  # Not override
-  stylix.targets.lazygit.enable = false;
-  stylix.targets.fzf.enable = false;
-  stylix.targets.wezterm.enable = false;
+  stylix.targets = {
+    lazygit.enable = false;
+    fzf.enable = false;
+    wezterm.enable = false;
+  };
 
 
   # Cursor

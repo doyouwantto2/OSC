@@ -1,4 +1,9 @@
-{ config, pkgs, rustPkgs, ... }:
+{
+  config,
+  pkgs,
+  rustPkgs,
+  ...
+}:
 
 {
   imports = [
@@ -10,7 +15,6 @@
     ./sql.nix
     ./solidity.nix
     ./hypr.nix
-    ./astro.nix
     ./java.nix
     ./nix.nix
     ./yaml.nix

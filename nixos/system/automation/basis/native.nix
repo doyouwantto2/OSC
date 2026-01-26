@@ -13,17 +13,10 @@
     packages =
       with pkgs;
       [
-        dejavu_fonts
-        liberation_ttf
-
         noto-fonts
-
         noto-fonts-cjk-sans
         noto-fonts-cjk-serif
-
         noto-fonts-color-emoji
-
-        symbola
       ]
       ++ builtins.filter lib.attrsets.isDerivation (builtins.attrValues pkgs.nerd-fonts);
 

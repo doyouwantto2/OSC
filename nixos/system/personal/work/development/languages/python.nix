@@ -6,8 +6,8 @@
 
 {
   environment.systemPackages = with pkgs; [
-    (python3.withPackages (ps:
-      with ps; [
+    (python3.withPackages (
+      ps: with ps; [
         datasets
         kaggle
 
@@ -24,12 +24,12 @@
 
         pydbus
         pyserial
-        pygame
         pygobject3
 
         fastapi
         fastapi-cli
-      ]))
+      ]
+    ))
     pyright
   ];
 }

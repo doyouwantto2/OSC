@@ -7,8 +7,7 @@
 
 {
   imports = [
-    ./automation/origin/configuration.nix
-    ./automation/basis/essence.nix
+    ./automation/automation.nix
     ./desktop/desktop.nix
     ./personal/personal.nix
     ./presets/presets.nix

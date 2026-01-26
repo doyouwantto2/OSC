@@ -1,5 +1,6 @@
 {
   userName = "emiya2467";
+  currentName = "emiya2467";
   currentSystem = "x86_64-linux";
 
   supportedSystems = [

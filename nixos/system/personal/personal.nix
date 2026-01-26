@@ -6,8 +6,8 @@
 
 {
   imports = [
-    ./work/work.nix
-    ./learn/learn.nix
-    ./entertain/entertain.nix
+    ./study/study.nix
+    ./working/working.nix
+    ./entertainment/entertainment.nix
   ];
 }

@@ -3,6 +3,6 @@
 {
   imports = [
     ./social.nix
-    ./games.nix
+    ./gaming.nix
   ];
 }

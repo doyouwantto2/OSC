@@ -20,6 +20,7 @@
     tree-sitter
     direnv
     zoxide
+    yazi
     btop
     eza
     unzip

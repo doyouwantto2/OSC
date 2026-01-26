@@ -1,4 +1,9 @@
-{ config, pkgs, lib, ... }:
+{
+  config,
+  pkgs,
+  lib,
+  ...
+}:
 
 {
 
@@ -11,6 +16,7 @@
     # Utilities
     alsa-lib
     udev
+    spacedrive
     pulseaudio
 
     # Portal

@@ -11,6 +11,9 @@ in
 
 {
   imports = [
+    ./environment.nix
+    ./style.nix
+    ./storage.nix
   ];
 
   home.username = userName;

@@ -1,7 +1,7 @@
 { inputs, self, ... }:
 let
   shared = import ./shared.nix;
-  currentSystem = builtins.currentSystem;
+  currentSystem = "x86_64-linux"; # Hardcoded for flake evaluation
 in
 {
   flake.nixosConfigurations = builtins.listToAttrs (

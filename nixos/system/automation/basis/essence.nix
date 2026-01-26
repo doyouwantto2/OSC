@@ -4,12 +4,8 @@
 
   programs.nix-ld.enable = true;
 
-  # System-specific hardware configurations
-  # Override the hostPlatform to allow multi-system support
-  nixpkgs.hostPlatform = lib.mkForce "x86_64-linux";
-  
   # Intel CPU microcode updates (only for x86 systems)
-  hardware.cpu.intel.updateMicrocode = lib.mkIf (lib.hasPrefix "x86_64" config.nixpkgs.hostPlatform) (lib.mkDefault config.hardware.enableRedistributableFirmware);
+  hardware.cpu.intel.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
 
   environment.systemPackages = with pkgs; [
     # Utilities

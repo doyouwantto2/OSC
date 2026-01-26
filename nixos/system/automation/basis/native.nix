@@ -6,10 +6,47 @@
 }:
 
 {
-  fonts.packages = [
-  ]
-  ++ builtins.filter lib.attrsets.isDerivation (builtins.attrValues pkgs.nerd-fonts);
 
+  fonts = {
+    enableDefaultPackages = true;
+
+    packages =
+      with pkgs;
+      [
+        dejavu_fonts
+        liberation_ttf
+
+        noto-fonts
+        noto-fonts-extra
+
+        noto-fonts-cjk-sans
+        noto-fonts-cjk-serif
+
+        noto-fonts-emoji
+
+        symbola
+      ]
+      ++ builtins.filter lib.attrsets.isDerivation (builtins.attrValues pkgs.nerd-fonts);
+
+    fontconfig = {
+      enable = true;
+      defaultFonts = {
+        sansSerif = [
+          "Noto Sans"
+          "Noto Sans CJK JP"
+        ];
+        serif = [
+          "Noto Serif"
+          "Noto Serif CJK JP"
+        ];
+        monospace = [
+          "JetBrainsMono Nerd Font"
+          "Noto Sans Mono"
+        ];
+        emoji = [ "Noto Color Emoji" ];
+      };
+    };
+  };
   i18n.inputMethod = {
     type = "fcitx5";
     enable = true;
@@ -36,7 +73,6 @@
 
   environment.sessionVariables = {
     OPENSSL_DIR = "${pkgs.openssl.dev}";
-    EDITOR = "nvim";
     OPENSSL_LIB_DIR = "${pkgs.openssl.out}/lib";
     OPENSSL_INCLUDE_DIR = "${pkgs.openssl.dev}/include";
     PKG_CONFIG_PATH = "${pkgs.openssl.dev}/lib/pkgconfig";

@@ -1,0 +1,9 @@
+[[manager.prepend_keymap]]
+on = "<Enter>"
+run = "open --edit"
+desc = "Enter = edit (Neovim)"
+
+[[manager.prepend_keymap]]
+on = "."
+run = "toggle hidden"
+desc = "Toggle hidden files"

@@ -1,0 +1,4 @@
+[opener]
+edit = [
+  { run = "env TERM=$TERM COLORTERM=$COLORTERM nvim %*", block = true, desc = "Neovim" }
+]

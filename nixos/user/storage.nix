@@ -17,5 +17,8 @@
       config.lib.file.mkOutOfStoreSymlink ./storage/dotfiles/hypr;
     "${config.xdg.configHome}/starship.toml".source =
       config.lib.file.mkOutOfStoreSymlink ./storage/dotfiles/starship.toml;
+    "${config.xdg.configHome}/yazi".source =
+      config.lib.file.mkOutOfStoreSymlink ./storage/dotfiles/yazi;
+
   };
 }

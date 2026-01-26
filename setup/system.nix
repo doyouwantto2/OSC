@@ -1,6 +1,7 @@
 { inputs, self, ... }:
 let
   shared = import ./shared.nix;
+  currentSystem = builtins.currentSystem;
 in
 {
   flake.nixosConfigurations = builtins.listToAttrs (
@@ -32,5 +33,32 @@ in
         };
       };
     }) shared.supportedSystems
-  );
+  ) // {
+    # Default "nixos" configuration that uses current system
+    nixos = inputs.nixpkgs.lib.nixosSystem {
+      system = currentSystem;
+
+      modules = [
+        inputs.disko.nixosModules.disko
+        ./../nixos/system/system.nix
+        { 
+          nixpkgs.config.allowUnfree = true;
+          nixpkgs.config.nvidia.acceptLicense = true;
+          # Apply system-specific graphics configuration with force to override Steam
+          hardware.graphics = shared.systemConfigs.${currentSystem}.graphics // {
+            enable32Bit = inputs.nixpkgs.lib.mkForce shared.systemConfigs.${currentSystem}.graphics.enable32Bit;
+          };
+        }
+      ];
+
+      specialArgs = {
+        inherit inputs self;
+        user = {
+          name = shared.userName;
+          system = currentSystem;
+        };
+        rustPkgs = inputs.fenix.packages.${currentSystem}.latest;
+      };
+    };
+  };
 }

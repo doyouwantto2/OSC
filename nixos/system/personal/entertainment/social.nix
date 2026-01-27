@@ -10,6 +10,6 @@
     telegram-desktop
 
     yt-dlp
-    spotube
+    amberol
   ];
 }

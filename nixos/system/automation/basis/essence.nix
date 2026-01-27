@@ -22,7 +22,7 @@
     netcat
 
     # File management
-    spacedrive
+    nautilus
 
     # Audio
     pulseaudio

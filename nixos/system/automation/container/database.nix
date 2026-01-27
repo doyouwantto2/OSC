@@ -26,7 +26,6 @@
     extraOptions = [
       "--restart=unless-stopped"
       "--network=bridge"
-      "--name=postgres_db"
     ];
   };
 
@@ -46,7 +45,6 @@
     extraOptions = [
       "--restart=unless-stopped"
       "--network=bridge"
-      "--name=mysql_db"
     ];
   };
 

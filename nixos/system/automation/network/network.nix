@@ -80,6 +80,6 @@
   programs.mtr.enable = true;
 
   # Optional: Enable specific network services for development
-  services.avahi.enable = lib.mkDefault false;
+  services.avahi.enable = lib.mkForce false;
   services.openssh.enable = lib.mkDefault true;
 }

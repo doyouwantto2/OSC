@@ -10,50 +10,46 @@
   # Enable Docker for container management
   virtualisation.docker.enable = true;
 
-  # PostgreSQL container configuration with basic secrets
-  virtualisation.oci-containers.containers."postgres" = {
-    image = "postgres:15";
-    ports = [ "5432:5432" ];
-    environment = {
-      POSTGRES_DB = "osc_db";
-      POSTGRES_USER = "osc_user";
-      POSTGRES_PASSWORD = "postgres_password";
-      POSTGRES_INITDB_ARGS = "--encoding=UTF-8 --lc-collate=C --lc-ctype=C";
-    };
-    volumes = [
-      "postgres_data:/var/lib/postgresql/data"
-    ];
-    extraOptions = [
-      "--restart=unless-stopped"
-      "--network=bridge"
-    ];
-  };
-
-  # MySQL container configuration with basic secrets
-  virtualisation.oci-containers.containers."mysql" = {
-    image = "mysql:8.0";
-    ports = [ "3306:3306" ];
-    environment = {
-      MYSQL_DATABASE = "osc_db";
-      MYSQL_USER = "osc_user";
-      MYSQL_PASSWORD = "mysql_password";
-      MYSQL_ROOT_PASSWORD = "mysql_root_password";
-    };
-    volumes = [
-      "mysql_data:/var/lib/mysql"
-    ];
-    extraOptions = [
-      "--restart=unless-stopped"
-      "--network=bridge"
-    ];
-  };
-
   # System packages for database management
   environment.systemPackages = with pkgs; [
     postgresql_15
     mariadb.client
     pgcli
   ];
+
+  # PostgreSQL container using systemd
+  systemd.services."postgres-container" = {
+    description = "PostgreSQL Docker Container";
+    wantedBy = [ "multi-user.target" ];
+    after = [ "docker.service" ];
+    serviceConfig = {
+      Type = "simple";
+      ExecStart = "${pkgs.docker}/bin/docker run --name postgres_db --restart unless-stopped -p 5432:5432 -e POSTGRES_DB=osc_db -e POSTGRES_USER=osc_user -e POSTGRES_PASSWORD=postgres_password -e POSTGRES_INITDB_ARGS='--encoding=UTF-8 --lc-collate=C --lc-ctype=C' -v postgres_data:/var/lib/postgresql/data postgres:15";
+      ExecStop = "${pkgs.docker}/bin/docker stop postgres_db";
+      ExecStopPost = "${pkgs.docker}/bin/docker rm postgres_db";
+      Restart = "always";
+    };
+    preStart = ''
+      ${pkgs.docker}/bin/docker volume create postgres_data || true
+    '';
+  };
+
+  # MySQL container using systemd
+  systemd.services."mysql-container" = {
+    description = "MySQL Docker Container";
+    wantedBy = [ "multi-user.target" ];
+    after = [ "docker.service" ];
+    serviceConfig = {
+      Type = "simple";
+      ExecStart = "${pkgs.docker}/bin/docker run --name mysql_db --restart unless-stopped -p 3306:3306 -e MYSQL_DATABASE=osc_db -e MYSQL_USER=osc_user -e MYSQL_PASSWORD=mysql_password -e MYSQL_ROOT_PASSWORD=mysql_root_password -v mysql_data:/var/lib/mysql mysql:8.0";
+      ExecStop = "${pkgs.docker}/bin/docker stop mysql_db";
+      ExecStopPost = "${pkgs.docker}/bin/docker rm mysql_db";
+      Restart = "always";
+    };
+    preStart = ''
+      ${pkgs.docker}/bin/docker volume create mysql_data || true
+    '';
+  };
 
   # Optional: Enable PostgreSQL service locally (for development)
   services.postgresql = {
@@ -85,16 +81,5 @@
         ensurePermissions = "osc_db.*:ALL";
       }
     ];
-  };
-
-  # Docker volume management
-  systemd.services.docker-database-setup = {
-    description = "Setup Docker volumes for databases";
-    wantedBy = [ "multi-user.target" ];
-    serviceConfig = {
-      Type = "oneshot";
-      ExecStart = "${pkgs.docker}/bin/docker volume create postgres_data";
-      ExecStartPost = "${pkgs.docker}/bin/docker volume create mysql_data";
-    };
   };
 }

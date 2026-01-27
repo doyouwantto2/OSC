@@ -1,12 +1,12 @@
 {
   config,
   pkgs,
-  user,
+  shared,
   ...
 }:
 
 let
-  userName = user.name;
+  userName = shared.currentName;
 in
 
 {

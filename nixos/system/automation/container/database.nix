@@ -60,35 +60,35 @@
   # SOPS secret definitions
   sops.secrets = {
     postgres_db = {
-      sopsFile = ../../presets/database/postgresql.yaml;
+      sopsFile = ../../presets/presets/database/postgresql.yaml;
       restartUnits = [ "docker-postgres.service" ];
     };
     postgres_user = {
-      sopsFile = ../../presets/database/postgresql.yaml;
+      sopsFile = ../../presets/presets/database/postgresql.yaml;
       restartUnits = [ "docker-postgres.service" ];
     };
     postgres_password = {
-      sopsFile = ../../presets/database/postgresql.yaml;
+      sopsFile = ../../presets/presets/database/postgresql.yaml;
       restartUnits = [ "docker-postgres.service" ];
     };
     postgres_initdb_args = {
-      sopsFile = ../../presets/database/postgresql.yaml;
+      sopsFile = ../../presets/presets/database/postgresql.yaml;
       restartUnits = [ "docker-postgres.service" ];
     };
     mysql_db = {
-      sopsFile = ../../presets/database/mysql.yaml;
+      sopsFile = ../../presets/presets/database/mysql.yaml;
       restartUnits = [ "docker-mysql.service" ];
     };
     mysql_user = {
-      sopsFile = ../../presets/database/mysql.yaml;
+      sopsFile = ../../presets/presets/database/mysql.yaml;
       restartUnits = [ "docker-mysql.service" ];
     };
     mysql_password = {
-      sopsFile = ../../presets/database/mysql.yaml;
+      sopsFile = ../../presets/presets/database/mysql.yaml;
       restartUnits = [ "docker-mysql.service" ];
     };
     mysql_root_password = {
-      sopsFile = ../../presets/database/mysql.yaml;
+      sopsFile = ../../presets/presets/database/mysql.yaml;
       restartUnits = [ "docker-mysql.service" ];
     };
   };

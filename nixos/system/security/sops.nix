@@ -8,7 +8,7 @@
 {
   # Enable SOPS for secret management
   sops = {
-    defaultSopsFile = ../presets/database/postgresql.yaml;
+    defaultSopsFile = ../presets/presets/database/postgresql.yaml;
     defaultSopsFormat = "yaml";
     
     # Age key configuration (recommended)

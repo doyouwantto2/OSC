@@ -2,7 +2,7 @@
   config,
   pkgs,
   lib,
-  userName,
+  user,
   ...
 }:
 
@@ -47,7 +47,7 @@
   };
 
   # User configuration for container and AI development
-  users.users.${userName}.extraGroups = [
+  users.users.${user.userName}.extraGroups = [
     "docker" # For containerized services
     "render" # For GPU access (AI development)
   ];

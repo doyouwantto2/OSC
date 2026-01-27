@@ -191,6 +191,6 @@ config.keys = {
 
 config.enable_tab_bar = true
 
-config.default_prog = { "fish", "fastfetch" }
+config.default_prog = { "fish" }
 
 return config

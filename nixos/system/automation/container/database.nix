@@ -53,7 +53,7 @@
   # System packages for database management
   environment.systemPackages = with pkgs; [
     postgresql_15
-    mysql-client
+    mariadb.client
     pgcli
     dbeaver
   ];

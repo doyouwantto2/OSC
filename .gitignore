@@ -1,0 +1,22 @@
+# SOPS and secret files
+.sops.yaml
+*.key
+*.age
+*.asc
+*.gpg
+secrets/
+keys/
+
+# Database secret files (unencrypted versions)
+presets/database/*.yaml
+presets/api/*.yaml
+presets/*/secret/*.yaml
+
+# Temporary secret files
+*.secret
+*.tmp
+*.bak
+
+# Age key files
+age-keys.txt
+config/sops/age/keys.txt

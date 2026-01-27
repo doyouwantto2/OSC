@@ -21,6 +21,8 @@
         torchvision
         torchaudio
         botorch
+        transformers
+        scipy
 
         pydbus
         pyserial
@@ -30,6 +32,7 @@
         fastapi-cli
       ]
     ))
+
     pyright
   ];
 }

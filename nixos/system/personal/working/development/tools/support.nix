@@ -25,5 +25,7 @@
     eza
     unzip
     zip
+    httpie
+    jq
   ];
 }

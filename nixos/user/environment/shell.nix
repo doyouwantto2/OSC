@@ -25,23 +25,22 @@
     '';
 
     interactiveShellInit = ''
-      # Get username and date
-      set _user (whoami)
-      set _date (date +"%Y-%m-%d")
-      set _weekday (date +"(%a)")
+      if status is-interactive; and not set -q __STARTUP_SHOWN
+        set -g __STARTUP_SHOWN 1
 
-      # Build the greeting with colors
-      set fish_greeting \
-        (set_color --bold magenta)"Welcome,"(set_color normal)" " \
-        (set_color --bold white)$_user \
-        (set_color --bold magenta)"!"(set_color normal) \
-        " - " \
-        (set_color --bold green)$_date(set_color normal)" " \
-        (set_color --bold yellow)$_weekday(set_color normal)
+        set _user (whoami)
+        set _date (date +"%Y-%m-%d")
+        set _weekday (date +"(%a)")
 
-      # Run fastfetch AFTER greeting
-      sleep 0.05
-      fastfetch
+        echo -e \
+          (set_color --bold magenta)"Welcome,"(set_color normal)" " \
+          (set_color --bold white)$_user \
+          (set_color --bold magenta)"!"(set_color normal)" - " \
+          (set_color --bold green)$_date(set_color normal)" " \
+          (set_color --bold yellow)$_weekday(set_color normal)
+
+        fastfetch
+      end
     '';
   };
 }

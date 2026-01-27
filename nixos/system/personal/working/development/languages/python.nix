@@ -23,6 +23,7 @@
         botorch
         transformers
         scipy
+        ollama
 
         pydbus
         pyserial

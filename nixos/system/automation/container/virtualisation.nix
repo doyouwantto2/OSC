@@ -1,4 +1,10 @@
-{ config, pkgs, lib, ... }:
+{
+  config,
+  pkgs,
+  lib,
+  userName,
+  ...
+}:
 
 {
   # Docker configuration for local development
@@ -39,10 +45,10 @@
     enable = true;
     wantedBy = [ "sockets.target" ];
   };
-  
+
   # User configuration for container and AI development
-  users.users.emiya2467.extraGroups = [
-    "docker"  # For containerized services
-    "render"  # For GPU access (AI development)
+  users.users.${userName}.extraGroups = [
+    "docker" # For containerized services
+    "render" # For GPU access (AI development)
   ];
 }

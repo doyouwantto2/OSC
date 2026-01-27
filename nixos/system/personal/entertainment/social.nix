@@ -8,5 +8,7 @@
     vesktop
     slack
     telegram-desktop
+
+    termusic
   ];
 }

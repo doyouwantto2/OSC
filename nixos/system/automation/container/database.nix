@@ -15,9 +15,9 @@
     image = "postgres:15";
     ports = [ "5432:5432" ];
     environment = {
-      POSTGRES_DB = config.sops.secrets.postgres_db.value;
-      POSTGRES_USER = config.sops.secrets.postgres_user.value;
-      POSTGRES_PASSWORD = config.sops.secrets.postgres_password.value;
+      POSTGRES_DB = config.sops.secrets.postgres_db.value or "osc_db";
+      POSTGRES_USER = config.sops.secrets.postgres_user.value or "osc_user";
+      POSTGRES_PASSWORD = config.sops.secrets.postgres_password.value or "postgres_password";
       POSTGRES_INITDB_ARGS = config.sops.secrets.postgres_initdb_args.value or "--encoding=UTF-8 --lc-collate=C --lc-ctype=C";
     };
     volumes = [
@@ -35,10 +35,10 @@
     image = "mysql:8.0";
     ports = [ "3306:3306" ];
     environment = {
-      MYSQL_DATABASE = config.sops.secrets.mysql_db.value;
-      MYSQL_USER = config.sops.secrets.mysql_user.value;
-      MYSQL_PASSWORD = config.sops.secrets.mysql_password.value;
-      MYSQL_ROOT_PASSWORD = config.sops.secrets.mysql_root_password.value;
+      MYSQL_DATABASE = config.sops.secrets.mysql_db.value or "osc_db";
+      MYSQL_USER = config.sops.secrets.mysql_user.value or "osc_user";
+      MYSQL_PASSWORD = config.sops.secrets.mysql_password.value or "mysql_password";
+      MYSQL_ROOT_PASSWORD = config.sops.secrets.mysql_root_password.value or "mysql_root_password";
     };
     volumes = [
       "mysql_data:/var/lib/mysql"

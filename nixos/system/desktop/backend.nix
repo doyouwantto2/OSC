@@ -20,5 +20,6 @@
     slurp
     wl-clipboard
     wl-screenrec
+    fastfetch
   ];
 }

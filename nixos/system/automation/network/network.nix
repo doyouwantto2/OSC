@@ -33,6 +33,8 @@
     8000 # Alternative dev server port
     9000 # Alternative dev server port
     44462 # Spotube
+    59048 # Spotube
+    58012 # Spotube
 
     # Development tools ports
     5173 # Vite default port

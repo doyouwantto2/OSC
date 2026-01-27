@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, lib, ... }:
 
 {
   # Docker configuration for local development
@@ -17,21 +17,17 @@
     defaultNetwork.settings.dns_enabled = true;
   };
 
-  # Essential container tools for local development
-  environment.systemPackages = with pkgs; [
-    docker-compose
-    podman-compose
-    buildah
-    skopeo
-  ];
-
-  # Add user to docker group for local development
-  users.users."emiya2467".extraGroups = [ "docker" ];
-
   # Container registry configuration (for local development)
   virtualisation.oci-containers = {
     backend = "docker";
   };
+
+  # Container tools
+  environment.systemPackages = with pkgs; [
+    docker-compose
+    podman-compose
+    buildah
+  ];
 
   # Ensure services are enabled and running
   systemd.services.docker = {
@@ -43,4 +39,10 @@
     enable = true;
     wantedBy = [ "sockets.target" ];
   };
+  
+  # User configuration for container and AI development
+  users.users.emiya2467.extraGroups = [
+    "docker"  # For containerized services
+    "render"  # For GPU access (AI development)
+  ];
 }

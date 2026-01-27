@@ -1,7 +1,5 @@
 { config, pkgs, lib, ... }:
 
-with lib;
-
 {
   # Kubernetes tools for local development
   environment.systemPackages = with pkgs; [
@@ -14,17 +12,15 @@ with lib;
     cni-plugins
     flannel
     
-    # Cloud provider CLIs (for future API integration)
+    # Cloud provider CLIs
     awscli2
   ];
-
+  
+  # Kubernetes configuration for local development
   # Keep minimal ports for local cluster communication only
   # Remove external network ports since you're not using router/stable network
-  networking.firewall.allowedTCPPorts = [
-    # Only needed for local Kubernetes cluster
-    # 6443  # Kubernetes API - only needed if running full K8s cluster
-  ];
-
+  # Note: Firewall is now managed in network/network.nix
+  
   # Optional: Enable local Kubernetes cluster (commented by default)
   # Uncomment when you need a full local cluster
   # services.kubernetes = {

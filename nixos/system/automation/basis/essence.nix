@@ -6,17 +6,25 @@
 }:
 
 {
-
   programs.nix-ld.enable = true;
 
   # Intel CPU microcode updates (only for x86 systems)
   hardware.cpu.intel.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
 
+  # Core system packages only (no development tools)
   environment.systemPackages = with pkgs; [
-    # Utilities
+    # Basic system utilities
     alsa-lib
     udev
+    
+    # Basic network utilities
+    curl
+    netcat
+    
+    # File management
     spacedrive
+    
+    # Audio
     pulseaudio
 
     # Portal
@@ -47,5 +55,4 @@
     libkrb5
     keyutils
   ];
-
 }

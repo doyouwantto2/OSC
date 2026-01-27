@@ -17,9 +17,9 @@
       generateKey = false; # Set to true to auto-generate
     };
     
-    # PGP key configuration (alternative)
+    # PGP key configuration (alternative) - use SSH keys instead
     gnupg = {
-      home = lib.mkDefault "/root/.gnupg";
+      sshKeyPaths = lib.mkDefault [ ];
     };
   };
 

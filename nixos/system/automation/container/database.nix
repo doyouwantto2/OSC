@@ -35,7 +35,7 @@
     image = "mysql:8.0";
     ports = [ "3306:3306" ];
     environment = {
-      MYSQL_DATABASE = config.sops.secrets.mysql_db.value or "osc_db";
+      MYSQL_DATABASE = config.sops.secrets.mysql_name.value or "osc_db";
       MYSQL_USER = config.sops.secrets.mysql_user.value or "osc_user";
       MYSQL_PASSWORD = config.sops.secrets.mysql_password.value or "mysql_password";
       MYSQL_ROOT_PASSWORD = config.sops.secrets.mysql_root_password.value or "mysql_root_password";
@@ -75,7 +75,7 @@
       sopsFile = ../../presets/database/postgresql.yaml;
       restartUnits = [ "docker-postgres.service" ];
     };
-    mysql_db = {
+    mysql_name = {
       sopsFile = ../../presets/database/mysql.yaml;
       restartUnits = [ "docker-mysql.service" ];
     };

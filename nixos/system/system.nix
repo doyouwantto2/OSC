@@ -10,7 +10,6 @@
     ./automation/automation.nix
     ./desktop/desktop.nix
     ./personal/personal.nix
-    ./presets/presets.nix
     ./security/security.nix
   ];
 

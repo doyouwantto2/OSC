@@ -9,7 +9,6 @@
     slack
     telegram-desktop
 
-    yt-dlp
-    termusic
+    spotube
   ];
 }

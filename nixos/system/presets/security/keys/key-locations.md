@@ -27,14 +27,16 @@ The `presets/` directory is for **encrypted secret files only**, not encryption 
 │   ├── database/
 │   │   ├── postgresql.yaml     # ← ENCRYPTED secrets
 │   │   └── mysql.yaml          # ← ENCRYPTED secrets
+│   ├── api/                    # ← Future API secrets
 │   └── security/
 │       └── keys/
 │           ├── README.md       # ← Documentation only
 │           └── key-locations.md # ← This file
 ├── security/
 │   └── sops.nix                # ← SOPS configuration
-└── scripts/
-    └── setup-sops-keys.sh      # ← Key generation script
+└── automation/
+    └── container/
+        └── database.nix        # ← Database containers
 ```
 
 ## How It Works

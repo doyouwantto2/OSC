@@ -1,0 +1,17 @@
+# MySQL Database Secrets
+# These secrets are encrypted with SOPS
+database:
+  mysql:
+    name: "osc_db"
+    user: "osc_user"
+    password: "osc_password"
+    host: "localhost"
+    port: 3306
+    root_password: "mysql_root_password"
+    
+# Connection URI (constructed from above values)
+connection_uri: "mysql://osc_user:osc_password@localhost:3306/osc_db"
+
+# Additional configuration
+charset: "utf8mb4"
+collation: "utf8mb4_unicode_ci"

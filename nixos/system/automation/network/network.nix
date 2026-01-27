@@ -29,12 +29,8 @@
     8080 # Common backend dev port
     5432 # PostgreSQL (if needed locally)
     3306 # MySQL (if needed locally)
-    6379 # Redis (if needed locally)
     8000 # Alternative dev server port
     9000 # Alternative dev server port
-    44462 # Spotube
-    59048 # Spotube
-    58012 # Spotube
 
     # Development tools ports
     5173 # Vite default port
@@ -84,6 +80,6 @@
   programs.mtr.enable = true;
 
   # Optional: Enable specific network services for development
-  # services.avahi.enable = lib.mkDefault false;  # Uncomment if needed for local discovery
-  # services.openssh.enable = lib.mkDefault true;  # Uncomment for SSH access
+  services.avahi.enable = lib.mkDefault false;
+  services.openssh.enable = lib.mkDefault true;
 }

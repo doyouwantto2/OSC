@@ -13,13 +13,13 @@
     
     # Age key configuration (recommended)
     age = {
-      keyFile = "/etc/sops/age/keys.txt";
+      keyFile = lib.mkDefault "/etc/sops/age/keys.txt";
       generateKey = false; # Set to true to auto-generate
     };
     
     # PGP key configuration (alternative)
     gnupg = {
-      home = "/root/.gnupg";
+      home = lib.mkDefault "/root/.gnupg";
     };
   };
 
@@ -38,10 +38,4 @@
     age
     gnupg
   ];
-
-  # Optional: Import age key from file (if you have a key file)
-  sops.age.keyFile = lib.mkDefault "/etc/sops/age/keys.txt";
-  
-  # Optional: Import PGP key from file (if you have a key file)
-  sops.gnupg.home = lib.mkDefault "/root/.gnupg";
 }

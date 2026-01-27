@@ -16,14 +16,14 @@
     # Basic system utilities
     alsa-lib
     udev
-    
+
     # Basic network utilities
     curl
     netcat
-    
+
     # File management
     spacedrive
-    
+
     # Audio
     pulseaudio
 
@@ -54,5 +54,6 @@
     stdenv.cc.cc.lib
     libkrb5
     keyutils
+    ffmpeg
   ];
 }

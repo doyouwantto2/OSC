@@ -55,7 +55,6 @@
     postgresql_15
     mariadb.client
     pgcli
-    dbeaver
   ];
 
   # SOPS secret definitions

@@ -47,7 +47,7 @@
   };
 
   # User configuration for container and AI development
-  users.users.${user.userName}.extraGroups = [
+  users.users.${user.name}.extraGroups = [
     "docker" # For containerized services
     "render" # For GPU access (AI development)
   ];

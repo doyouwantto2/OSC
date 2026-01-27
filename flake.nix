@@ -23,8 +23,8 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    disko = {
-      url = "github:nix-community/disko";
+    sops-nix = {
+      url = "github:Mic92/sops-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
@@ -32,12 +32,17 @@
   outputs =
     inputs@{ flake-parts, ... }:
     flake-parts.lib.mkFlake { inherit inputs; } {
-      systems = [ "x86_64-linux" "aarch64-linux" ];
+      systems = [
+        "x86_64-linux"
+        "aarch64-linux"
+      ];
 
-      perSystem = { system, pkgs, ... }: {
-        # This pkgs is properly instantiated for each system
-        # and can be passed to child configurations
-      };
+      perSystem =
+        { system, pkgs, ... }:
+        {
+          # This pkgs is properly instantiated for each system
+          # and can be passed to child configurations
+        };
 
       imports = [
         ./setup/system.nix

@@ -53,42 +53,43 @@
   # System packages for database management
   environment.systemPackages = with pkgs; [
     postgresql_15
-    mariadb.client
+    mysql-client
     pgcli
+    dbeaver
   ];
 
   # SOPS secret definitions
   sops.secrets = {
     postgres_db = {
-      sopsFile = ../../presets/presets/database/postgresql.yaml;
+      sopsFile = ../../presets/database/postgresql.yaml;
       restartUnits = [ "docker-postgres.service" ];
     };
     postgres_user = {
-      sopsFile = ../../presets/presets/database/postgresql.yaml;
+      sopsFile = ../../presets/database/postgresql.yaml;
       restartUnits = [ "docker-postgres.service" ];
     };
     postgres_password = {
-      sopsFile = ../../presets/presets/database/postgresql.yaml;
+      sopsFile = ../../presets/database/postgresql.yaml;
       restartUnits = [ "docker-postgres.service" ];
     };
     postgres_initdb_args = {
-      sopsFile = ../../presets/presets/database/postgresql.yaml;
+      sopsFile = ../../presets/database/postgresql.yaml;
       restartUnits = [ "docker-postgres.service" ];
     };
     mysql_db = {
-      sopsFile = ../../presets/presets/database/mysql.yaml;
+      sopsFile = ../../presets/database/mysql.yaml;
       restartUnits = [ "docker-mysql.service" ];
     };
     mysql_user = {
-      sopsFile = ../../presets/presets/database/mysql.yaml;
+      sopsFile = ../../presets/database/mysql.yaml;
       restartUnits = [ "docker-mysql.service" ];
     };
     mysql_password = {
-      sopsFile = ../../presets/presets/database/mysql.yaml;
+      sopsFile = ../../presets/database/mysql.yaml;
       restartUnits = [ "docker-mysql.service" ];
     };
     mysql_root_password = {
-      sopsFile = ../../presets/presets/database/mysql.yaml;
+      sopsFile = ../../presets/database/mysql.yaml;
       restartUnits = [ "docker-mysql.service" ];
     };
   };

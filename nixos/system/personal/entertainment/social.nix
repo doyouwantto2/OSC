@@ -9,7 +9,7 @@
     slack
     telegram-desktop
 
-    youtube-dl
+    yt-dlp
     termusic
   ];
 }

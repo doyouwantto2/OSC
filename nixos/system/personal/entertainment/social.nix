@@ -9,6 +9,7 @@
     slack
     telegram-desktop
 
+    yt-dlp
     spotube
   ];
 }

@@ -25,9 +25,6 @@
     '';
 
     interactiveShellInit = ''
-      # Run fastfetch
-      fastfetch
-
       # Get username and date
       set _user (whoami)
       set _date (date +"%Y-%m-%d")
@@ -41,6 +38,10 @@
         " - " \
         (set_color --bold green)$_date(set_color normal)" " \
         (set_color --bold yellow)$_weekday(set_color normal)
+
+      # Run fastfetch AFTER greeting
+      sleep 0.05
+      fastfetch
     '';
   };
 }

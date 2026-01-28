@@ -9,7 +9,6 @@ let
     ;
   inherit (shared.lib) nixosConfig;
 
-  # Helper function to create NixOS configuration
   mkNixosConfig =
     system:
     inputs.nixpkgs.lib.nixosSystem {
@@ -31,7 +30,6 @@ let
 in
 {
   flake.nixosConfigurations =
-    # Create configurations for all supported systems
     builtins.listToAttrs (
       map (system: {
         name = "nixos-${system}";
@@ -39,7 +37,6 @@ in
       }) supportedSystems
     )
     // {
-      # Default configuration for current system
       nixos = mkNixosConfig currentSystem;
     };
 }

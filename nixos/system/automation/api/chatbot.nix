@@ -18,7 +18,6 @@
   '';
 
   # Optional AI services (commented by default)
-  # Enable when you want to run AI services as system services
 
   # Ollama AI service
   # services.ollama = {
@@ -29,6 +28,5 @@
   # };
 
   # Optional: Enable GPU support
-  # hardware.opengl.enable = true;
-  # services.xserver.videoDrivers = [ "nvidia" ];  # For NVIDIA
+  hardware.opengl.enable = true;
 }

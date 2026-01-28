@@ -35,10 +35,6 @@
     wl-screenrec
     fastfetch
 
-    (hyprlandPlugins.withPackages (
-      ps: with ps; [
-        hy3
-      ]
-    ))
+    hyprlandPlugins.hy3
   ];
 }

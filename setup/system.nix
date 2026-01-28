@@ -2,7 +2,7 @@
 let
   shared = import ./shared.nix;
   inherit (shared)
-    userName
+    currentName
     currentSystem
     supportedSystems
     systemConfigs
@@ -24,7 +24,7 @@ let
 
       specialArgs = {
         inherit inputs self shared;
-        user = shared.lib.mkUser userName system;
+        user = shared.lib.mkUser currentName system;
         rustPkgs = inputs.fenix.packages.${system}.latest;
       };
     };

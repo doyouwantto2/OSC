@@ -1,11 +1,10 @@
 {
   # User configuration
-  userName = "emiya2467";
-  currentName = "emiya2467";  # For backward compatibility with user modules
-  
+  currentName = "emiya2467"; # For backward compatibility with user modules
+
   # Current system (for default configurations)
   currentSystem = "x86_64-linux";
-  
+
   # Supported systems
   supportedSystems = [
     "x86_64-linux"
@@ -31,12 +30,12 @@
     # Create system configuration for a specific system
     mkSystemConfig = systemConfigs: system: {
       inherit system;
-      config = systemConfigs.${system} or {};
+      config = systemConfigs.${system} or { };
     };
 
     # Create user object for specialArgs
-    mkUser = userName: system: {
-      name = userName;
+    mkUser = currentName: system: {
+      name = currentName;
       inherit system;
     };
 
@@ -45,7 +44,7 @@
       # Add common NixOS modules here
     ];
 
-    # Common Home Manager modules  
+    # Common Home Manager modules
     homeModules = [
       # Add common Home Manager modules here
     ];

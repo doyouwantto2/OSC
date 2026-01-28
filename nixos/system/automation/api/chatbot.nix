@@ -28,5 +28,5 @@
   # };
 
   # Optional: Enable GPU support
-  hardware.opengl.enable = true;
+  hardware.graphics.enable = true;
 }

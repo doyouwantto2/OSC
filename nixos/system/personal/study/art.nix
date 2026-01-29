@@ -5,5 +5,6 @@
     krita
     blender
     inkscape
+    drawio
   ];
 }

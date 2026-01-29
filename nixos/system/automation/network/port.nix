@@ -38,6 +38,8 @@
     # AI monitoring and management
     3000 # AI dashboard/monitoring
     9090 # AI metrics/prometheus
+
+    1433 # SQL server
   ];
 
   # UDP ports for development

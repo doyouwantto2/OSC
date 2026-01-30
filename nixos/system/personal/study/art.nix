@@ -6,5 +6,6 @@
     blender
     inkscape
     drawio
+    pencil
   ];
 }

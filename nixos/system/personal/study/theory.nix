@@ -7,6 +7,6 @@
 {
   environment.systemPackages = with pkgs; [
     koodo-reader
-    logseq
+    anki
   ];
 }

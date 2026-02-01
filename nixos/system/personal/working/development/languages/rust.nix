@@ -1,5 +1,8 @@
 {
-  config, pkgs, rustPkgs, ...
+  config,
+  pkgs,
+  rustPkgs,
+  ...
 }:
 
 {
@@ -12,6 +15,8 @@
     rustPkgs.rust-analyzer
     cargo-tauri
     cargo-generate
+    cargo-update
+    cargo-edit
     sqlx-cli
     sea-orm-cli
   ];

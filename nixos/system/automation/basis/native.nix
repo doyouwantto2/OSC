@@ -6,9 +6,7 @@
 }:
 
 {
-  services.logind = {
-    lidSwitch = "ignore";
-  };
+  services.logind.settings.Login.HandleLidSwitch = "ignore";
 
   fonts = {
     enableDefaultPackages = true;

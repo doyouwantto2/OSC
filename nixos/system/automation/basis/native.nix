@@ -6,6 +6,9 @@
 }:
 
 {
+  services.logind = {
+    lidSwitch = "ignore";
+  };
 
   fonts = {
     enableDefaultPackages = true;
@@ -39,6 +42,7 @@
       };
     };
   };
+
   i18n.inputMethod = {
     type = "fcitx5";
     enable = true;
@@ -56,6 +60,7 @@
     pkgs.xdg-desktop-portal-hyprland
     pkgs.xdg-desktop-portal-gnome
   ];
+
   xdg.portal.configPackages = [ pkgs.xdg-desktop-portal-wlr ];
 
   nix.extraOptions = ''

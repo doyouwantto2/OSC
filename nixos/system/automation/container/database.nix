@@ -16,6 +16,7 @@
     mariadb.client
     pgcli
     azuredatastudio
+    dbgate
   ];
 
   # PostgreSQL container using systemd

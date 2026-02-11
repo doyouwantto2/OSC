@@ -10,6 +10,5 @@
     ./local.nix
     ./port.nix
     ./utils.nix
-    ./vpn.nix
   ];
 }

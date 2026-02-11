@@ -15,6 +15,7 @@
     dnsutils
     iperf3
     wireshark-cli
+    protonvpn-gui
   ];
 
   # Network monitoring and debugging tools

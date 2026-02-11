@@ -18,5 +18,4 @@
     127.0.0.1 stable.localdev
     127.0.0.1 textgen.localdev
   '';
-
 }

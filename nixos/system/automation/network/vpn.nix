@@ -10,6 +10,7 @@
   environment.systemPackages = with pkgs; [
     openvpn
     networkmanager-openvpn
+    protonvpn-gui
   ];
   
   # Enable NetworkManager for VPN management

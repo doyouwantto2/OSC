@@ -12,6 +12,10 @@ presets/database/*.yaml
 presets/api/*.yaml
 presets/*/secret/*.yaml
 
+# VPN configuration files (contain credentials)
+*.ovpn
+presets/*.ovpn
+
 # Temporary secret files
 *.secret
 *.tmp

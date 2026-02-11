@@ -21,15 +21,12 @@
   ];
   
   # OpenVPN service configuration
-  # Uncomment and configure based on your VPN provider
   services.openvpn.servers = {
-    # Example for a single VPN connection
-    # Replace "myvpn" with your desired service name
-    # myvpn = {
-    #   config = ''config /etc/openvpn/your-config-file.ovpn'';
-    #   autoStart = false;  # Set to true if you want it to start automatically
-    #   updateResolvConf = true;  # Update DNS when connecting
-    # };
+    protonvpn = {
+      config = ''config /etc/openvpn/jp-free-13.protonvpn.udp.ovpn'';
+      autoStart = true;
+      updateResolvConf = true;
+    };
   };
   
   # Optional: Kill switch configuration

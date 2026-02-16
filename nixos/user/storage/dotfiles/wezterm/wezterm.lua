@@ -98,6 +98,8 @@ config.window_frame = {
 	font_size = 7,
 }
 
+config.font_size = 7
+
 local resizeGap = 3
 
 config.leader = { key = "w", mods = "ALT", timeout_milliseconds = 1000 }

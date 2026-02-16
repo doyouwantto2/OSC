@@ -98,7 +98,7 @@ config.window_frame = {
 	font_size = 7,
 }
 
-config.font_size = 9
+config.font_size = 10
 
 local resizeGap = 3
 

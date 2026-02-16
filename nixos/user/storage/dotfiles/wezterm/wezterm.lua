@@ -98,7 +98,7 @@ config.window_frame = {
 	font_size = 12.0,
 }
 
-config.font_size = 16.5
+config.font_size = 10
 config.font = wezterm.font("JetBrains Mono", { weight = "Regular", italic = false })
 
 local resizeGap = 3

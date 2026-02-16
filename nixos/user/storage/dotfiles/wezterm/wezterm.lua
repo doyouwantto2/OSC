@@ -95,8 +95,11 @@ config.colors = {
 config.window_frame = {
 	active_titlebar_bg = colors.mantle,
 	inactive_titlebar_bg = colors.base,
-	font_size = 7.0,
+	font_size = 12.0,
 }
+
+config.font_size = 16.5
+config.font = wezterm.font("JetBrains Mono", { weight = "Regular", italic = false })
 
 local resizeGap = 3
 

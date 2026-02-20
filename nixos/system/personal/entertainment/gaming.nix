@@ -25,13 +25,16 @@
     ];
   };
 
-  environment.systemPackages = with pkgs; [
-  ] ++ lib.optionals (pkgs.stdenv.isx86_64) [
-    osu-lazer
-    lutris
-    protonup-qt
-    wine
-  ];
+  environment.systemPackages =
+    with pkgs;
+    [
+    ]
+    ++ lib.optionals (pkgs.stdenv.isx86_64) [
+      osu-lazer
+      lutris
+      protonup-qt
+      wine
+    ];
 
   nixpkgs.config.allowUnfreePredicate =
     pkg:
@@ -41,4 +44,7 @@
       "steam-unwrapped"
       "steam-run"
     ];
+
+  hardware.graphics.enable = true;
+
 }

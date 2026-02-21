@@ -12,5 +12,6 @@
 
     yt-dlp
     amberol
+    obs-studio
   ];
 }

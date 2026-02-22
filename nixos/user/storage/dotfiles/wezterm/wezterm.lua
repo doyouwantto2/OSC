@@ -95,7 +95,7 @@ config.colors = {
 config.window_frame = {
 	active_titlebar_bg = colors.mantle,
 	inactive_titlebar_bg = colors.base,
-	font_size = 7,
+	font_size = 12,
 }
 
 config.font_size = 10

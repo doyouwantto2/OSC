@@ -33,7 +33,7 @@
     wl-clipboard
     wl-screenrec
     fastfetch
-    
+
     # Hyprland plugins (also added to HYPR_PLUGIN_DIR)
     hyprlandPlugins.hy3
     hyprlandPlugins.hyprexpo

@@ -10,7 +10,6 @@
     bun
     typescript
     typescript-language-server
-    vue-language-server
     vscode-langservers-extracted
     astro-language-server
     tailwindcss

@@ -23,8 +23,6 @@
     defaultNetwork.settings.dns_enabled = true;
   };
 
-  virtualisation.waydroid.enable = true;
-
   # Container registry configuration (for local development)
   virtualisation.oci-containers = {
     backend = "docker";

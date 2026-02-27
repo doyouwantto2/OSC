@@ -9,12 +9,6 @@
   services.logind.settings.Login.HandleLidSwitch = "ignore";
   services.dbus.enable = true;
 
-  boot.kernelModules = [ "binder_linux" ];
-
-  boot.kernel.sysctl = {
-    "kernel.unprivileged_userns_clone" = 1;
-  };
-
   fonts = {
     enableDefaultPackages = true;
 

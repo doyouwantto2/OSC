@@ -23,6 +23,8 @@
     defaultNetwork.settings.dns_enabled = true;
   };
 
+  virtualisation.waydroid.enable = true;
+
   # Container registry configuration (for local development)
   virtualisation.oci-containers = {
     backend = "docker";
@@ -33,6 +35,7 @@
     docker-compose
     podman-compose
     buildah
+    waydroid
   ];
 
   # Ensure services are enabled and running

@@ -13,7 +13,5 @@
     yt-dlp
     amberol
     obs-studio
-
-    waydroid
   ];
 }

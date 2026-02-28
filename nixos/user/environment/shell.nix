@@ -39,8 +39,6 @@
           (set_color --bold magenta)"!"(set_color normal)" - " \
           (set_color --bold green)$_date(set_color normal)" " \
           (set_color --bold yellow)$_weekday(set_color normal)
-
-        fastfetch
       end
     '';
   };

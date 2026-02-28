@@ -6,7 +6,7 @@ local bar = wezterm.plugin.require("https://github.com/adriankarlen/bar.wezterm"
 bar.apply_to_config(config)
 
 config.color_scheme = "rebecca"
-config.window_background_opacity = 0.8
+config.window_background_opacity = 0.9
 config.warn_about_missing_glyphs = false
 config.enable_wayland = true
 

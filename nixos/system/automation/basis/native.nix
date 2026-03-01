@@ -13,7 +13,7 @@
   boot = {
     plymouth = {
       enable = true;
-      theme = "rings";
+      theme = "spin";
       themePackages = with pkgs; [
         # By default we would install all themes
         (adi1090x-plymouth-themes.override {

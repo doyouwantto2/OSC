@@ -39,7 +39,6 @@
 
     nixosConfig = {
       nixpkgs.config.allowUnfree = true;
-      nixpkgs.config.nvidia.acceptLicense = true;
     };
 
     mkGraphicsConfig = pkgs: systemConfigs: system: {

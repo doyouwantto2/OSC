@@ -15,8 +15,8 @@
     package = pkgs.steam.override {
       extraPkgs =
         pkgs': with pkgs'; [
-          bumblebee
-          primus
+          # bumblebee - Removed due to broken NVIDIA driver dependency
+          # primus - Commented out as it depends on bumblebee
         ];
     };
 

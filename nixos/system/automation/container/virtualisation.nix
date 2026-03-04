@@ -33,7 +33,6 @@
     docker-compose
     podman-compose
     buildah
-    waydroid
   ];
 
   # Ensure services are enabled and running

@@ -7,7 +7,7 @@
 {
   environment.systemPackages = with pkgs; [
     libreoffice
-    davinci-resolve
+    flowblade
     thunderbird
   ];
 }

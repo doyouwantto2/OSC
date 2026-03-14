@@ -7,7 +7,7 @@
 {
   environment.systemPackages = with pkgs; [
     libreoffice
-    flowblade
+    shotcut
     thunderbird
   ];
 }

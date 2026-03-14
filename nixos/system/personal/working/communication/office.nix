@@ -7,7 +7,7 @@
 {
   environment.systemPackages = with pkgs; [
     libreoffice
-    openshot-qt
+    davinci-resolve
     thunderbird
   ];
 }

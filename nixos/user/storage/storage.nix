@@ -42,5 +42,9 @@
     "${config.xdg.configHome}/fastfetch" = lib.mkForce {
       source = config.lib.file.mkOutOfStoreSymlink ./dotfiles/fastfetch;
     };
+
+    ".face" = lib.mkForce {
+      source = config.lib.file.mkOutOfStoreSymlink ./dotfiles/.face;
+    };
   };
 }

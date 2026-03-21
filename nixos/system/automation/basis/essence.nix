@@ -16,6 +16,7 @@
     # Basic system utilities
     alsa-lib
     udev
+    playerctl
 
     # Basic network utilities
     curl

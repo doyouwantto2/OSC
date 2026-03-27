@@ -6,7 +6,7 @@
 
 {
   environment.systemPackages = with pkgs; [
-    calibre-no-speech
+    koodo-reader
     anki
   ];
 }

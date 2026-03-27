@@ -121,6 +121,12 @@ return {
           cmd = { "astro-ls", "--stdio" },
           filetypes = { "astro" },
           capabilities = capabilities,
+          init_options = {
+            typescript = {
+              -- Khai báo đường dẫn trỏ tới thư mục chứa tsserverlibrary.js
+              tsdk = "node_modules/typescript/lib",
+            },
+          },
         },
 
         ------------------------------------------------

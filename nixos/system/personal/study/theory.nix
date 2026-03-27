@@ -6,7 +6,7 @@
 
 {
   environment.systemPackages = with pkgs; [
-    calibre
+    calibre-no-speech
     anki
   ];
 }

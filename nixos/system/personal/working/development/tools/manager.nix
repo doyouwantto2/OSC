@@ -10,6 +10,7 @@
     micro
     neovim
     wezterm
+    godot
     kitty
   ];
 }

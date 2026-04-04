@@ -10,5 +10,6 @@
     ollama
     koboldcpp
     logseq
+    syncthing
   ];
 }

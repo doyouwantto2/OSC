@@ -8,6 +8,7 @@
   environment.systemPackages = with pkgs; [
     solc
     solc-select
+    foundry
     trufflehog
   ];
 }

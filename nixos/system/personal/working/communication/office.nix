@@ -9,5 +9,6 @@
     libreoffice
     shotcut
     thunderbird
+    zotero
   ];
 }

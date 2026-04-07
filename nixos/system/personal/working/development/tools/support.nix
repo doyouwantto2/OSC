@@ -11,6 +11,7 @@
     pstree
     lazygit
     lazydocker
+    sniffnet
     imagemagick
     ghostscript
     fzf

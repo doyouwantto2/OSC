@@ -10,6 +10,7 @@
     git-lfs
     pstree
     lazygit
+    lazydocker
     imagemagick
     ghostscript
     fzf

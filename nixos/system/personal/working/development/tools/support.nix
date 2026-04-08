@@ -10,6 +10,7 @@
     git-lfs
     pstree
     lazygit
+    meilisearch
     lazydocker
     sniffnet
     imagemagick

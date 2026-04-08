@@ -9,6 +9,7 @@
     windsurf
     micro
     neovim
+    hoppscotch
     wezterm
     godot
     kitty

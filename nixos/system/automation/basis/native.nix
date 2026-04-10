@@ -111,4 +111,21 @@
       ]
     );
   };
+
+  systemd.services.nion-service = {
+    description = "Nion Japanese Learning Core";
+    serviceConfig = {
+      ExecStart = "/usr/bin/env python3 /home/emiya2467/Documents/Notes/Plans/nion/nion_core.py";
+      User = "emiya2467";
+    };
+  };
+
+  systemd.timers.nion-timer = {
+    wantedBy = [ "timers.target" ];
+    timerConfig = {
+      OnActiveSec = "3h";
+      OnUnitActiveSec = "3h";
+      Unit = "nion-service.service";
+    };
+  };
 }

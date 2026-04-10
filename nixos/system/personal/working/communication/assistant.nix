@@ -12,4 +12,6 @@
     logseq
     syncthing
   ];
+
+  services.ollama.enable = true;
 }

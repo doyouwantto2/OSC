@@ -11,6 +11,7 @@
     pstree
     lazygit
     lazydocker
+    texliveFull
     sniffnet
     imagemagick
     ghostscript

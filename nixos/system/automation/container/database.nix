@@ -13,8 +13,6 @@
   # System packages for database management
   environment.systemPackages = with pkgs; [
     postgresql_15
-    neo4j
-    gephi
     pgcli
     azuredatastudio
     dbeaver-bin
@@ -54,15 +52,5 @@
         ensurePermissions."DATABASE osc_db" = "ALL PRIVILEGES";
       }
     ];
-  };
-
-  services.neo4j = {
-    enable = true;
-    bolt = {
-      tlsLevel = "DISABLED";
-    };
-    https = {
-      enable = false;
-    };
   };
 }

@@ -13,7 +13,8 @@
   # System packages for database management
   environment.systemPackages = with pkgs; [
     postgresql_15
-    mariadb.client
+    neo4j
+    neo4j-desktop
     pgcli
     azuredatastudio
     dbeaver-bin
@@ -36,23 +37,6 @@
     '';
   };
 
-  # MySQL container using systemd
-  systemd.services."mysql-container" = {
-    description = "MySQL Docker Container";
-    wantedBy = [ "multi-user.target" ];
-    after = [ "docker.service" ];
-    serviceConfig = {
-      Type = "simple";
-      ExecStart = "${pkgs.docker}/bin/docker run --name mysql_db --restart unless-stopped -p 3306:3306 -e MYSQL_DATABASE=osc_db -e MYSQL_USER=osc_user -e MYSQL_PASSWORD=mysql_password -e MYSQL_ROOT_PASSWORD=mysql_root_password -v mysql_data:/var/lib/mysql mysql:8.0";
-      ExecStop = "${pkgs.docker}/bin/docker stop mysql_db";
-      ExecStopPost = "${pkgs.docker}/bin/docker rm mysql_db";
-      Restart = "always";
-    };
-    preStart = ''
-      ${pkgs.docker}/bin/docker volume create mysql_data || true
-    '';
-  };
-
   # Optional: Enable PostgreSQL service locally (for development)
   services.postgresql = {
     enable = lib.mkDefault false;
@@ -72,16 +56,4 @@
     ];
   };
 
-  # Optional: Enable MySQL service locally (for development)
-  services.mysql = {
-    enable = lib.mkDefault false;
-    package = pkgs.mysql;
-    ensureDatabases = [ "osc_db" ];
-    ensureUsers = [
-      {
-        name = "osc_user";
-        ensurePermissions = "osc_db.*:ALL";
-      }
-    ];
-  };
 }

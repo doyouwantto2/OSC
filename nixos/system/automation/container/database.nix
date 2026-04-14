@@ -56,4 +56,13 @@
     ];
   };
 
+  services.neo4j = {
+    enable = true;
+    bolt = {
+      tlsLevel = "DISABLED";
+    };
+    https = {
+      enable = false;
+    };
+  };
 }

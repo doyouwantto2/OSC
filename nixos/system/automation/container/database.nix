@@ -14,7 +14,7 @@
   environment.systemPackages = with pkgs; [
     postgresql_15
     neo4j
-    cytoscape
+    gephi
     pgcli
     azuredatastudio
     dbeaver-bin

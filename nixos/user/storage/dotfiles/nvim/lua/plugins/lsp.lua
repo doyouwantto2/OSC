@@ -194,7 +194,7 @@ return {
                   "-synctex=1",
                   "%f",
                 },
-                onSave = true,
+                onSave = false,
               },
               forwardSearch = {
                 executable = "zathura",
@@ -299,11 +299,20 @@ return {
 
   {
     "lervag/vimtex",
-    lazy = false, -- we don't want to lazy load VimTeX
-    -- tag = "v2.15", -- uncomment to pin to a specific release
+    lazy = false,
     init = function()
-      -- VimTeX configuration goes here, e.g.
       vim.g.vimtex_view_method = "zathura"
+
+      -- 👇 THÊM ĐOẠN NÀY
+      vim.g.vimtex_compiler_method = "latexmk"
+      vim.g.vimtex_compiler_latexmk = {
+        options = {
+          "-xelatex",
+          "-synctex=1",
+          "-interaction=nonstopmode",
+          "-file-line-error",
+        },
+      }
     end,
   },
 }

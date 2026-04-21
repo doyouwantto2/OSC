@@ -194,7 +194,7 @@ return {
                   "-synctex=1",
                   "%f",
                 },
-                onSave = false,
+                onSave = true,
               },
               forwardSearch = {
                 executable = "zathura",

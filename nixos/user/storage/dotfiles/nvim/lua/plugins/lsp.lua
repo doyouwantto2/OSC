@@ -189,25 +189,20 @@ return {
               build = {
                 executable = "latexmk",
                 args = {
-                  "-pdf",
+                  "-xelatex", -- 👈 QUAN TRỌNG
                   "-interaction=nonstopmode",
                   "-synctex=1",
                   "%f",
                 },
-                onSave = true,
+                onSave = false,
               },
               forwardSearch = {
                 executable = "zathura",
                 args = { "--synctex-forward", "%l:1:%f", "%p" },
               },
-              chktex = {
-                onOpenAndSave = true,
-                onEdit = false,
-              },
             },
           },
         },
-      },
 
       ------------------------------------------------
       -- typescript-tools integration

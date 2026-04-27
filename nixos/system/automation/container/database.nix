@@ -16,6 +16,7 @@
     pgcli
     azuredatastudio
     dbeaver-bin
+    libpq
   ];
 
   # PostgreSQL container using systemd

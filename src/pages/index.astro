@@ -1,5 +1,7 @@
 ---
+import '../styles/global.css';
 let hi = "you";
+import About from "./about.astro";
 ---
 
 <html lang="en">
@@ -12,6 +14,8 @@ let hi = "you";
     <title>Astro</title>
 	</head>
 	<body>
-    <a href="/about">Go to about</a>
+    <About title="hi" description="">
+      b
+    </About>
 	</body>
 </html>

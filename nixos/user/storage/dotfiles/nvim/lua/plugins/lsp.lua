@@ -305,9 +305,9 @@ return {
 
       vim.g.vimtex_compiler_method = "latexmk"
       vim.g.vimtex_compiler_latexmk = {
+        executable = "latexmk",
         options = {
-          "-xelatex",
-          "-pdf-",
+          "-xelatex", -- 👈 đủ rồi
           "-synctex=1",
           "-interaction=nonstopmode",
           "-file-line-error",

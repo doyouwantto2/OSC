@@ -15,7 +15,7 @@
   environment.systemPackages = with pkgs; [
     cava
     swappy
-    swww
+    awww
     brightnessctl
     grim
     slurp

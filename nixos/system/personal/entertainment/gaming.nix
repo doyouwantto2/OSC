@@ -30,8 +30,7 @@
     [
     ]
     ++ lib.optionals (pkgs.stdenv.isx86_64) [
-      osu-lazer
-      protonup-qt
+      protonvpn-gui
       wine
     ];
 

@@ -16,9 +16,6 @@
     kind
     cni-plugins
     flannel
-
-    # Cloud provider CLIs
-    awscli2
   ];
 
   # Optional: Enable local Kubernetes cluster (commented by default)

@@ -7,6 +7,11 @@
 }:
 
 {
+  services.minecraft = {
+    enable = true;
+    eula = true;
+  };
+
   programs.steam = lib.mkIf (pkgs.stdenv.isx86_64) {
     enable = true;
     remotePlay.openFirewall = true;
@@ -31,6 +36,8 @@
     ]
     ++ lib.optionals (pkgs.stdenv.isx86_64) [
       wine
+      prismlauncher
+      minecraft-server
     ];
 
   nixpkgs.config.allowUnfreePredicate =

@@ -14,7 +14,6 @@
     nmap
     dnsutils
     iperf3
-    wireshark-cli
     proton-vpn
   ];
 

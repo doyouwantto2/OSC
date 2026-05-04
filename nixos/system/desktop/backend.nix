@@ -6,7 +6,7 @@
 
 {
   programs.hyprland.enable = true;
-  programs.niri.enable = true;
+  programs.mangowc.enable = true;
   programs.xwayland.enable = true;
 
   services.power-profiles-daemon.enable = true;

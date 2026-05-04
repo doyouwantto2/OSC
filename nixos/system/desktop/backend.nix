@@ -15,6 +15,7 @@
   # System packages including Hyprland plugins
   environment.systemPackages = with pkgs; [
     cava
+    rofi
     swappy
     awww
     brightnessctl

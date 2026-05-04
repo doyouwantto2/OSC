@@ -6,7 +6,7 @@
 
 {
   programs.hyprland.enable = true;
-  programs.mangowc.enable = true;
+  programs.niri.enable = true;
   programs.xwayland.enable = true;
 
   services.power-profiles-daemon.enable = true;
@@ -15,7 +15,6 @@
   # System packages including Hyprland plugins
   environment.systemPackages = with pkgs; [
     cava
-    rofi
     swappy
     awww
     brightnessctl

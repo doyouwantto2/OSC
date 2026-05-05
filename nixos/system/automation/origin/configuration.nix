@@ -47,6 +47,7 @@
 
   # Enable the GNOME Desktop Environment.
   services.displayManager.gdm.enable = true;
+  services.displayManager.sddm.autoNumlock = true;
   services.desktopManager.gnome.enable = true;
 
   # Configure keymap in X11

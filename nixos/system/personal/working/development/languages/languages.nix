@@ -20,5 +20,6 @@
     ./yaml.nix
     ./qt.nix
     ./tex.nix
+    ./typst.nix
   ];
 }

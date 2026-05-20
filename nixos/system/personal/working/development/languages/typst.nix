@@ -6,7 +6,8 @@
 
 {
   environment.systemPackages = with pkgs; [
-    texliveBasic
-    texlab
+    typst
+    typst-live
+    typstyle
   ];
 }

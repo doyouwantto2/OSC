@@ -9,5 +9,6 @@
     typst
     typst-live
     typstyle
+    tinymist
   ];
 }

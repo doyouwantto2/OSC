@@ -6,7 +6,7 @@
 
 {
   environment.systemPackages = with pkgs; [
-    texliveBasic
     texlab
+    texliveFull
   ];
 }

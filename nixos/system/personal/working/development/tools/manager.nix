@@ -10,8 +10,8 @@
     micro
     neovim
     hoppscotch
-    metabase
     wezterm
+    grafana
     godot
     kitty
   ];

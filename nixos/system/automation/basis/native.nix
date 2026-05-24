@@ -48,6 +48,8 @@
         noto-fonts-cjk-serif
         noto-fonts-color-emoji
         corefonts
+        nerd-fonts
+        google-fonts
       ]
       ++ builtins.filter lib.attrsets.isDerivation (builtins.attrValues pkgs.nerd-fonts);
 

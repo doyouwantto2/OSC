@@ -10,9 +10,15 @@
     micro
     neovim
     hoppscotch
+    metabase
     wezterm
-    grafana
     godot
     kitty
   ];
+
+  nixpkgs.config.packageOverrides = pkgs: {
+  metabase = pkgs.metabase.override {
+    jdk11 = pkgs.jdk17;
+  };
+};
 }

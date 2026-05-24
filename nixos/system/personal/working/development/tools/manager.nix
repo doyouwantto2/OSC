@@ -18,7 +18,7 @@
 
   nixpkgs.config.packageOverrides = pkgs: {
   metabase = pkgs.metabase.override {
-    jdk11 = pkgs.jdk17;
+    jdk = pkgs.jdk17;
   };
 };
 }

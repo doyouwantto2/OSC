@@ -15,10 +15,4 @@
     godot
     kitty
   ];
-
-  nixpkgs.config.packageOverrides = pkgs: {
-  metabase = pkgs.metabase.override {
-    jdk = pkgs.jdk17;
-  };
-};
 }

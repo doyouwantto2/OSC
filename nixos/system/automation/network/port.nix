@@ -17,6 +17,7 @@
     3000 # Common frontend dev port
     8080 # Common backend dev port
     5432 # PostgreSQL (if needed locally)
+    5430
     3306 # MySQL (if needed locally)
     6379 # Redis (if needed locally)
     8000 # Alternative dev server port

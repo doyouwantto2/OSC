@@ -17,22 +17,32 @@
     dbeaver-bin
   ];
 
-  # PostgreSQL container using systemd
-  systemd.services."postgres-container" = {
-    description = "PostgreSQL Docker Container";
-    wantedBy = [ "multi-user.target" ];
-    after = [ "docker.service" ];
-    serviceConfig = {
-      Type = "simple";
-      ExecStart = "${pkgs.docker}/bin/docker run --name postgres_db --restart unless-stopped -p 5432:5432 -e POSTGRES_DB=osc_db -e POSTGRES_USER=osc_user -e POSTGRES_PASSWORD=postgres_password -e POSTGRES_INITDB_ARGS='--encoding=UTF-8 --lc-collate=C --lc-ctype=C' -v postgres_data:/var/lib/postgresql/data postgres:15";
-      ExecStop = "${pkgs.docker}/bin/docker stop postgres_db";
-      ExecStopPost = "${pkgs.docker}/bin/docker rm postgres_db";
-      Restart = "always";
-    };
-    preStart = ''
-      ${pkgs.docker}/bin/docker volume create postgres_data || true
-    '';
+systemd.services."postgres-container" = {
+  description = "PostgreSQL Docker Container";
+  wantedBy = [ "multi-user.target" ];
+  after = [ "docker.service" ];
+
+  preStart = ''
+    ${pkgs.docker}/bin/docker volume create postgres_data || true
+
+    if ! ${pkgs.docker}/bin/docker ps -a --format '{{.Names}}' | grep -q '^postgres_db$'; then
+      ${pkgs.docker}/bin/docker create \
+        --name postgres_db \
+        -p 5432:5432 \
+        -e POSTGRES_DB=osc_db \
+        -e POSTGRES_USER=osc_user \
+        -e POSTGRES_PASSWORD=postgres_password \
+        -v postgres_data:/var/lib/postgresql/data \
+        postgres:15
+    fi
+  '';
+
+  serviceConfig = {
+    ExecStart = "${pkgs.docker}/bin/docker start -a postgres_db";
+    ExecStop = "${pkgs.docker}/bin/docker stop postgres_db";
+    Restart = "always";
   };
+};
 
   # Optional: Enable PostgreSQL service locally (for development)
   services.postgresql = {

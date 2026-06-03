@@ -91,9 +91,12 @@ return {
       lspconfig.astro.setup({
         capabilities = capabilities,
         on_attach = on_attach,
+
+        cmd = { vim.fn.getcwd() .. "/node_modules/.bin/astro-ls", "--stdio" },
+
         init_options = {
           typescript = {
-            tsdk = "node_modules/typescript/lib",
+            tsdk = vim.fn.getcwd() .. "/node_modules/typescript/lib",
           },
         },
       })

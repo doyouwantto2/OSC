@@ -91,6 +91,11 @@ return {
       lspconfig.astro.setup({
         capabilities = capabilities,
         on_attach = on_attach,
+        init_options = {
+          typescript = {
+            tsdk = "node_modules/typescript/lib",
+          },
+        },
       })
 
       ------------------------------------------------

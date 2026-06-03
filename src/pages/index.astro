@@ -1,21 +1,19 @@
 ---
-import '../styles/global.css';
+import "../styles/global.css";
 let hi = "you";
 import About from "./about.astro";
 ---
 
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
     <title>Astro</title>
-	</head>
-	<body>
-    <About title="hi" description="">
-      b
-    </About>
-	</body>
+  </head>
+  <body>
+    <About title="hi" description=""> b </About>
+  </body>
 </html>

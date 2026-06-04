@@ -29,7 +29,6 @@
 
   environment.systemPackages = with pkgs; [
     docker-compose
-    podman-compose
     podman-desktop
     buildah   
     distrobox 

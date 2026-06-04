@@ -6,9 +6,6 @@
 }:
 
 {
-  # Docker
-  virtualisation.docker.enable = true;
-
   # Packages
   environment.systemPackages = with pkgs; [
     postgresql_15

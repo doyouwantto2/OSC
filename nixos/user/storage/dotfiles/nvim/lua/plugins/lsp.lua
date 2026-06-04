@@ -193,6 +193,28 @@ return {
         },
       })
 
+      lspconfig.tailwindcss.setup({
+        capabilities = capabilities,
+        on_attach = on_attach,
+        filetypes = {
+          "html",
+          "css",
+          "javascript",
+          "javascriptreact",
+          "typescriptreact",
+          "astro",
+          "solid",
+          "typescript",
+        },
+        -- Đảm bảo LSP nhận diện đúng root của project Tailwind
+        root_dir = util.root_pattern(
+          "tailwind.config.js",
+          "tailwind.config.cjs",
+          "tailwind.config.mjs",
+          "tailwind.config.ts"
+        ),
+      })
+
       ------------------------------------------------
       -- TypeScript
       ------------------------------------------------

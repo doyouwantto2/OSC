@@ -7,48 +7,36 @@
 }:
 
 {
-  # Docker configuration for local development
-  virtualisation.docker = {
+  virtualisation.docker.enable = false;
+
+  virtualisation.podman = {
     enable = true;
-    enableOnBoot = true;
+
+    dockerCompat = true;
+
+    dockerSocket.enable = true;
+
+    defaultNetwork.settings.dns_enabled = true;
+
     autoPrune = {
       enable = true;
+      flags = [ "--all" ];
       dates = "weekly";
     };
   };
 
-  # Podman configuration (alternative to Docker)
-  virtualisation.podman = {
-    enable = true;
-    defaultNetwork.settings.dns_enabled = true;
-  };
+  virtualisation.oci-containers.backend = "podman";
 
-  # Container registry configuration (for local development)
-  virtualisation.oci-containers = {
-    backend = "docker";
-  };
-
-  # Container tools
   environment.systemPackages = with pkgs; [
     docker-compose
     podman-compose
-    buildah
+    podman-desktop
+    buildah   
+    distrobox 
   ];
 
-  # Ensure services are enabled and running
-  systemd.services.docker = {
-    enable = true;
-    wantedBy = [ "multi-user.target" ];
-  };
-
-  systemd.sockets.podman = {
-    enable = true;
-    wantedBy = [ "sockets.target" ];
-  };
-
-  # User configuration for container and AI development
   users.users.${user.name}.extraGroups = [
-    "docker" # For containerized services
-    "render" # For GPU access (AI development)
+    "podman" 
+    "render" 
   ];
 }

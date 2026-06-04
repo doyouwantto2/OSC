@@ -28,7 +28,6 @@
   virtualisation.oci-containers.backend = "podman";
 
   environment.systemPackages = with pkgs; [
-    docker-compose
     podman-desktop
     podman-compose
     buildah   

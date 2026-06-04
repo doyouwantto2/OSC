@@ -59,6 +59,13 @@ return {
       lspconfig.cssls.setup({
         capabilities = capabilities,
         on_attach = on_attach,
+        settings = {
+          css = {
+            lint = {
+              unknownAtRules = "ignore",
+            },
+          },
+        },
       })
 
       ------------------------------------------------

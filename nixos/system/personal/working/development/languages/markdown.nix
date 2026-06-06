@@ -12,5 +12,6 @@
     tinymist
     marksman
     plantuml
+    mermaid-cli
   ];
 }

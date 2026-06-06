@@ -19,6 +19,6 @@
     ./nix.nix
     ./yaml.nix
     ./qt.nix
-    ./mardowk.nix
+    ./markdowk.nix
   ];
 }

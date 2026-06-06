@@ -11,5 +11,6 @@
     typstyle
     tinymist
     marksman
+    plantuml
   ];
 }

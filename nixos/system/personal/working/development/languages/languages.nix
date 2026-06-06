@@ -19,7 +19,6 @@
     ./nix.nix
     ./yaml.nix
     ./qt.nix
-    ./tex.nix
-    ./typst.nix
+    ./mardowk.nix
   ];
 }

@@ -10,5 +10,6 @@
     typst-live
     typstyle
     tinymist
+    marksman
   ];
 }

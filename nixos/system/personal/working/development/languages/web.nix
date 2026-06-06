@@ -10,6 +10,7 @@
     bun
     prettier
     typescript
+    tslib
     typescript-language-server
     vscode-langservers-extracted
     astro-language-server

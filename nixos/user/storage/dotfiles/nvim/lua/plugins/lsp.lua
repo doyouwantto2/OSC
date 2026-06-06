@@ -312,4 +312,18 @@ return {
     ---@type render.md.UserConfig
     opts = {},
   },
+
+  {
+    "goropikari/plantuml.nvim",
+    dependencies = {
+      "goropikari/LibDeflate.nvim",
+    },
+    opts = {
+      -- default opts
+      base_url = "https://www.plantuml.com/plantuml",
+      reload_events = { "BufWritePre" },
+      viewer = "xdg-open", -- Image viewer for non-ASCII exports
+      docker_image = "plantuml/plantuml-server:tomcat",
+    },
+  },
 }

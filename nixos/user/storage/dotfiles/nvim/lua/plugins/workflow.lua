@@ -232,10 +232,14 @@ return {
   {
     "yetone/avante.nvim",
     opts = {
-      provider = "ollama",
-      ollama = {
-        model = "llama3.1:8b", -- hoặc model bạn đã pull
-        endpoint = "http://127.0.0.1:11434", -- mặc định của Ollama
+      providers = {
+        ollama = {
+          endpoint = "http://127.0.0.1:11434",
+          model = "qwen2.5-coder:7b", -- Chọn model Qwen
+          -- Tuỳ chọn thêm:
+          -- temperature = 0.7,
+          -- max_tokens = 4096,
+        },
       },
     },
   },

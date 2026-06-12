@@ -17,7 +17,10 @@
 
   # Disable native PostgreSQL service
   services.postgresql.enable = false;
-  services.mongodb.enable = true;
+  services.mongodb = {
+    enable = true;
+    package = pkgs.mongodb-ce;
+  };
   # PostgreSQL container
   virtualisation.oci-containers.containers.postgres = {
     image = "postgres:15";

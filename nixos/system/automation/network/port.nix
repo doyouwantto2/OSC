@@ -25,6 +25,7 @@
 
     # Development tools ports
     5173 # Vite default port
+    5678
     4173 # Vite preview port
     1024 # Alternative low port for development
     2049 # NFS (if needed for development)

@@ -228,22 +228,4 @@ return {
       { "<leader>p", "<cmd>PasteImage<cr>", desc = "Paste image from system clipboard" },
     },
   },
-
-  {
-    "yetone/avante.nvim",
-    opts = {
-      input = {
-        provider = "snacks", -- hoặc "dressing"
-      },
-      providers = {
-        ollama = {
-          endpoint = "http://127.0.0.1:11434",
-          model = "qwen2.5-coder:7b", -- Chọn model Qwen
-          -- Tuỳ chọn thêm:
-          -- temperature = 0.7,
-          -- max_tokens = 4096,
-        },
-      },
-    },
-  },
 }

@@ -228,4 +228,15 @@ return {
       { "<leader>p", "<cmd>PasteImage<cr>", desc = "Paste image from system clipboard" },
     },
   },
+
+  {
+    "yetone/avante.nvim",
+    opts = {
+      provider = "ollama",
+      ollama = {
+        model = "llama3.1:8b", -- hoặc model bạn đã pull
+        endpoint = "http://127.0.0.1:11434", -- mặc định của Ollama
+      },
+    },
+  },
 }

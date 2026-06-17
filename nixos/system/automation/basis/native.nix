@@ -1,4 +1,5 @@
 {
+  inputs,
   config,
   pkgs,
   lib,
@@ -6,6 +7,9 @@
 }:
 
 {
+  imports = [
+    inputs.fcitx5-lotus.nixosModules.fcitx5-lotus
+  ];
   services.logind.settings.Login.HandleLidSwitch = "ignore";
   services.dbus.enable = true;
 
@@ -17,7 +21,7 @@
       themePackages = with pkgs; [
         # By default we would install all themes
         (adi1090x-plymouth-themes.override {
-          selected_themes = [ "pixels" ];
+          selected_themes = [ "deusex" ];
         })
       ];
     };
@@ -78,8 +82,12 @@
       fcitx5-mozc
       fcitx5-gtk
       fcitx5-bamboo
-      fcitx5-lotus
     ];
+  };
+
+  services.fcitx5-lotus = {
+    enable = true;
+    users = [ "emiya2467" ]; 
   };
 
   xdg.portal.wlr.enable = true;

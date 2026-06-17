@@ -78,6 +78,7 @@
       fcitx5-mozc
       fcitx5-gtk
       fcitx5-bamboo
+      fcitx5-lotus
     ];
   };
 

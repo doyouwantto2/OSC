@@ -21,7 +21,7 @@
       themePackages = with pkgs; [
         # By default we would install all themes
         (adi1090x-plymouth-themes.override {
-          selected_themes = [ "Deus Ex" ];
+          selected_themes = [ "deus_ex" ];
         })
       ];
     };

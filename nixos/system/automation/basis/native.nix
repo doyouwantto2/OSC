@@ -17,11 +17,11 @@
   boot = {
     plymouth = {
       enable = true;
-      theme = "hud3";
+      theme = "hud_3";
       themePackages = with pkgs; [
         # By default we would install all themes
         (adi1090x-plymouth-themes.override {
-          selected_themes = [ "hud3" ];
+          selected_themes = [ "hud_3" ];
         })
       ];
     };

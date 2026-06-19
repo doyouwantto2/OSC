@@ -12,6 +12,7 @@
     pgcli
     dbeaver-bin
     docker-compose
+    mongodb-compass
   ];
 
   # Disable native PostgreSQL service

@@ -85,11 +85,6 @@
     ];
   };
 
-  services.fcitx5-lotus = {
-    enable = true;
-    users = [ "emiya2467" ]; 
-  };
-
   xdg.portal.wlr.enable = true;
   xdg.portal.enable = true;
   xdg.portal.extraPortals = [

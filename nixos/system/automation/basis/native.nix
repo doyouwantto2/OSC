@@ -7,9 +7,6 @@
 }:
 
 {
-  imports = [
-    inputs.fcitx5-lotus.nixosModules.fcitx5-lotus
-  ];
   services.logind.settings.Login.HandleLidSwitch = "ignore";
   services.dbus.enable = true;
 

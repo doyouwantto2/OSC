@@ -44,6 +44,7 @@
     1433 # SQL server
 
     6334
+    6333
   ];
 
   # UDP ports for development

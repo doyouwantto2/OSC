@@ -42,6 +42,8 @@
     9090 # AI metrics/prometheus
 
     1433 # SQL server
+
+    6334
   ];
 
   # UDP ports for development

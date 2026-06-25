@@ -15,6 +15,7 @@
     dnsutils
     iperf3
     proton-vpn
+    rancher
   ];
 
   # Network monitoring and debugging tools

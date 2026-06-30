@@ -200,6 +200,34 @@ return {
         },
       })
 
+      ------------------------------------------------
+      -- Solidity
+      ------------------------------------------------
+      lspconfig.solidity_ls.setup({
+        capabilities = capabilities,
+        on_attach = on_attach,
+
+        cmd = {
+          vim.fn.getcwd() .. "/node_modules/.bin/@nomicfoundation/solidity-language-server",
+          "--stdio",
+        },
+
+        filetypes = { "solidity" },
+
+        root_dir = util.root_pattern(
+          "foundry.toml",
+          "hardhat.config.ts",
+          "hardhat.config.js",
+          "hardhat.config.cjs",
+          "hardhat.config.mjs",
+          "truffle-config.js",
+          "package.json",
+          ".git"
+        ),
+
+        single_file_support = true,
+      })
+
       lspconfig.marksman.setup({
         capabilities = capabilities,
         on_attach = on_attach,

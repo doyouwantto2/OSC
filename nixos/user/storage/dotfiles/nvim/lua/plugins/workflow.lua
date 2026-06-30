@@ -139,10 +139,10 @@ return {
         float_opts = {
           border = "curved",
           width = function()
-            return math.floor(vim.o.columns - 4)
+            return math.floor(vim.o.columns - 40)
           end,
           height = function()
-            return math.floor(vim.o.lines - 4)
+            return math.floor(vim.o.lines - 10)
           end,
           winblend = 0,
         },

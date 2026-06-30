@@ -10,12 +10,10 @@ return {
     lazy = false,
     priority = 1000,
     config = function()
-      -- The require("everforest") line is only necessary if you need to call
-      -- a setup function for the colorscheme itself (e.g., everforest.setup()).
-      -- Since LazyVim is setting the colorscheme in the next block,
-      -- we can remove the local variable assignment if no setup is needed.
-      -- If you DO need to configure everforest, put that setup call here.
-      -- Example: require("everforest").setup({})
+      require("everforest").setup({
+        background = "soft",
+        transparent_background_level = 1,
+      })
     end,
   },
 

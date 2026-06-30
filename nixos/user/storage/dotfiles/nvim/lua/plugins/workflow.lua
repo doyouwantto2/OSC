@@ -137,9 +137,9 @@ return {
         shell = "fish",
         open_mapping = "<M-\\>",
         float_opts = {
-          border = "curved",
+          border = "shadow",
           width = function()
-            return math.floor(vim.o.columns - 40)
+            return math.floor(vim.o.columns - 15)
           end,
           height = function()
             return math.floor(vim.o.lines - 10)

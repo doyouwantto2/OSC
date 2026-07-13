@@ -31,6 +31,8 @@
 
         fastapi
         fastapi-cli
+
+        onnx
       ]
     ))
 

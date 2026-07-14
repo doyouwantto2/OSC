@@ -11,6 +11,8 @@
         datasets
         kaggle
 
+        pip
+
         numpy
         pandas
         opencv4Full
@@ -34,7 +36,6 @@
       ]
     ))
 
-    pipx
     pyright
   ];
 }

@@ -12,7 +12,7 @@
         kaggle
 
         ultralytics
-        opencv4
+        opencv4Full
 
         pip
 

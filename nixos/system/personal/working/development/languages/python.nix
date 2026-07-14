@@ -34,6 +34,7 @@
       ]
     ))
 
+    pipx
     pyright
   ];
 }

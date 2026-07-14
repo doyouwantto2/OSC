@@ -12,7 +12,8 @@
         kaggle
 
         ultralytics
-        opencv4Full
+        opencv4
+        pygame
 
         numpy
         pandas

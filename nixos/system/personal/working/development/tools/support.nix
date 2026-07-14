@@ -8,6 +8,7 @@
   environment.systemPackages = with pkgs; [
     git
     git-lfs
+    distrobox
     pstree
     lazygit
     lazydocker

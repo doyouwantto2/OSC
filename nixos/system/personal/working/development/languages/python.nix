@@ -16,7 +16,6 @@
 
         numpy
         pandas
-        opencv4Full
         matplotlib
         scikit-learn
 

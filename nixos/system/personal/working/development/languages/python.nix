@@ -10,6 +10,7 @@
       ps: with ps; [
         datasets
         kaggle
+        ultralytics
 
         pip
 

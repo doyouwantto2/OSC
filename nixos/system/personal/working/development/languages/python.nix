@@ -13,7 +13,7 @@
 
         numpy
         pandas
-        opencv4
+        opencv4Full
         matplotlib
         scikit-learn
 
@@ -31,8 +31,6 @@
 
         fastapi
         fastapi-cli
-
-        onnx
       ]
     ))
 

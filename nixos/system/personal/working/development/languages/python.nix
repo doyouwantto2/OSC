@@ -12,7 +12,8 @@
         kaggle
 
         ultralytics
-        opencv4
+
+        opencv-python-headless
         pygame
 
         numpy

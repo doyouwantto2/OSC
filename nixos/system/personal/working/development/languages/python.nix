@@ -13,8 +13,6 @@
 
         pip
 
-        ultralytics
-
         numpy
         pandas
         opencv4Full

@@ -5,6 +5,7 @@
     librewolf
     brave
 
+    mastodon
     vesktop
     slack
     telegram-desktop

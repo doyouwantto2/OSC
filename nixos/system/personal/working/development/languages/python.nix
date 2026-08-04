@@ -12,6 +12,7 @@
         kaggle
 
         opencv-python-headless
+        tensorflow-lite
         pygame
 
         numpy

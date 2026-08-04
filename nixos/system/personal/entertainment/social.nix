@@ -4,7 +4,6 @@
   environment.systemPackages = with pkgs; [
     librewolf
     brave
-    chromium
 
     mastodon
     vesktop

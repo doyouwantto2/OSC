@@ -11,8 +11,6 @@
         datasets
         kaggle
 
-        ultralytics
-
         opencv-python-headless
         pygame
 
@@ -25,8 +23,6 @@
         torchvision
         torchaudio
         botorch
-        transformers
-        scipy
         ollama
 
         pydbus

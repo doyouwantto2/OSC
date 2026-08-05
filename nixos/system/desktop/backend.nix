@@ -11,7 +11,6 @@
   services.power-profiles-daemon.enable = true;
   services.upower.enable = true;
 
-  # System packages including Hyprland plugins
   environment.systemPackages = with pkgs; [
     cava
     swappy

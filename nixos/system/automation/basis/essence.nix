@@ -32,7 +32,6 @@
     xdg-desktop-portal
     xdg-desktop-portal-wlr
     xdg-desktop-portal-gnome
-    xdg-desktop-portal-hyprland
 
     # Tauri / asm
     openssl

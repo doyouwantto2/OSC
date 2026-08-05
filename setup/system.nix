@@ -15,7 +15,6 @@ let
       inherit system;
 
       modules = [
-        inputs.sops-nix.nixosModules.sops
         inputs.impermanence.nixosModules.impermanence
         ./../nixos/system/system.nix
         (nixosConfig // shared.lib.mkGraphicsConfig inputs.nixpkgs systemConfigs system)

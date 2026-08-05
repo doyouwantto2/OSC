@@ -1,12 +1,8 @@
 { config, pkgs, ... }:
 
 {
-  nixpkgs.config.packageOverrides = super: let self = super.pkgs; in {
-    python3 = self.python311;
-  };
-
   environment.systemPackages = with pkgs; [
-    (python3.withPackages (
+    (python312.withPackages (
       ps: with ps; [
         datasets
         kaggle
@@ -24,8 +20,6 @@
         pydbus
         pyserial
         pygobject3
-        fastapi
-        fastapi-cli
       ]
     ))
     pyright

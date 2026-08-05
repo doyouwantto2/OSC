@@ -2,7 +2,7 @@
 
 {
   environment.systemPackages = with pkgs; [
-    (python314.withPackages (
+    (python313.withPackages (
       ps: with ps; [
         datasets
         kaggle

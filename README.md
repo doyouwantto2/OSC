@@ -1,4 +1,4 @@
-# OSC (Operating System Configuration) 
+# Operating System Configuration
 
 ## Neovim
 ![](assets/neovim-niri-osc-workspace.png)

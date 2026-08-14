@@ -40,8 +40,6 @@
       perSystem =
         { system, pkgs, ... }:
         {
-          # This pkgs is properly instantiated for each system
-          # and can be passed to child configurations
         };
 
       imports = [

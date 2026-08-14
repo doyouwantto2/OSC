@@ -1,7 +1,7 @@
 # Operating System Configuration
 
 ## Neovim
-![](assets/neovim-niri-osc-workspace.png)
+![](assets/niri-osc-workspace-nix-flake.png)
 
 ![](assets/nextjs-dev-neovim.png)
 

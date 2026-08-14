@@ -1,6 +1,6 @@
 # OSC (Operating System Configuration) 
 
-This is my personal dotfiles. Use as your own risk.
+This is my personal dotfiles. Use at your own risk.
 
 ![](assets/neovim-niri-osc-workspace.png)
 

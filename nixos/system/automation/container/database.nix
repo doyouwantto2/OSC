@@ -14,6 +14,7 @@
     docker-compose
     mongodb-compass
     surrealist
+    surrealdb-surrealkv
   ];
 
   # Disable native PostgreSQL service

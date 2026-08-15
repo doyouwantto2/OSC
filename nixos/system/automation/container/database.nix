@@ -13,8 +13,6 @@
     dbeaver-bin
     docker-compose
     mongodb-compass
-    surrealdb
-    surrealdb-surrealkv
     surrealist
   ];
 

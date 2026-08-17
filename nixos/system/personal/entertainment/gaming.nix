@@ -7,36 +7,11 @@
 }:
 
 {
-  services.minecraft-server = {
-    enable = true;
-    eula = true;
-  };
-
-  programs.steam = lib.mkIf (pkgs.stdenv.isx86_64) {
-    enable = true;
-    remotePlay.openFirewall = true;
-    dedicatedServer.openFirewall = true;
-    localNetworkGameTransfers.openFirewall = true;
-    package = pkgs.steam.override {
-      extraPkgs =
-        pkgs': with pkgs'; [
-          # bumblebee - Removed due to broken NVIDIA driver dependency
-          # primus - Commented out as it depends on bumblebee
-        ];
-    };
-
-    extraCompatPackages = with pkgs; [
-      proton-ge-bin
-    ];
-  };
-
   environment.systemPackages =
     with pkgs;
     [
     ]
     ++ lib.optionals (pkgs.stdenv.isx86_64) [
-      wine
-      prismlauncher
     ];
 
   nixpkgs.config.allowUnfreePredicate =

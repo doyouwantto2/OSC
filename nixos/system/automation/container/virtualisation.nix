@@ -28,10 +28,8 @@
   virtualisation.oci-containers.backend = "podman";
 
   environment.systemPackages = with pkgs; [
-    podman-desktop
     podman-compose
     buildah   
-    distrobox 
   ];
 
   users.users.${user.name}.extraGroups = [

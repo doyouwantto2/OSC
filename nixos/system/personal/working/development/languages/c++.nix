@@ -6,7 +6,7 @@
 
 {
   environment.systemPackages = with pkgs; [
-    gnat
+    gcc
     gnumake
     cmake
     ccls

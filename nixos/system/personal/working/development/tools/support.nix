@@ -8,7 +8,6 @@
   environment.systemPackages = with pkgs; [
     git
     git-lfs
-    distrobox
     pstree
     lazygit
     lazydocker
@@ -27,7 +26,6 @@
     zoxide
     yazi
     btop
-    eza
     unzip
     zip
     httpie

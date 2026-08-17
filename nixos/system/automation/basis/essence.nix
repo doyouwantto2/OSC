@@ -37,15 +37,8 @@
     openssl
     pkg-config
     glib
-    gobject-introspection
-    gtk3
-    gtk4
-    libiconv
 
     # Games
-    libpng
-    libpulseaudio
-    libvorbis
     stdenv.cc.cc.lib
     libkrb5
     keyutils

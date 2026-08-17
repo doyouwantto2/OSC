@@ -6,7 +6,6 @@
 }:
 
 {
-  # Kubernetes tools for local development
   environment.systemPackages = with pkgs; [
     kubectl
     helm
@@ -14,8 +13,6 @@
     stern
     minikube
     kind
-    cni-plugins
-    flannel
   ];
 
   # Optional: Enable local Kubernetes cluster (commented by default)

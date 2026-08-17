@@ -10,7 +10,6 @@
     neovim
     hoppscotch
     wezterm
-    godot
     kitty
   ];
 }

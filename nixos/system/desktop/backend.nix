@@ -13,11 +13,6 @@
 
   environment.systemPackages = with pkgs; [
     cava
-    swappy
-    awww
-    brightnessctl
-    grim
-    slurp
     wl-clipboard
     wl-screenrec
     fastfetch

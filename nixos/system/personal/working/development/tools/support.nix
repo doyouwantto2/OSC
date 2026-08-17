@@ -15,6 +15,7 @@
     sniffnet
     imagemagick
     ghostscript
+    tree
     fzf
     ripgrep
     fd

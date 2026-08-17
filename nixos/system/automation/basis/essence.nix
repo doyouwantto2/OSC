@@ -7,6 +7,9 @@
 
 {
   programs.nix-ld.enable = true;
+  programs.nix-ld.libraries = with pkgs; [
+    gcc.cc.lib   
+  ];
 
   # Intel CPU microcode updates (only for x86 systems)
   hardware.cpu.intel.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;

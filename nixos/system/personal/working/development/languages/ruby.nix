@@ -10,5 +10,6 @@
     rubyfmt
     ruby-lsp
     bundler
+    rails-new
   ];
 }

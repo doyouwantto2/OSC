@@ -20,5 +20,6 @@
     ./yaml.nix
     ./qt.nix
     ./markdown.nix
+    ./ruby.nix
   ];
 }

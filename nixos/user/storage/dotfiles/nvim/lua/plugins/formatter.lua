@@ -18,11 +18,9 @@ return {
 
     opts = {
       formatters_by_ft = {
-        -- Giữ nguyên cấu hình cũ của cậu
         lua = { "stylua" },
         typst = { "typstyle" },
 
-        -- BỔ SUNG HỆ SINH THÁI WEB (Astro / SolidJS / Tailwind)
         astro = { "prettier" },
         javascript = { "prettier" },
         typescript = { "prettier" },
@@ -32,15 +30,12 @@ return {
         css = { "prettier" },
         html = { "prettier" },
         json = { "prettier" },
+        ruby = { "rubyfmt" },
       },
 
       formatters = {
         stylua = {},
-        -- Có thể thêm override cho prettier ở đây nếu cần thiết sau này
       },
     },
-
-    -- Xóa hoàn toàn function config rườm rà cũ của cậu đi
-    -- Lazy sẽ tự động gọi require("conform").setup(opts)
   },
 }

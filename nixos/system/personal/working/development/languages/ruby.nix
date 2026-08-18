@@ -10,6 +10,6 @@
     rubyfmt
     ruby-lsp
     bundler
-    rails-new
+    (ruby.withPackages (ps: with ps; [ rails ]))
   ];
 }

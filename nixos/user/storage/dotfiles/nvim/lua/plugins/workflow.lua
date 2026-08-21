@@ -266,7 +266,6 @@ return {
       { "<leader>ns", "<cmd>Neominimap ToggleFocus<cr>", desc = "Switch focus on minimap" },
     },
     init = function()
-      -- The following options are recommended when layout == "float"
       vim.opt.wrap = false
       vim.opt.sidescrolloff = 36 -- Set a large value
 
@@ -274,6 +273,7 @@ return {
       ---@type Neominimap.UserConfig
       vim.g.neominimap = {
         auto_enable = true,
+        layout = "split",
       }
     end,
   },

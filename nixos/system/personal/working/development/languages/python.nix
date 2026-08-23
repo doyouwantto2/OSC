@@ -20,6 +20,7 @@
         pydbus
         pyserial
         pygobject3
+        manim
       ]
     ))
     pyright

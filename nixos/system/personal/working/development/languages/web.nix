@@ -8,6 +8,7 @@
   environment.systemPackages = with pkgs; [
     nodejs
     bun
+    deno
     prettier
     typescript
     tslib

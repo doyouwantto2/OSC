@@ -10,6 +10,7 @@
     bun
     deno
     prettier
+    netlify-cli
     typescript
     tslib
     typescript-language-server

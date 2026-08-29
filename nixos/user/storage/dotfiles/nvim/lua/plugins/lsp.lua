@@ -143,11 +143,17 @@ return {
       ------------------------------------------------
       -- Ruby (ruby-lsp)
       ------------------------------------------------
-      lspconfig.ruby_lsp.setup({
+      lspconfig.vue_ls.setup({
         capabilities = capabilities,
         on_attach = on_attach,
 
-        root_dir = util.root_pattern("Gemfile", ".git"),
+        init_options = {
+          typescript = {
+            tsdk = vim.fn.getcwd() .. "/node_modules/typescript/lib",
+          },
+        },
+
+        root_dir = util.root_pattern("package.json", ".git"),
       })
 
       ------------------------------------------------

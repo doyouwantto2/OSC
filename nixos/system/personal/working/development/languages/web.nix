@@ -16,6 +16,7 @@
     typescript-language-server
     vscode-langservers-extracted
     astro-language-server
+    vue-language-server
     tailwindcss
     tailwindcss-language-server
   ];

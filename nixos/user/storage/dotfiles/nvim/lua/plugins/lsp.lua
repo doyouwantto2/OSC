@@ -174,12 +174,10 @@ return {
       --
       -- vtsls
       --   ├── TypeScript / JavaScript
-      --   └── @vue/typescript-plugin
+      --   └── @vue/typescript-plugin (Vue projects only)
       --
       -- vue_ls
-      --   └── Vue template / CSS
-      --
-      -- Both vtsls and vue_ls attach to .vue.
+      --   └── Vue template / CSS (Vue projects only)
       ------------------------------------------------
 
       local tsserver_filetypes = {
@@ -193,6 +191,7 @@ return {
       ------------------------------------------------
       -- VTSLS
       ------------------------------------------------
+
       vim.lsp.config("vtsls", {
         capabilities = capabilities,
         on_attach = on_attach,
@@ -208,7 +207,6 @@ return {
 
         cmd = function(dispatchers, config)
           local local_cmd = project_bin(config.root_dir, "vtsls")
-
           local cmd = local_cmd or "vtsls"
 
           return vim.lsp.rpc.start({
@@ -233,26 +231,25 @@ return {
           end
 
           ------------------------------------------------
-          -- @vue/language-server
+          -- Only enable Vue TypeScript plugin when this
+          -- project actually contains @vue/language-server.
           ------------------------------------------------
-          --
-          -- The Vue TypeScript plugin is shipped alongside
-          -- the Vue language server.
-          --
-          -- Project:
-          -- node_modules/@vue/language-server
-          ------------------------------------------------
+
           local vue_language_server_path = project_package(root_dir, "@vue/language-server")
 
+          -- Normal TypeScript / JavaScript project.
+          --
+          -- Do NOT show an error or warning.
           if not vue_language_server_path then
-            vim.notify("Could not find @vue/language-server in " .. root_dir, vim.log.levels.WARN)
-
             return
           end
 
+          ------------------------------------------------
+          -- Vue project
+          ------------------------------------------------
+
           config.settings = config.settings or {}
           config.settings.vtsls = config.settings.vtsls or {}
-
           config.settings.vtsls.tsserver = config.settings.vtsls.tsserver or {}
 
           config.settings.vtsls.tsserver.globalPlugins = {
@@ -276,6 +273,7 @@ return {
       ------------------------------------------------
       -- Vue Language Server
       ------------------------------------------------
+
       vim.lsp.config("vue_ls", {
         capabilities = capabilities,
         on_attach = on_attach,
@@ -304,6 +302,26 @@ return {
           "vite.config.js",
           ".git",
         },
+
+        before_init = function(_, config)
+          local root_dir = config.root_dir
+
+          if not root_dir then
+            return
+          end
+
+          ------------------------------------------------
+          -- Only allow vue_ls when Vue Language Server
+          -- actually exists in this project.
+          ------------------------------------------------
+
+          local vue_language_server_path = project_package(root_dir, "@vue/language-server")
+
+          if not vue_language_server_path then
+            -- Silently skip.
+            return
+          end
+        end,
       })
 
       ------------------------------------------------

@@ -15,6 +15,7 @@
     imagemagick
     ghostscript
     tree
+    librsvg
     fzf
     ripgrep
     fd

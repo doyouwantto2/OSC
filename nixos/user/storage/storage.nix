@@ -43,6 +43,10 @@
       source = config.lib.file.mkOutOfStoreSymlink ./dotfiles/fastfetch;
     };
 
+    "${config.xdg.configHome}/zathura" = lib.mkForce {
+      source = config.lib.file.mkOutOfStoreSymlink ./dotfiles/zathura;
+    };
+
     ".face" = lib.mkForce {
       source = config.lib.file.mkOutOfStoreSymlink ./dotfiles/.face;
     };

@@ -263,23 +263,14 @@ return {
 
   {
     "epwalsh/obsidian.nvim",
-    version = "*", -- recommended, use latest release instead of latest commit
+    version = "*",
     lazy = true,
     ft = "markdown",
-    -- Replace the above line with this if you only want to load obsidian.nvim for markdown files in your vault:
-    -- event = {
-    --   -- If you want to use the home shortcut '~' here you need to call 'vim.fn.expand'.
-    --   -- E.g. "BufReadPre " .. vim.fn.expand "~" .. "/my-vault/*.md"
-    --   -- refer to `:h file-pattern` for more examples
-    --   "BufReadPre path/to/my-vault/*.md",
-    --   "BufNewFile path/to/my-vault/*.md",
-    -- },
-    dependencies = {
-      -- Required.
-      "nvim-lua/plenary.nvim",
 
-      -- see below for full list of optional dependencies 👇
+    dependencies = {
+      "nvim-lua/plenary.nvim",
     },
+
     opts = {
       workspaces = {
         {
@@ -287,8 +278,24 @@ return {
           path = "~/Documents/Notes/Plans/",
         },
       },
-
-      -- see below for full list of options 👇
     },
+
+    config = function(_, opts)
+      require("obsidian").setup(opts)
+
+      -- Mở PDF bằng Zathura
+      local original_ui_open = vim.ui.open
+
+      vim.ui.open = function(path, ...)
+        if type(path) == "string" and path:lower():match("%.pdf$") then
+          vim.fn.jobstart({ "zathura", path }, {
+            detach = true,
+          })
+          return
+        end
+
+        return original_ui_open(path, ...)
+      end
+    end,
   },
 }

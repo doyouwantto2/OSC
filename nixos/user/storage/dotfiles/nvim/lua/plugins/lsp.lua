@@ -581,7 +581,7 @@ return {
 
     opts = {
       checkbox = {
-        enabled = true,
+        enabled = false,
 
         -- Không render checkbox khi đang Insert
         render_modes = false,

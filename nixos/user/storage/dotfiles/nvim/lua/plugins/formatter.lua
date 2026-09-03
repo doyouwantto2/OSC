@@ -31,7 +31,7 @@ return {
         html = { "prettier" },
         json = { "prettier" },
         vue = { "prettier" },
-        markdown = { "prettier" },
+        markdown = { "mdformat" },
         ruby = { "rubyfmt" },
       },
 

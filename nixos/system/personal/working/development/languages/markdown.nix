@@ -11,7 +11,7 @@
     typstyle
     tinymist
     marksman
-    prettier
+    mdformat
     plantuml
     mermaid-cli
   ];

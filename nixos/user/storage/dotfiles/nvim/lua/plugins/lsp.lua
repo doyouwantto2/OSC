@@ -580,12 +580,28 @@ return {
     },
 
     opts = {
+      render_modes = {
+        "n",
+        "c",
+        "t",
+      },
+
       checkbox = {
-        enabled = false,
+        enabled = true,
+        render_modes = false,
       },
 
       anti_conceal = {
         enabled = true,
+        above = 0,
+        below = 0,
+
+        ignore = {
+          code_background = true,
+          indent = true,
+          sign = true,
+          virtual_lines = true,
+        },
       },
 
       latex = {
@@ -600,9 +616,8 @@ return {
         bottom_pad = 0,
       },
 
-      -- Cài đặt chung về mức độ ẩn (conceal) của plugin
       conceal = {
-        rendered = 0, -- Đặt '0' để hiển thị văn bản thô, '1' để ẩn dấu, '2' để ẩn nhiều hơn
+        rendered = 0,
       },
     },
   },

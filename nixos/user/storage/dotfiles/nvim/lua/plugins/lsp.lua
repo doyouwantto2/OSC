@@ -579,7 +579,32 @@ return {
       "nvim-mini/mini.icons",
     },
 
-    opts = {},
+    opts = {
+      checkbox = {
+        enabled = false,
+      },
+
+      anti_conceal = {
+        enabled = true,
+      },
+
+      latex = {
+        enabled = true,
+        render_modes = false,
+        converter = { "utftex", "latex2text" },
+        inline = true,
+        block = true,
+        highlight = "RenderMarkdownMath",
+        position = "center",
+        top_pad = 0,
+        bottom_pad = 0,
+      },
+
+      -- Cài đặt chung về mức độ ẩn (conceal) của plugin
+      conceal = {
+        rendered = 0, -- Đặt '0' để hiển thị văn bản thô, '1' để ẩn dấu, '2' để ẩn nhiều hơn
+      },
+    },
   },
 
   ------------------------------------------------

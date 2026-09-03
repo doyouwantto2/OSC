@@ -579,45 +579,7 @@ return {
       "nvim-mini/mini.icons",
     },
 
-    opts = {
-      render_modes = { "n", "c", "t" },
-
-      checkbox = {
-        enabled = true,
-        render_modes = false,
-        bullet = false,
-        left_pad = 0,
-        right_pad = 1,
-      },
-
-      anti_conceal = {
-        enabled = true,
-      },
-
-      win_options = {
-        conceallevel = {
-          default = vim.o.conceallevel,
-          rendered = 3,
-        },
-
-        concealcursor = {
-          default = vim.o.concealcursor,
-          rendered = "",
-        },
-      },
-
-      latex = {
-        enabled = true,
-        render_modes = false,
-        converter = { "utftex", "latex2text" },
-        inline = true,
-        block = true,
-        highlight = "RenderMarkdownMath",
-        position = "center",
-        top_pad = 0,
-        bottom_pad = 0,
-      },
-    },
+    opts = {},
   },
 
   ------------------------------------------------

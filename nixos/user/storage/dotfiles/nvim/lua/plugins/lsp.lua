@@ -609,10 +609,7 @@ return {
       latex = {
         enabled = true,
         render_modes = false,
-
-        -- NixOS: dùng pylatexenc -> latex2text
-        converter = "latex2text",
-
+        converter = { "latex2text" },
         inline = true,
         block = true,
         highlight = "RenderMarkdownMath",

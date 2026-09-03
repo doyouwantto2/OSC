@@ -608,7 +608,7 @@ return {
 
       latex = {
         enabled = true,
-        render_modes = false,
+        render_modes = true,
         converter = { "utftex", "latex2text" },
         inline = true,
         block = true,

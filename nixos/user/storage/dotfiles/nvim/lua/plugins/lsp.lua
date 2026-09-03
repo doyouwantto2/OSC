@@ -608,8 +608,11 @@ return {
 
       latex = {
         enabled = true,
-        render_modes = true,
-        converter = { "utftex", "latex2text" },
+        render_modes = false,
+
+        -- NixOS: dùng pylatexenc -> latex2text
+        converter = "latex2text",
+
         inline = true,
         block = true,
         highlight = "RenderMarkdownMath",

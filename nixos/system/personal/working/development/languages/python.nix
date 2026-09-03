@@ -6,6 +6,7 @@
       ps: with ps; [
         datasets
         kaggle
+        pylatexenc
         opencv-python-headless
         pygame
         numpy

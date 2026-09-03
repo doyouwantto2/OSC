@@ -580,18 +580,42 @@ return {
     },
 
     opts = {
-      obsidian = {
-        enabled = true,
-      },
+      render_modes = { "n", "c", "t" },
 
-      -- Đây là phần quan trọng nhất để không bị "mù" khi bấm Enter
-      anti_conceal = {
-        enabled = true, -- Khi con trỏ đặt trên dòng, nó sẽ hiện chữ thật ra để bạn sửa
-      },
-
-      -- (Cấu hình checkbox bạn đã thêm trước đó)
       checkbox = {
         enabled = true,
+        render_modes = false,
+        bullet = false,
+        left_pad = 0,
+        right_pad = 1,
+      },
+
+      anti_conceal = {
+        enabled = true,
+      },
+
+      win_options = {
+        conceallevel = {
+          default = vim.o.conceallevel,
+          rendered = 3,
+        },
+
+        concealcursor = {
+          default = vim.o.concealcursor,
+          rendered = "",
+        },
+      },
+
+      latex = {
+        enabled = true,
+        render_modes = false,
+        converter = { "utftex", "latex2text" },
+        inline = true,
+        block = true,
+        highlight = "RenderMarkdownMath",
+        position = "center",
+        top_pad = 0,
+        bottom_pad = 0,
       },
     },
   },

@@ -8,6 +8,7 @@
   environment.systemPackages = with pkgs; [
     typst
     typst-live
+    texliveFull
     typstyle
     tinymist
     marksman

@@ -580,19 +580,30 @@ return {
     },
 
     opts = {
-      checkbox = {
-        enabled = false,
+      render_modes = { "n", "c", "t" },
 
-        -- Không render checkbox khi đang Insert
+      checkbox = {
+        enabled = true,
         render_modes = false,
+        bullet = false,
+        left_pad = 0,
+        right_pad = 1,
       },
 
       anti_conceal = {
         enabled = true,
+      },
 
-        -- Khi cursor đang ở dòng checkbox thì không conceal
-        above = 0,
-        below = 0,
+      win_options = {
+        conceallevel = {
+          default = vim.o.conceallevel,
+          rendered = 3,
+        },
+
+        concealcursor = {
+          default = vim.o.concealcursor,
+          rendered = "",
+        },
       },
 
       latex = {

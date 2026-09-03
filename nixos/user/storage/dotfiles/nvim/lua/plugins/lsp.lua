@@ -617,11 +617,6 @@ return {
         top_pad = 0,
         bottom_pad = 0,
       },
-
-      mermaid = {
-        enabled = true,
-        position = "bottom",
-      },
     },
   },
 

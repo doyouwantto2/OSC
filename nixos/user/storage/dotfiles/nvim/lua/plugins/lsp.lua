@@ -580,28 +580,12 @@ return {
     },
 
     opts = {
-      render_modes = {
-        "n",
-        "c",
-        "t",
-      },
-
       checkbox = {
         enabled = true,
-        render_modes = false,
       },
 
       anti_conceal = {
         enabled = true,
-        above = 0,
-        below = 0,
-
-        ignore = {
-          code_background = true,
-          indent = true,
-          sign = true,
-          virtual_lines = true,
-        },
       },
 
       latex = {
@@ -614,10 +598,6 @@ return {
         position = "center",
         top_pad = 0,
         bottom_pad = 0,
-      },
-
-      conceal = {
-        rendered = 0,
       },
     },
   },

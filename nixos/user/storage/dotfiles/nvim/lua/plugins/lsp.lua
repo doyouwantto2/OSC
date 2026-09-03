@@ -582,10 +582,17 @@ return {
     opts = {
       checkbox = {
         enabled = true,
+
+        -- Không render checkbox khi đang Insert
+        render_modes = false,
       },
 
       anti_conceal = {
         enabled = true,
+
+        -- Khi cursor đang ở dòng checkbox thì không conceal
+        above = 0,
+        below = 0,
       },
 
       latex = {

@@ -579,7 +579,21 @@ return {
       "nvim-mini/mini.icons",
     },
 
-    opts = {},
+    opts = {
+      obsidian = {
+        enabled = true,
+      },
+
+      -- Đây là phần quan trọng nhất để không bị "mù" khi bấm Enter
+      anti_conceal = {
+        enabled = true, -- Khi con trỏ đặt trên dòng, nó sẽ hiện chữ thật ra để bạn sửa
+      },
+
+      -- (Cấu hình checkbox bạn đã thêm trước đó)
+      checkbox = {
+        enabled = true,
+      },
+    },
   },
 
   ------------------------------------------------

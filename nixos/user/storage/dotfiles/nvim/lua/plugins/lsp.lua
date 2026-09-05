@@ -649,6 +649,7 @@ return {
       renderer_options = {
         mermaid = {
           background = nil,
+          position = "bottom",
           theme = nil,
           scale = 1,
           width = nil,

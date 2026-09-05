@@ -629,19 +629,14 @@ return {
     dependencies = {
       {
         "3rd/image.nvim",
-        opts = {
-          max_height_window_percentage = 90,
-          max_width_window_percentage = 120,
-        },
+        opts = {},
       },
     },
 
     opts = {
       events = {
         render_buffer = {
-          "InsertLeave",
-          "BufWinEnter",
-          "TextChanged",
+          "BufWritePost",
         },
 
         clear_buffer = {

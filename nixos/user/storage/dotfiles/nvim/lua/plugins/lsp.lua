@@ -637,6 +637,7 @@ return {
       events = {
         render_buffer = {
           "BufWritePost",
+          "BufWinEnter",
         },
 
         clear_buffer = {

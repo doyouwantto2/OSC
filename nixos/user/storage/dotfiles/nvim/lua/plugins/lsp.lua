@@ -629,7 +629,10 @@ return {
     dependencies = {
       {
         "3rd/image.nvim",
-        opts = {},
+        opts = {
+          max_height_window_percentage = 50,
+          max_width_window_percentage = 80,
+        },
       },
     },
 
@@ -649,7 +652,6 @@ return {
       renderer_options = {
         mermaid = {
           background = nil,
-          position = "bottom",
           theme = nil,
           scale = 1,
           width = nil,

@@ -636,13 +636,10 @@ return {
     opts = {
       events = {
         render_buffer = {
-          "BufWritePost",
           "BufWinEnter",
         },
 
-        clear_buffer = {
-          "BufLeave",
-        },
+        clear_buffer = {},
       },
 
       renderer_options = {

@@ -630,8 +630,8 @@ return {
       {
         "3rd/image.nvim",
         opts = {
-          max_height_window_percentage = 50,
-          max_width_window_percentage = 80,
+          max_height_window_percentage = 90,
+          max_width_window_percentage = 120,
         },
       },
     },

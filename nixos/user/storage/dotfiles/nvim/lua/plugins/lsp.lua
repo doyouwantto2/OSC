@@ -636,6 +636,7 @@ return {
     opts = {
       events = {
         render_buffer = {
+          "BufWritePost",
           "BufWinEnter",
         },
 

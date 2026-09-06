@@ -1,6 +1,9 @@
 # Operating System Configuration
 
+This configuration was tended to help me maintain my personal workspace. But as i
+
 ## Neovim
+
 ![](assets/niri-osc-workspace-nix-flake.png)
 
 ![](assets/nextjs-dev-neovim.png)
@@ -9,8 +12,8 @@
 
 ![](assets/rust-ramish-lazygit.png)
 
+## Niri
 
-## Niri 
 ![](assets/select-wallpaper-trees.png)
 
 ![](assets/yazi-vs-profile.png)
@@ -18,4 +21,3 @@
 ![](assets/overview-niri-app-launcher.png)
 
 ![](assets/alt-tab-jury.png)
-

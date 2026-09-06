@@ -13,5 +13,6 @@
     clang-tools
     nasm
     lldb
+    glsl_analyzer
   ];
 }

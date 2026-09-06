@@ -368,6 +368,18 @@ return {
         root_dir = util.root_pattern("Gemfile", ".git"),
       })
 
+      vim.lsp.config("glsl_analyzer", {
+        capabilities = capabilities,
+        on_attach = on_attach,
+
+        filetypes = {
+          "glsl",
+        },
+
+        root_markers = {
+          ".git",
+        },
+      })
       ------------------------------------------------
       -- LaTeX
       ------------------------------------------------

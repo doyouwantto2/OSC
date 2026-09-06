@@ -490,6 +490,7 @@ return {
       ------------------------------------------------
       vim.lsp.enable({
         "lua_ls",
+        "glsl_analyzer",
         "html",
         "cssls",
         "jsonls",

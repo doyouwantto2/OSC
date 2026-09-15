@@ -12,6 +12,7 @@
   # Network utilities
   environment.systemPackages = with pkgs; [
     nmap
+    tshark
     dnsutils
     iperf3
     proton-vpn

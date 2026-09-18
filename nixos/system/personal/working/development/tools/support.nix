@@ -12,6 +12,7 @@
     lazygit
     lazydocker
     sniffnet
+    live-server
     imagemagick
     ghostscript
     tree

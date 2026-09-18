@@ -177,23 +177,6 @@ return {
   },
 
   {
-    "ngtuonghy/live-server-nvim",
-    event = "VeryLazy",
-    build = ":LiveServerInstall",
-    config = function()
-      local live_server = require("live-server-nvim")
-      live_server.setup({
-        custom = {
-          "--port=8080",
-          "--no-css-inject",
-        },
-        serverPath = vim.fn.stdpath("data") .. "/live-server/",
-        open = "folder",
-      })
-    end,
-  },
-
-  {
     "mgierada/lazydocker.nvim",
     dependencies = { "akinsho/toggleterm.nvim" },
     config = function()

@@ -18,6 +18,8 @@
     cargo-update
     cargo-edit
     sqlx-cli
+    diesel-cli
+    diesel-cli-ext
     sea-orm-cli
   ];
 }

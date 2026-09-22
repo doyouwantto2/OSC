@@ -4,9 +4,9 @@
   environment.systemPackages = with pkgs; [
     (python313.withPackages (
       ps: with ps; [
-        datasets
-        jupyter-kernel
         jupyter-client
+        ipykernel
+
         kaggle
         pylatexenc
         opencv-python-headless
@@ -15,17 +15,10 @@
         pandas
         matplotlib
         scikit-learn
-        torch
-        torchvision
-        torchaudio
-        botorch
         ollama
-        pydbus
-        pyserial
-        pygobject3
-        manim
       ]
     ))
+
     pyright
   ];
 }

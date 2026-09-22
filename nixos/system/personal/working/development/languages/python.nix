@@ -5,6 +5,8 @@
     (python313.withPackages (
       ps: with ps; [
         datasets
+        jupyter-kernel
+        jupyter-client
         kaggle
         pylatexenc
         opencv-python-headless

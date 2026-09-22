@@ -4,12 +4,14 @@ return {
     event = "BufWritePre",
     cmd = { "ConformInfo" },
 
-    -- Khai báo phím tắt chuẩn của Lazy.nvim
     keys = {
       {
         "<leader>fm",
         function()
-          require("conform").format({ async = true, lsp_format = "fallback" })
+          require("conform").format({
+            async = true,
+            lsp_format = "fallback",
+          })
         end,
         mode = { "n", "v" },
         desc = "Format file or range (Conform)",
@@ -31,12 +33,28 @@ return {
         html = { "prettier" },
         json = { "prettier" },
         vue = { "prettier" },
+
         markdown = { "mdformat" },
         ruby = { "rubyfmt" },
+
+        -- Jupyter Notebook
+        ipynb = { "nbqa_ruff" },
       },
 
       formatters = {
         stylua = {},
+
+        nbqa_ruff = {
+          command = "nbqa",
+          args = {
+            "ruff",
+            "format",
+            "--stdin-filename",
+            "$FILENAME",
+            "-",
+          },
+          stdin = true,
+        },
       },
     },
   },

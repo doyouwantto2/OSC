@@ -6,7 +6,7 @@ The project separates **machine-specific configuration**, **system configuration
 
 The main goal is to make the configuration easier to maintain, reuse, extend, and migrate between machines.
 
----
+______________________________________________________________________
 
 ## Overview
 
@@ -55,7 +55,7 @@ flowchart LR
     Setup --> User
 ```
 
----
+______________________________________________________________________
 
 # Repository Structure
 
@@ -137,7 +137,7 @@ flowchart LR
 
 > The exact contents of individual modules may change over time. The important architectural boundaries are `origin`, `system`, `user`, and `setup`.
 
----
+______________________________________________________________________
 
 # Directory Responsibilities
 
@@ -185,7 +185,7 @@ flowchart LR
 
 The `origin` directory is expected to be specific to the machine on which NixOS was installed.
 
----
+______________________________________________________________________
 
 # `nixos/system`
 
@@ -238,7 +238,7 @@ flowchart TD
     Development --> Tools
 ```
 
----
+______________________________________________________________________
 
 # `nixos/user`
 
@@ -302,7 +302,7 @@ This can include:
 
 `style.nix` contains configuration related to the visual appearance of the user environment.
 
----
+______________________________________________________________________
 
 # `setup`
 
@@ -350,7 +350,7 @@ Shared helper functions
 
 Centralizing these values avoids repeating machine-specific information throughout individual modules.
 
----
+______________________________________________________________________
 
 # Configuration Flow
 
@@ -405,7 +405,7 @@ flowchart LR
     Reusable --> Setup["setup"]
 ```
 
----
+______________________________________________________________________
 
 # Installation
 
@@ -512,7 +512,7 @@ If multiple configurations are provided:
 sudo nixos-rebuild switch --flake .#<configuration>
 ```
 
----
+______________________________________________________________________
 
 # Reusability
 
@@ -571,7 +571,7 @@ flowchart TD
     MachineB --> OriginB
 ```
 
----
+______________________________________________________________________
 
 # Features
 
@@ -648,7 +648,7 @@ The configuration is designed to be maintained in Git.
 
 Changes can be reviewed, tracked, reverted, and shared like a software project.
 
----
+______________________________________________________________________
 
 # Updating
 
@@ -670,7 +670,7 @@ Apply the configuration:
 sudo nixos-rebuild switch --flake .
 ```
 
----
+______________________________________________________________________
 
 # Rollback
 
@@ -684,7 +684,7 @@ A rollback can also be performed with:
 sudo nixos-rebuild switch --rollback
 ```
 
----
+______________________________________________________________________
 
 # Design Principles
 
@@ -745,7 +745,7 @@ Keep the configuration in version control so the environment can be rebuilt cons
 
 ![](assets/alt-tab-jury.png)
 
----
+## ![](assets/tsubasa-atcoder.png)
 
 # License
 

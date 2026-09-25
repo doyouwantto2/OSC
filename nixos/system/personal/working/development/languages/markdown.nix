@@ -12,6 +12,7 @@
     tinymist
     marksman
     mdformat
+    mdbook
     plantuml
     mermaid-cli
   ];

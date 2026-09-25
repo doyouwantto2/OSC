@@ -13,6 +13,7 @@
     marksman
     mdformat
     mdbook
+    mdbook-mermaid
     plantuml
     mermaid-cli
   ];

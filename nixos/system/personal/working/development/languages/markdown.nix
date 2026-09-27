@@ -12,7 +12,7 @@
     tinymist
     marksman
     mdbook
-    hongdown
+    mdsf
     mdbook-mermaid
     plantuml
     mermaid-cli

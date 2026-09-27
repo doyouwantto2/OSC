@@ -12,6 +12,7 @@
     tinymist
     marksman
     mdbook
+    rumdl
     mdbook-mermaid
     plantuml
     mermaid-cli

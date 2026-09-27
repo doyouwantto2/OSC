@@ -11,7 +11,7 @@
     typstyle
     tinymist
     marksman
-    mdformat
+    hongdown
     mdbook
     mdbook-mermaid
     plantuml

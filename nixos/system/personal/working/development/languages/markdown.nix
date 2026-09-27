@@ -12,9 +12,7 @@
     tinymist
     marksman
     mdbook
-    mdsf
     mdbook-mermaid
-    plantuml
     mermaid-cli
   ];
 }

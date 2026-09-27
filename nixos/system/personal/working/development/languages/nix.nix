@@ -6,7 +6,6 @@
     nixf
     nixd
     nixfmt
-    devenv
     cachix
   ];
 }

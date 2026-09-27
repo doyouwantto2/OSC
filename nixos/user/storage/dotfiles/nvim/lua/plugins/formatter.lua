@@ -35,6 +35,7 @@ return {
         json = { "prettier" },
         vue = { "prettier" },
 
+        markdown = { "hongdown" },
         ruby = { "rubyfmt" },
 
         -- Jupyter Notebook

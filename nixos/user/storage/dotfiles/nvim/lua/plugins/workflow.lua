@@ -245,10 +245,13 @@ return {
   },
 
   {
-    "epwalsh/obsidian.nvim",
-    version = "*",
+    "obsidian-nvim/obsidian.nvim",
     lazy = true,
     ft = "markdown",
+
+    version = "*",
+    ---@module 'obsidian'
+    ---@type obsidian.config
 
     dependencies = {
       "nvim-lua/plenary.nvim",

@@ -4,9 +4,8 @@
   environment.systemPackages = with pkgs; [
     (python313.withPackages (
       ps: with ps; [
-        ipykernel
-
         kaggle
+        marimo
         pylatexenc
         opencv-python-headless
         pygame

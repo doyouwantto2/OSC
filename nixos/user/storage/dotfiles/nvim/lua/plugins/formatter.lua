@@ -36,9 +36,6 @@ return {
         vue = { "prettier" },
 
         ruby = { "rubyfmt" },
-
-        -- Jupyter Notebook
-        ipynb = { "nbqa_ruff" },
       },
 
       formatters = {

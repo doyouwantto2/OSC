@@ -215,10 +215,7 @@ return {
   {
     "hedyhli/outline.nvim",
 
-    cmd = {
-      "Outline",
-      "OutlineOpen",
-    },
+    cmd = "Outline",
 
     keys = {
       {
@@ -344,5 +341,19 @@ return {
         return original_ui_open(path, ...)
       end
     end,
+  },
+
+  {
+    "epwalsh/pomo.nvim",
+    version = "*", -- Recommended, use latest release instead of latest commit
+    lazy = true,
+    cmd = { "TimerStart", "TimerRepeat", "TimerSession" },
+    dependencies = {
+      -- Optional, but highly recommended if you want to use the "Default" timer
+      "rcarriga/nvim-notify",
+    },
+    opts = {
+      -- See below for full list of options 👇
+    },
   },
 }

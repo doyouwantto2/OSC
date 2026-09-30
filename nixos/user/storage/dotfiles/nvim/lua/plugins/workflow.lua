@@ -232,11 +232,11 @@ return {
       outline_window = {
         position = "right",
 
-        width = 15,
+        width = 22,
 
         auto_width = {
-          enabled = true,
-          max_width = 40,
+          enabled = false,
+          max_width = 22,
         },
 
         focus_on_open = false,
@@ -248,7 +248,7 @@ return {
       },
 
       outline_items = {
-        show_symbol_details = true,
+        show_symbol_details = false,
         show_symbol_lineno = false,
         highlight_hovered_item = true,
         auto_set_cursor = true,
@@ -256,6 +256,7 @@ return {
 
       guides = {
         enabled = true,
+
         markers = {
           bottom = "└",
           middle = "├",

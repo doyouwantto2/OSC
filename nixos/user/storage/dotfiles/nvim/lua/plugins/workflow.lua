@@ -213,33 +213,87 @@ return {
   },
 
   {
-    "stevearc/aerial.nvim",
+    "hedyhli/outline.nvim",
 
-    dependencies = {
-      "nvim-treesitter/nvim-treesitter",
-      "nvim-tree/nvim-web-devicons",
-    },
-
-    opts = {
-      layout = {
-        default_direction = "right",
-        min_width = 30,
-        max_width = { 40, 0.25 },
-      },
-
-      backends = {
-        "treesitter",
-        "lsp",
-        "markdown",
-        "man",
-      },
+    cmd = {
+      "Outline",
+      "OutlineOpen",
     },
 
     keys = {
       {
-        "<leader>a",
-        "<cmd>AerialToggle!<CR>",
-        desc = "Aerial Outline",
+        "<leader>o",
+        "<cmd>Outline<CR>",
+        desc = "Outline",
+      },
+    },
+
+    opts = {
+      outline_window = {
+        position = "right",
+
+        width = 30,
+
+        auto_width = {
+          enabled = true,
+          max_width = 40,
+        },
+
+        focus_on_open = false,
+        auto_close = false,
+
+        show_numbers = false,
+        show_relative_numbers = false,
+        wrap = false,
+      },
+
+      outline_items = {
+        show_symbol_details = true,
+        show_symbol_lineno = false,
+        highlight_hovered_item = true,
+        auto_set_cursor = true,
+      },
+
+      guides = {
+        enabled = true,
+        markers = {
+          bottom = "└",
+          middle = "├",
+          vertical = "│",
+        },
+      },
+
+      symbol_folding = {
+        autofold_depth = 1,
+
+        auto_unfold = {
+          hovered = true,
+          only = true,
+        },
+
+        markers = {
+          "",
+          "",
+        },
+      },
+
+      providers = {
+        priority = {
+          "lsp",
+          "markdown",
+          "norg",
+          "man",
+        },
+
+        lsp = {
+          blacklist_clients = {},
+        },
+
+        markdown = {
+          filetypes = {
+            "markdown",
+          },
+        },
       },
     },
   },

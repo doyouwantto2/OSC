@@ -18,6 +18,7 @@
       ]
     ))
 
+    marimo
     pyright
   ];
 }

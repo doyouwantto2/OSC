@@ -232,11 +232,11 @@ return {
       outline_window = {
         position = "right",
 
-        width = 12,
+        width = 15,
 
         auto_width = {
           enabled = false,
-          max_width = 22,
+          max_width = 20,
         },
 
         focus_on_open = false,

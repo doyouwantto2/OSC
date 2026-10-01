@@ -139,7 +139,7 @@ return {
         float_opts = {
           border = "curved",
           width = function()
-            return math.floor(vim.o.columns * 0.9)
+            return math.floor(vim.o.columns * 0.8)
           end,
           height = function()
             return math.floor(vim.o.lines * 0.8)
@@ -149,7 +149,7 @@ return {
       })
 
       local Terminal = require("toggleterm.terminal").Terminal
-      local lazygit = Terminal:new({ cmd = "lazygit", hidden = true, direction = "float" })
+      local lazygit = Terminal:new({ cmd = "lazygit", hidden = false, direction = "float" })
 
       vim.keymap.set("n", "<Leader>gl", function()
         lazygit:toggle()

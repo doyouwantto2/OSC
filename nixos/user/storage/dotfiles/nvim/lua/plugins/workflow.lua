@@ -133,16 +133,16 @@ return {
       local toggleterm = require("toggleterm")
 
       toggleterm.setup({
-        direction = "float",
+        direction = "horizontal",
         shell = "fish",
         open_mapping = "<M-\\>",
         float_opts = {
           border = "curved",
           width = function()
-            return math.floor(vim.o.columns - 50)
+            return math.floor(vim.o.columns - 20)
           end,
           height = function()
-            return math.floor(vim.o.lines - 40)
+            return math.floor(vim.o.lines - 10)
           end,
           winblend = 0,
         },

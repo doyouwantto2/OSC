@@ -5,7 +5,6 @@
     (python313.withPackages (
       ps: with ps; [
         kaggle
-        marimo
         pylatexenc
         opencv-python-headless
         pygame
@@ -17,7 +16,7 @@
       ]
     ))
 
-    marimo
+    positron-bin
     pyright
   ];
 }

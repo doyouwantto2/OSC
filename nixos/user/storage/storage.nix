@@ -47,6 +47,11 @@
       source = config.lib.file.mkOutOfStoreSymlink ./dotfiles/zathura;
     };
 
+        "${config.xdg.configHome}/niri" = lib.mkForce {
+      source = config.lib.file.mkOutOfStoreSymlink ./dotfiles/niri;
+    };
+
+
     ".face" = lib.mkForce {
       source = config.lib.file.mkOutOfStoreSymlink ./dotfiles/.face;
     };

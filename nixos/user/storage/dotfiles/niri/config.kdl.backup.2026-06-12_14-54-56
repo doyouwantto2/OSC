@@ -1,0 +1,249 @@
+config-notification {
+    disable-failed
+}
+
+gestures {
+    hot-corners {
+        off
+    }
+}
+
+input {
+    workspace-auto-back-and-forth false
+
+    focus-follows-mouse {
+        enabled false
+    }
+
+    warp-mouse-to-focus false
+
+    keyboard {
+        numlock
+    }
+
+    touchpad {
+        tap
+        natural-scroll
+    }
+}
+
+layout {
+    background-color "transparent"
+
+    center-focused-column "on-overflow"
+
+    default-column-width {
+        proportion 0.5
+    }
+
+    preset-column-widths {
+        proportion 0.33333
+        proportion 0.5
+        proportion 0.66667
+    }
+
+    border {
+        off
+    }
+
+    shadow {
+        softness 30
+        spread 5
+        offset x=0 y=5
+        color "#0007"
+    }
+
+    struts {
+    }
+}
+
+overview {
+    workspace-shadow {
+        off
+    }
+}
+
+environment {
+    XDG_CURRENT_DESKTOP "niri"
+    QT_QPA_PLATFORM "wayland;xcb"
+    ELECTRON_OZONE_PLATFORM_HINT "auto"
+    QT_QPA_PLATFORMTHEME "gtk3"
+    QT_QPA_PLATFORMTHEME_QT6 "gtk3"
+    TERMINAL "wezterm"
+}
+
+spawn-at-startup "noctalia-shell"
+
+hotkey-overlay {
+    skip-at-startup
+}
+
+prefer-no-csd
+
+screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
+
+animations {
+    workspace-switch {
+        spring damping-ratio=0.80 stiffness=523 epsilon=0.0001
+    }
+
+    horizontal-view-movement {
+        spring damping-ratio=0.85 stiffness=423 epsilon=0.0001
+    }
+
+    window-movement {
+        spring damping-ratio=0.75 stiffness=323 epsilon=0.0001
+    }
+
+    window-resize {
+        spring damping-ratio=0.85 stiffness=423 epsilon=0.0001
+    }
+
+    overview-open-close {
+        spring damping-ratio=0.85 stiffness=800 epsilon=0.0001
+    }
+}
+
+layer-rule {
+    match namespace="^quickshell$"
+    place-within-backdrop true
+}
+
+window-rule {
+    match app-id=r#"^org\.wezfurlong\.wezterm$"#
+    default-column-width {}
+}
+
+window-rule {
+    match app-id=r#"^org\.gnome\."#
+    draw-border-with-background false
+    geometry-corner-radius 12
+    clip-to-geometry true
+}
+
+window-rule {
+    match app-id=r#"^gnome-calculator$"#
+    match app-id=r#"^blueman-manager$"#
+    match app-id=r#"^org\.gnome\.Nautilus$"#
+
+    open-floating true
+}
+
+window-rule {
+    match app-id=r#"firefox$"# title="^Picture-in-Picture$"
+    open-floating true
+}
+
+window-rule {
+    match app-id=r#"org.quickshell$"#
+    open-floating true
+}
+
+debug {
+    honor-xdg-activation-with-invalid-serial
+}
+
+recent-windows {
+    binds {
+        Alt+Tab         { next-window scope="output"; }
+        Alt+Shift+Tab   { previous-window scope="output"; }
+
+        Alt+grave       { next-window filter="app-id"; }
+        Alt+Shift+grave { previous-window filter="app-id"; }
+    }
+}
+
+binds {
+    // Apps
+    Super+N {
+        spawn "wezterm";
+    }
+
+    Super+R {
+        spawn "noctalia-shell" "ipc" "call" "launcher" "toggle";
+    }
+
+    // Focus
+    Super+H {
+        focus-column-left;
+    }
+
+    Super+L {
+        focus-column-right;
+    }
+
+    Super+J {
+        focus-window-down;
+    }
+
+    Super+K {
+        focus-window-up;
+    }
+
+    // Alternative focus
+    Super+braceleft {
+        focus-column-left;
+    }
+
+    Super+braceright {
+        focus-column-right;
+    }
+
+    // Move windows
+    Super+Shift+H {
+        move-column-left;
+    }
+
+    Super+Shift+L {
+        move-column-right;
+    }
+
+    Super+Shift+J {
+        move-window-down;
+    }
+
+    Super+Shift+K {
+        move-window-up;
+    }
+
+    // Scroll columns
+    Super+WheelScrollUp {
+        focus-column-left;
+    }
+
+    Super+WheelScrollDown {
+        focus-column-right;
+    }
+
+    // Workspace navigation
+    Super+U {
+        focus-workspace-up;
+    }
+
+    Super+D {
+        focus-workspace-down;
+    }
+
+    // Workspace scroll
+    Super+Shift+WheelScrollUp {
+        focus-workspace-up;
+    }
+
+    Super+Shift+WheelScrollDown {
+        focus-workspace-down;
+    }
+
+    // Overview
+    Super+Tab {
+        overview-workspace;
+    }
+
+    // Layout controls
+    Super+F {
+        maximize-column;
+    }
+
+    Super+Shift+F {
+        fullscreen-window;
+    }
+}

@@ -36,6 +36,8 @@
     xdg-desktop-portal-wlr
     xdg-desktop-portal-gnome
 
+    xwayland-satellite
+
     # Tauri / asm
     openssl
     pkg-config

@@ -16,6 +16,7 @@
     dnsutils
     iperf3
     proton-vpn
+    netdiscover
     rancher
   ];
 

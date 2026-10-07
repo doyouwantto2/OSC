@@ -10,7 +10,7 @@
   virtualisation.docker.enable = false;
 
   virtualisation.libvirtd.enable = true;
-programs.virt-manager.enable = true;
+  programs.virt-manager.enable = true;
 
   virtualisation.podman = {
     enable = true;
@@ -32,6 +32,7 @@ programs.virt-manager.enable = true;
 
   environment.systemPackages = with pkgs; [
     podman-compose
+    qemu_full
     buildah   
   ];
 

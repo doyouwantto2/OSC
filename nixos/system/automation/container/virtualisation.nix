@@ -2,12 +2,16 @@
   config,
   pkgs,
   lib,
-  user,
+  shared,
   ...
 }:
 
 {
   virtualisation.docker.enable = false;
+
+  virtualisation.libvirtd.enable = true;
+  programs.virt-manager.enable = true;
+  users.users.${shared.currentName}.extraGroups = [ "libvirtd" ];
 
   virtualisation.podman = {
     enable = true;
@@ -32,7 +36,7 @@
     buildah   
   ];
 
-  users.users.${user.name}.extraGroups = [
+  users.users.${shared.currentName}.extraGroups = [
     "podman" 
     "render" 
   ];

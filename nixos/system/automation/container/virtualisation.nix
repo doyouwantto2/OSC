@@ -2,7 +2,7 @@
   config,
   pkgs,
   lib,
-  shared,
+  user,
   ...
 }:
 
@@ -10,8 +10,7 @@
   virtualisation.docker.enable = false;
 
   virtualisation.libvirtd.enable = true;
-  programs.virt-manager.enable = true;
-  users.users.${shared.currentName}.extraGroups = [ "libvirtd" ];
+programs.virt-manager.enable = true;
 
   virtualisation.podman = {
     enable = true;
@@ -33,12 +32,12 @@
 
   environment.systemPackages = with pkgs; [
     podman-compose
-    qemu
     buildah   
   ];
 
-  users.users.${shared.currentName}.extraGroups = [
+  users.users.${user.name}.extraGroups = [
     "podman" 
     "render" 
+    "libvirtd"
   ];
 }

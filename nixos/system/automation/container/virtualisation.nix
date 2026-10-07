@@ -9,9 +9,6 @@
 {
   virtualisation.docker.enable = false;
 
-  virtualisation.libvirtd.enable = true;
-  programs.virt-manager.enable = true;
-
   virtualisation.podman = {
     enable = true;
 
@@ -32,11 +29,11 @@
 
   environment.systemPackages = with pkgs; [
     podman-compose
-    qemu
-    qemu_kvm
     buildah   
   ];
 
+  virtualisation.virtualbox.host.enable = true;
+  users.extraGroups.vboxusers.members = [ "user-with-access-to-virtualbox" ];
   users.users.${user.name}.extraGroups = [
     "podman" 
     "render" 

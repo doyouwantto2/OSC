@@ -32,7 +32,8 @@
 
   environment.systemPackages = with pkgs; [
     podman-compose
-    qemu_full
+    qemu
+    qemu_kvm
     buildah   
   ];
 

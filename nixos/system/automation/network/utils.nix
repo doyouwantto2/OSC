@@ -17,6 +17,7 @@
     iperf3
     proton-vpn
     netdiscover
+    libguestfs
     rancher
   ];
 

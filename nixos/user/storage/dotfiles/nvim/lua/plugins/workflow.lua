@@ -297,6 +297,16 @@ return {
   },
 
   {
+    "Kamyil/markdown-agenda.nvim",
+    -- Required for :MarkdownAgenda command to be available
+    -- Alternatively, use: cmd = 'MarkdownAgenda' for lazy-loading on command
+    lazy = false,
+    opts = {
+      directory = "~/Documents/Notes/Plans/",
+    },
+  },
+
+  {
     "obsidian-nvim/obsidian.nvim",
     lazy = true,
     ft = "markdown",

@@ -297,13 +297,19 @@ return {
   },
 
   {
-    "Kamyil/markdown-agenda.nvim",
-    -- Required for :MarkdownAgenda command to be available
-    -- Alternatively, use: cmd = 'MarkdownAgenda' for lazy-loading on command
-    lazy = false,
+    "dpezto/obsidian-query.nvim",
+    ft = "markdown",
     opts = {
-      directory = "~/Documents/Notes/Plans/",
+      picker = { style = "rich" }, -- show task text and query columns
     },
+  },
+  {
+    "MeanderingProgrammer/render-markdown.nvim",
+    opts = function(_, opts)
+      opts.custom_handlers = opts.custom_handlers or {}
+      opts.custom_handlers.markdown = require("obsidian-query").handler
+      opts.custom_handlers.markdown_inline = require("obsidian-query.inline").handler
+    end,
   },
 
   {
